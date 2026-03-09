@@ -4,7 +4,7 @@
 
 SafeClaw is an [OpenClaw](https://docs.openclaw.ai) agent with access to [Protopia SGT](https://protopia.ai/stained-glass-transform/) to expand the usability of sensitive data for AI with state-of-the-art data protection and privacy.
 
-> **SafeClaw** does not replace your existing OpenClaw agents, it provides an alternative for using your AI assistant with sensitive information. With SafeClaw, information never leaves your workspace as plaintext and cannot be recovered from the protected embeddings.
+**SafeClaw** does not replace your existing OpenClaw agents, it provides an alternative for using your AI assistant with sensitive information. With SafeClaw, information never leaves your workspace as plaintext and cannot be recovered from the protected embeddings.
 
 ## Table of Contents
 
@@ -135,11 +135,11 @@ chmod -R a+r ~/.openclaw/workspace-safeclaw/investment-portfolio
 
 ## 2. Setup Slack Integration
 
+![safe-claw](./screenshots/slack.png)
+
 1. Follow the steps here: (https://docs.openclaw.ai/channels/slack)
 
-### Example Slack bot manifest for `SafeClaw` bot.
-
-![safe-claw](./screenshots/SafeClaw.png)
+### Example Slack bot manifest for the `SafeClaw` bot.
 
 ```json
 {
@@ -255,16 +255,18 @@ cp -r examples/3-email-monitor ~/.openclaw/workspace-safeclaw/email-monitor
 chmod -R a+r ~/.openclaw/workspace-safeclaw/email-monitor
 ```
 4. Register the [`email_monitor`](./cron/email_monitor.sh) OpenClaw cron task:
-```bash
-# Register job.
-docker compose exec -T openclaw-gateway sh < cron/email_monitor.sh
+    > 💡 Update ./cron/email_monitor.sh with your SLACK-CHANNEL-ID.
+    
+    ```bash
+    # Register job.
+    docker compose exec -T openclaw-gateway sh < cron/email_monitor.sh
 
-# Verify job.
-docker compose exec openclaw-gateway openclaw cron list
+    # Verify job.
+    docker compose exec openclaw-gateway openclaw cron list
 
-# Test run job.
-docker compose exec openclaw-gateway openclaw cron run [job-id]
-```
+    # Test run job.
+    docker compose exec openclaw-gateway openclaw cron run [job-id]
+    ```
 
 # Example 4 (PII Scanner)
 Sorts and sends a report to slack when files are uploaded to a local directory, stating whether the files contained PII.
@@ -278,7 +280,7 @@ Sorts and sends a report to slack when files are uploaded to a local directory, 
     chmod -R a+r ~/.openclaw/workspace-safeclaw/pii-scanner
     ```
 3. Register the [`pii_scanner`](./cron/pii_scanner.sh) OpenClaw cron task:
-    > 💡 Update the ./cron/pii_scanner.sh with your SLACK-CHANNEL-ID.
+    > 💡 Update ./cron/pii_scanner.sh with your SLACK-CHANNEL-ID.
     ```bash
     # Register job.
     docker compose exec -T openclaw-gateway sh < cron/pii_scanner.sh
