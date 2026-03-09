@@ -1,5 +1,7 @@
 # SafeClaw: OpenClaw with Protopia SGT Protection 🦞
 
+![SafeClaw](./safeclaw.jpg)
+
 SafeClaw is an [OpenClaw](https://docs.openclaw.ai) agent with access to [Protopia SGT](https://protopia.ai/stained-glass-transform/) to expand the usability of sensitive data for AI with state-of-the-art data protection and privacy.
 
 > **SafeClaw** does not replace your existing OpenClaw agents, it provides an alternative for using your AI assistant with sensitive information. With SafeClaw, information never leaves your workspace as plaintext and cannot be recovered from the protected embeddings.
