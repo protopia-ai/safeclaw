@@ -1,0 +1,225 @@
+{
+  "browser": {
+    "defaultProfile": "openclaw"
+  },
+  "ui": {
+    "assistant": {
+      "name": "Protected by Protopia's SGT 🔒",
+      "avatar": "https://avatars.githubusercontent.com/u/73908584?s=200&v=4"
+    }
+  },
+  "models": {
+    "mode": "merge",
+    "providers": {
+      "vllm": {
+        "baseUrl": "http://stainedglass:8600/v1",
+        "apiKey": "VLLM_API_KEY",
+        "api": "openai-completions",
+        "models": [
+          {
+            "id": "Qwen/Qwen3-32B",
+            "name": "Qwen/Qwen3-32B",
+            "reasoning": false,
+            "input": [
+              "text"
+            ],
+            
+            "contextWindow": 32768,
+            "maxTokens": 32768
+          }
+        ]
+      }
+    }
+  },
+  "agents": {
+    "defaults": {
+      "model": {
+        "primary": "vllm/Qwen/Qwen3-32B"
+      },
+      "models": {
+        "vllm/Qwen/Qwen3-32B": {
+          "alias": "Protopia-SGT-Model"
+        }
+      },
+      "workspace": "/home/node/.openclaw/workspace",
+      "compaction": {
+        "mode": "safeguard"
+      },
+      "thinkingDefault": "high",
+      "verboseDefault": "full",
+      "typingMode": "instant",
+      "maxConcurrent": 4,
+      "subagents": {
+        "maxConcurrent": 8
+      }
+    },
+    "list": [
+      {
+        "id": "main"
+      },
+      {
+        "id": "safeclaw",
+        "name": "SafeClaw",
+        "workspace": "/home/node/.openclaw/workspace-safeclaw",
+        "agentDir": "/home/node/.openclaw/agents/safeclaw/agent",
+        "model": "Protopia-SGT-Model"
+      }
+    ]
+  },
+  "tools": {
+    "web": {
+      "search": {
+        "enabled": true,
+        "provider": "brave",
+        "apiKey": "[BRAVE_API_KEY]"
+      },
+      "fetch": {
+        "enabled": true
+      }
+    }
+  },
+  "messages": {
+    "ackReactionScope": "group-mentions"
+  },
+  "commands": {
+    "native": "auto",
+    "nativeSkills": "auto",
+    "bash": true,
+    "restart": true,
+    "ownerDisplay": "raw",
+    "allowFrom": {
+      "custom-1": []
+    }
+  },
+  "session": {
+    "dmScope": "per-channel-peer"
+  },
+  "hooks": {
+    "enabled": true,
+    "path": "/hooks",
+    "token": "OPENCLAW_HOOK_TOKEN",
+    "presets": [
+      "gmail"
+    ],
+    "mappings": [
+      {
+        "match": {
+          "path": "gmail"
+        },
+        "action": "agent",
+        "wakeMode": "now",
+        "name": "Gmail",
+        "sessionKey": "hook:gmail:{{messages[0].id}}",
+        "messageTemplate": "New email from {{messages[0].from}}\nSubject: {{messages[0].subject}}\n{{messages[0].snippet}}\n{{messages[0].body}}",
+        "deliver": true,
+        "channel": "slack",
+        "model": "vllm/Qwen/Qwen3-32B"
+      }
+    ]
+  },
+  "channels": {
+    "slack": {
+      "mode": "socket",
+      "webhookPath": "/slack/events",
+      "enabled": true,
+      "botToken": "[SLACK_BOT_TOKEN]",
+      "appToken": "[]SLACK_APP_TOKEN]",
+      "userTokenReadOnly": true,
+      "groupPolicy": "allowlist",
+      "streaming": "partial",
+      "nativeStreaming": false,
+      "dmPolicy": "pairing",
+      "dm": {
+        "enabled": true
+      },
+      "channels": {
+        "C0AHK8ZQKA5": {
+          "requireMention": true
+        }
+      },
+      "ackReaction": "eyes"
+    }
+  },
+  "gateway": {
+    "port": 18789,
+    "mode": "local",
+    "bind": "loopback",
+    "controlUi": {
+      "allowedOrigins": [
+        "*"
+      ]
+    },
+    "auth": {
+      "mode": "token",
+      "token": "444ae01b2fb24003c6cbaf9cb6834ad1150db0979f8e7bd0"
+    },
+    "tailscale": {
+      "mode": "off",
+      "resetOnExit": false
+    },
+    "nodes": {
+      "denyCommands": [
+        "camera.snap",
+        "camera.clip",
+        "screen.record",
+        "calendar.add",
+        "contacts.add",
+        "reminders.add"
+      ]
+    }
+  },
+  "skills": {
+    "load": {
+      "extraDirs": [
+        "/opt/homebrew/lib/node_modules/openclaw/skills/"
+      ],
+      "watch": false
+    },
+    "install": {
+      "preferBrew": true,
+      "nodeManager": "npm"
+    },
+    "entries": {
+      "1password": {
+        "enabled": false
+      },
+      "apple-reminders": {
+        "enabled": false
+      },
+      "bear-notes": {
+        "enabled": false
+      },
+      "blogwatcher": {
+        "enabled": false
+      },
+      "camsnap": {
+        "enabled": false
+      },
+      "apple-notes": {
+        "enabled": false
+      },
+      "blucli": {
+        "enabled": false
+      },
+      "bluebubbles": {
+        "enabled": false
+      },
+      "coding-agent": {
+        "enabled": false
+      },
+      "discord": {
+        "enabled": false
+      },
+      "gog": {
+        "enabled": true
+      }
+    }
+  },
+  "plugins": {
+    "entries": {
+      "qwen-portal-auth": {
+        "enabled": false
+      }
+    }
+  }
+}
