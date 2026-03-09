@@ -27,7 +27,7 @@ SafeClaw is an [OpenClaw](https://docs.openclaw.ai) agent with access to [Protop
 3. Modal deployment script and Modal API keys (or any other way to host the upstream `Qwen3-32B` for inference.)
 4. [docker-compose](/docker-compose.yaml) file.
 5. [openclaw.json](openclaw.json) started configuration.
-6. [Demo Resources and Data](./demo/)
+6. [Demo Resources and Data](./examples/)
 7. [Cron Tasks Scripts](./cron/)
 
 ## Setup
@@ -110,9 +110,9 @@ docker compose exec openclaw-gateway openclaw tui
 # Demo Candidate 1: (Financial Data 📈 Using the Chat Interface).
 User uses the OpenClaw chat interface to work on financial data analysis.
 
-1. Copy the [demo data](./demo/1-financial-data/documents/) to the OpenClaw workspace: `~/.openclaw/workspace-safeclaw/`.
+1. Copy the [demo data](./examples/1-financial-data/documents/) to the OpenClaw workspace: `~/.openclaw/workspace-safeclaw/`.
 ```bash
-cp -r demo/1-financial-data/documents/ ~/.openclaw/workspace-safeclaw/financial-data
+cp -r examples/1-financial-data/documents/ ~/.openclaw/workspace-safeclaw/financial-data
 chmod -R a+r ~/.openclaw/workspace-safeclaw/financial-data
 ```
 
@@ -125,9 +125,9 @@ chmod -R a+r ~/.openclaw/workspace-safeclaw/financial-data
 OpenClaw agent scheduled task to generate a report based on local portfolio data and web search. The resulting report is posted on Slack.
 
 ## 1. Demo data: 
-1. Copy the [demo data and instructions](./demo/2-investment-portfolio/) to the OpenClaw workspace: `~/.openclaw/workspace-safeclaw/`.
+1. Copy the [demo data and instructions](./examples/2-investment-portfolio/) to the OpenClaw workspace: `~/.openclaw/workspace-safeclaw/`.
 ```bash
-cp -r demo/2-investment-portfolio ~/.openclaw/workspace-safeclaw/investment-portfolio
+cp -r examples/2-investment-portfolio ~/.openclaw/workspace-safeclaw/investment-portfolio
 chmod -R a+r ~/.openclaw/workspace-safeclaw/investment-portfolio
 ```
 
@@ -247,9 +247,9 @@ Sends a report to Slack each day with a list of action items based on new emails
 
 1. Follow the steps to [setup OpenClaw Gmail Integration](#1-google-gmail-integration).
 2. Follow the steps to [setup Slack Integration](#2-setup-slack-integration).
-3. Copy the [demo data and task instructions](./demo/3-email-monitor/) to the OpenClaw workspace: `~/.openclaw/workspace-safeclaw/`.
+3. Copy the [demo data and task instructions](./examples/3-email-monitor/) to the OpenClaw workspace: `~/.openclaw/workspace-safeclaw/`.
 ```bash
-cp -r demo/3-email-monitor ~/.openclaw/workspace-safeclaw/email-monitor
+cp -r examples/3-email-monitor ~/.openclaw/workspace-safeclaw/email-monitor
 chmod -R a+r ~/.openclaw/workspace-safeclaw/email-monitor
 ```
 4. Register the [`email_monitor`](./cron/email_monitor.sh) OpenClaw cron task:
@@ -268,9 +268,9 @@ docker compose exec openclaw-gateway openclaw cron run [job-id]
 Sorts and sends a report to slack when files are uploaded to a local directory, stating whether the files contained PII.
 
 1. Follow the steps to [setup Slack Integration](#2-setup-slack-integration).
-2. Copy the [demo data and task instructions](./demo/4-pii-scanner/) to the OpenClaw workspace: `~/.openclaw/workspace-safeclaw/`.
+2. Copy the [demo data and task instructions](./examples/4-pii-scanner/) to the OpenClaw workspace: `~/.openclaw/workspace-safeclaw/`.
     ```bash
-    cp -r demo/4-pii-scanner ~/.openclaw/workspace-safeclaw/pii-scanner
+    cp -r examples/4-pii-scanner ~/.openclaw/workspace-safeclaw/pii-scanner
     chmod -R a+r ~/.openclaw/workspace-safeclaw/pii-scanner
     mkdir ~/.openclaw/workspace-safeclaw/data-guardian-pii-scanner/
     mkdir ~/.openclaw/workspace-safeclaw/data-guardian-pii-scanner/pending
