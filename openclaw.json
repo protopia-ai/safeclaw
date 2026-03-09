@@ -123,7 +123,7 @@
       "webhookPath": "/slack/events",
       "enabled": true,
       "botToken": "[SLACK_BOT_TOKEN]",
-      "appToken": "[]SLACK_APP_TOKEN]",
+      "appToken": "[SLACK_APP_TOKEN]",
       "userTokenReadOnly": true,
       "groupPolicy": "allowlist",
       "streaming": "partial",
