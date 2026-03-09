@@ -17,7 +17,6 @@ SafeClaw is an [OpenClaw](https://docs.openclaw.ai) agent with access to [Protop
 - [Example 4 (🔎 PII Scanner).](#example-4-pii-scanner)
 - [Data Sources Integration](#data-sources-integration-)
     - [Google Gmail](#1-google-gmail-integration)
-- [Other Agent Use Cases](#other-agent-use-cases)
 
 ## Requirements
 
