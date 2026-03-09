@@ -27,19 +27,19 @@ SafeClaw is an [OpenClaw](https://docs.openclaw.ai) agent with access to [Protop
 
 3. Modal deployment script and Modal API keys (or any other way to host the upstream `Qwen3-32B` for inference.)
 4. [docker-compose](/docker-compose.yaml) file.
-5. [openclaw.json](openclaw.json) started configuration.
+5. [openclaw.json](openclaw.json) starter configuration.
 6. [Demo Resources and Data](./examples/)
-7. [Cron Tasks Scripts](./cron/)
+7. [Example Cron Tasks Scripts](./cron/)
 
 ## Setup
 
-1. 🐳 Build demo OpenClaw docker image:
+1. 🐳 Build custom `OpenClaw` docker image:
 ```bash
 # Build demo image from custom Dockerfile
 docker build -t ghcr.io/openclaw/openclaw:protopia-demo .
 ```
 
-2. ⚠️ (Important) Copy the provided `openclaw.json` config file to `~/.openclaw/openclaw.json` (create directory if needed). This config will be mounted to the OpenClaw container by `docker compose`.
+2. ⚠️ **Important**: Copy the provided `openclaw.json` config file to `~/.openclaw/openclaw.json` (create directory if needed). This config will be mounted to the OpenClaw container by `docker compose`.
 
 3. Deploy upstream LLM to Modal with the [Modal Deployment Script](./modal_deploy_script.py) (or any other inference service of your choice).
 
@@ -48,9 +48,10 @@ docker build -t ghcr.io/openclaw/openclaw:protopia-demo .
 uv pip install modal
 MODAL_LOG_LEVEL=DEBUG modal deploy scripts/modal_deploy_output_protection.py
 ```
-✋ Attention: The modal deploy script loads the `OUTPUT_PROTECTION_IMAGE` from AWS ECR. Update this as needed.
 
-✋ Attention: The modal deploy script pulls the model `Qwen/Qwen3-32B` from HF. Make sure your Modal secret `huggingface-secret` is set to a valid key. **Note this is not the same HF key used for the SGT model**.
+⚠️ **Important**: The modal deploy script loads the `OUTPUT_PROTECTION_IMAGE` from AWS ECR. Update this as needed.
+
+⚠️ **Important**: The Modal deployment script loads the `Qwen/Qwen3-32B` model from Hugging Face. Ensure your Modal `huggingface-secret` is configured with a valid HF token. This token may differ from the HF token used for SGT model access.
 
 - Update the [docker-compose](./docker-compose.yaml) `stainedglass` service with your modal API keys to ensure SGT proxy can communicate with upstream Modal.
 
