@@ -11,10 +11,10 @@ SafeClaw is an [OpenClaw](https://docs.openclaw.ai) agent with access to [Protop
 - [📋 Requirements](#requirements)
 - [⚙️ Setup](#setup)
 - [Setup OpenClaw Browsing Tool](#setup-openclaw-browsing-tool)
-- [Demo Candidate 1: (Financial Data 📈 Using the Chat Interface).](#demo-candidate-1-financial-data--using-the-chat-interface)
-- [Demo Candidate 2 (Portfolio Monitoring Agent ⏱️ Using cron job).](#demo-candidate-2-portfolio-monitoring-agent-️-using-cron-job)
-- [Demo Candidate 3 (✉️ Email scanning/report).](#demo-candidate-3-email-scanningreport)
-- [Demo Candidate 4 (🔎 PII Scanner).](#demo-candidate-4-pii-scanner)
+- [Example 1: (Financial Data 📈 Using the Chat Interface).](#demo-candidate-1-financial-data--using-the-chat-interface)
+- [Example 2 (Portfolio Monitoring Agent ⏱️ Using cron job).](#demo-candidate-2-portfolio-monitoring-agent-️-using-cron-job)
+- [Example 3 (✉️ Email scanning/report).](#demo-candidate-3-email-scanningreport)
+- [Example 4 (🔎 PII Scanner).](#demo-candidate-4-pii-scanner)
 - [Data Sources Integration](#data-sources-integration-)
     - [Google Gmail](#1-google-gmail-integration)
 - [Other Agent Use Cases](#other-agent-use-cases)
@@ -109,7 +109,7 @@ docker compose exec openclaw-gateway openclaw tui
 
 ---
 
-# Demo Candidate 1: (Financial Data 📈 Using the Chat Interface).
+# Example 1: (Financial Data 📈 Using the Chat Interface).
 User uses the OpenClaw chat interface to work on financial data analysis.
 
 1. Copy the [demo data](./examples/1-financial-data/documents/) to the OpenClaw workspace: `~/.openclaw/workspace-safeclaw/`.
@@ -123,7 +123,7 @@ chmod -R a+r ~/.openclaw/workspace-safeclaw/financial-data
 
 ---
 
-# Demo Candidate 2 (Portfolio Monitoring Agent ⏱️ Using cron job).
+# Example 2 (Portfolio Monitoring Agent ⏱️ Using cron job).
 OpenClaw agent scheduled task to generate a report based on local portfolio data and web search. The resulting report is posted on Slack.
 
 ## 1. Demo data: 
@@ -244,7 +244,7 @@ docker compose exec openclaw-gateway openclaw cron run [job-id]
 
 ---
 
-# Demo Candidate 3 (Email scanning/report).
+# Example 3 (Email scanning/report).
 Sends a report to Slack each day with a list of action items based on new emails.
 
 1. Follow the steps to [setup OpenClaw Gmail Integration](#1-google-gmail-integration).
@@ -266,15 +266,15 @@ docker compose exec openclaw-gateway openclaw cron list
 docker compose exec openclaw-gateway openclaw cron run [job-id]
 ```
 
-# Demo Candidate 4 (PII Scanner)
+# Example 4 (PII Scanner)
 Sorts and sends a report to slack when files are uploaded to a local directory, stating whether the files contained PII.
 
 1. Follow the steps to [setup Slack Integration](#2-setup-slack-integration).
 2. Copy the [demo data and task instructions](./examples/4-pii-scanner/) to the OpenClaw workspace: `~/.openclaw/workspace-safeclaw/`.
     ```bash
     cp -r examples/4-pii-scanner ~/.openclaw/workspace-safeclaw/pii-scanner
-    mkdir ~/.openclaw/workspace-safeclaw/data-guardian-pii-scanner/no-pii
-    mkdir ~/.openclaw/workspace-safeclaw/data-guardian-pii-scanner/yes-pii
+    mkdir ~/.openclaw/workspace-safeclaw/pii-scanner/data-guardian-pii-scanner/no-pii
+    mkdir ~/.openclaw/workspace-safeclaw/pii-scanner/data-guardian-pii-scanner/yes-pii
     chmod -R a+r ~/.openclaw/workspace-safeclaw/pii-scanner
     ```
 3. Register the [`pii_scanner`](./cron/pii_scanner.sh) OpenClaw cron task:
