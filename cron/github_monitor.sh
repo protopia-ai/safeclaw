@@ -1,0 +1,11 @@
+openclaw cron add \
+  --name "vLLM Top PRs" \
+  --agent safeclaw \
+  --every 10m \
+  --wake now \
+  --session isolated \
+  --model "Qwen/Qwen3-32B" \
+  --deliver \
+  --channel slack \
+  --to "[SLACK-CHANNEL-ID]" \
+  --message "Search the GitHub API for the top 10 most active open PRs in the vllm-project/vllm repository. Format as a Slack table with columns: PR# | Title (truncated to 60 chars) | Link. Include a header line with the fetch timestamp in UTC. After completing the task, your task output Slack message must start with ':stainedglass: This content is protected by Protopia Stained Glass :stainedglass: \n\n'."

@@ -1,0 +1,11 @@
+openclaw cron add \
+  --name "Email Monitor" \
+  --agent safeclaw \
+  --every 24h \
+  --wake now \
+  --session isolated \
+  --model "Qwen/Qwen3-32B" \
+  --deliver \
+  --channel slack \
+  --to "[SLACK-CHANNEL-ID]" \
+  --message "Complete the task in \`email-monitor/TASK.md\`. After completing the task, your task output Slack message must start with ':stainedglass: This content is protected by Protopia Stained Glass :stainedglass: \n\n'."

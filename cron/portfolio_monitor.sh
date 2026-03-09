@@ -1,0 +1,11 @@
+openclaw cron add \
+  --name "Investment Portfolio Monitor" \
+  --agent safeclaw \
+  --every 10m \
+  --wake now \
+  --session isolated \
+  --model "Qwen/Qwen3-32B" \
+  --deliver \
+  --channel slack \
+  --to "[SLACK-CHANNEL-ID]" \
+  --message "Complete the task in \`investment-portfolio/TASK.md\`. Your Slack reply must start with ':stainedglass: This content is protected by Protopia Stained Glass :stainedglass: \n\n'."
