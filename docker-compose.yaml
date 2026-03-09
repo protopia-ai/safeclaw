@@ -64,7 +64,7 @@ services:
       GOG_KEYRING_PASSWORD: "safeclaw"
     volumes:
       # Agent config (optional, auto-generated if missing)
-      - $HOME/.openclaw/openclaw.json:/home/node/.openclaw/openclaw.json
+      - $HOME/.openclaw/:/home/node/.openclaw/
       # SafeClaw agent workspace
       - $HOME/.openclaw/workspace-safe-claw:/home/node/.openclaw/workspace-safe-claw
     ports:
@@ -118,7 +118,7 @@ services:
       BROWSER: echo
     volumes:
       # Agent config (optional, auto-generated if missing)
-      - $HOME/.openclaw/openclaw.json:/home/node/.openclaw/openclaw.json
+      - $HOME/.openclaw/:/home/node/.openclaw/
       # SafeClaw agent workspace
       - $HOME/.openclaw/workspace-safe-claw:/home/node/.openclaw/workspace-safe-claw
     stdin_open: true
