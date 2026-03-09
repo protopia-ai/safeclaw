@@ -1,0 +1,134 @@
+---
+services:
+  ###############################
+  # Protopia StainedGlass Proxy #
+  ###############################
+  stainedglass:
+    image: stainedglass-proxy:1.49.2-e934ce8-dgx
+    environment:
+      SGP_SGT_PATH: Protopia/SGT-for-Qwen3-32B-swept-water-bfloat16
+      SGP_INFERENCE_SERVICE_HOST: "[INFERENCE-SERVICE-URL]"
+      SGP_DEVICE: cuda
+      SGP_OUTPUT_DECRYPTION: true
+      SGP_RECONSTRUCTION_MAX_SEQUENCE_LENGTH: 2048
+      SGP_RECONSTRUCTION_MAX_NUM_EMBEDDINGS: 2048
+      SGP_RECONSTRUCTION_MAX_BATCH_SIZE: 512
+      SGP_COMPILE_NOISE_LAYER_FORWARD: true
+      SGP_TOOL_PARSER: hermes
+      SGP_USE_AIOHTTP_FOR_UPSTREAM: true
+      HF_TOKEN: "${HF_TOKEN:-''}"
+      # Set these if your upstream inference service requires Modal authentication.
+      SGP_REQUEST_HEADERS_TO_ADD: "Modal-Key=${MODAL_KEY:-},Modal-Secret=${MODAL_SECRET:-}"
+      # Force PyTorch/Triton to use controlled cache paths
+      TRITON_CACHE_DIR: /home/stainedglass/.triton
+      TORCHINDUCTOR_CACHE_DIR: /home/stainedglass/.cache/torch/inductor
+      HF_HUB_CACHE: /home/stainedglass/.cache/hf-hub-cache
+    ports:
+      - name: proxy
+        target: 8600
+        published: "${PROXY_PORT:-0}"  # set to 8600 to not use a random port
+        protocol: tcp
+        app_protocol: http
+    healthcheck:
+      test: curl --fail http://localhost:8600/livez || exit 1
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 10s
+    volumes:
+      # Cache for HuggingFace Hub and inference engine data.
+      - inference-engine-cache:/home/stainedglass/.cache:rw
+      # Cache for compiled triton kernels.
+      - triton-cache:/home/stainedglass/.triton:rw
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              device_ids: ["0"] # Add/or remove available GPU IDs
+              capabilities: [gpu]
+
+  ##############
+  # 🦞 Gateway #
+  ##############
+  # source: https://github.com/openclaw/openclaw
+  openclaw-gateway:
+    image: ghcr.io/openclaw/openclaw:protopia-demo
+    environment:
+      HOME: /home/node
+      TERM: xterm-256color
+      # Auto-generated if empty.
+      OPENCLAW_GATEWAY_TOKEN: ${OPENCLAW_GATEWAY_TOKEN}
+      OPENCLAW_ALLOW_INSECURE_PRIVATE_WS: ${OPENCLAW_ALLOW_INSECURE_PRIVATE_WS:-}
+      # Google integration
+      GOG_KEYRING_PASSWORD: "safeclaw"
+    volumes:
+      # Agent config (optional, auto-generated if missing)
+      - $HOME/.openclaw/openclaw.json:/home/node/.openclaw/openclaw.json
+      # SafeClaw agent workspace
+      - $HOME/.openclaw/workspace-safe-claw:/home/node/.openclaw/workspace-safe-claw
+    ports:
+      # Gateway web UI, REST API, and health endpoints.
+      - "${OPENCLAW_GATEWAY_PORT:-18789}:18789"
+      # WebSocket bridge for CLI.
+      - "${OPENCLAW_BRIDGE_PORT:-18790}:18790"
+    init: true
+    restart: unless-stopped
+    command:
+      [
+        "node",
+        "dist/index.js",
+        "gateway",
+        "--bind",
+        "lan",
+        "--port",
+        "18789",
+      ]
+    healthcheck:
+      test:
+        [
+          "CMD",
+          "node",
+          "-e",
+          "fetch('http://127.0.0.1:18789/healthz').then((r)=>process.exit(r.ok?0:1)).catch(()=>process.exit(1))",
+        ]
+      interval: 30s
+      timeout: 5s
+      retries: 5
+      start_period: 20s
+    depends_on:
+      - stainedglass
+
+  ##########
+  # 🦞 CLI #
+  ##########
+  openclaw-cli:
+    image: ghcr.io/openclaw/openclaw:protopia-demo
+    network_mode: "service:openclaw-gateway"
+    cap_drop:
+      - NET_RAW
+      - NET_ADMIN
+    security_opt:
+      - no-new-privileges:true
+    environment:
+      HOME: /home/node
+      TERM: xterm-256color
+      OPENCLAW_GATEWAY_TOKEN: ${OPENCLAW_GATEWAY_TOKEN}
+      OPENCLAW_ALLOW_INSECURE_PRIVATE_WS: ${OPENCLAW_ALLOW_INSECURE_PRIVATE_WS:-}
+      BROWSER: echo
+    volumes:
+      # Agent config (optional, auto-generated if missing)
+      - $HOME/.openclaw/openclaw.json:/home/node/.openclaw/openclaw.json
+      # SafeClaw agent workspace
+      - $HOME/.openclaw/workspace-safe-claw:/home/node/.openclaw/workspace-safe-claw
+    stdin_open: true
+    tty: true
+    init: true
+    entrypoint: ["node", "dist/index.js"]
+    depends_on:
+      - openclaw-gateway
+      - stainedglass
+
+volumes:
+  triton-cache: # project-scoped triton cache shared by vLLM and SGTs
+  inference-engine-cache:
