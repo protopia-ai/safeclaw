@@ -1,0 +1,136 @@
+{
+  "students": [
+    {
+      "student": {
+        "name": "Priya Davis",
+        "student_id": "S8526039",
+        "dob": "1990-10-20",
+        "school": "North Valley High School",
+        "address": "896 Elm St, Denton, IL"
+      },
+      "academic": {
+        "gpa": 2.92,
+        "grades": {
+          "math": "A",
+          "english": "B",
+          "science": "C"
+        }
+      },
+      "support": {
+        "iep": true,
+        "attendance_alert": false,
+        "guardian_email": "priya.davis95 at sample.net"
+      }
+    },
+    {
+      "student": {
+        "name": "Carlos Johnson",
+        "student_id": "S4953027",
+        "dob": "1980-08-23",
+        "school": "Denton STEM Academy",
+        "address": "6316 Oak Ave, Plano, AZ"
+      },
+      "academic": {
+        "gpa": 3.11,
+        "grades": {
+          "math": "A",
+          "english": "C",
+          "science": "B"
+        }
+      },
+      "support": {
+        "iep": false,
+        "attendance_alert": false,
+        "guardian_email": "carlos.johnson36 at mail.test"
+      }
+    },
+    {
+      "student": {
+        "name": "Fatima Smith",
+        "student_id": "S9800791",
+        "dob": "1973-07-13",
+        "school": "Denton STEM Academy",
+        "address": "1320 Pine Rd, Phoenix, GA"
+      },
+      "academic": {
+        "gpa": 3.38,
+        "grades": {
+          "math": "C",
+          "english": "A",
+          "science": "C"
+        }
+      },
+      "support": {
+        "iep": true,
+        "attendance_alert": false,
+        "guardian_email": "fa***@mail.test"
+      }
+    },
+    {
+      "student": {
+        "name": "Hector Harris",
+        "student_id": "S6864740",
+        "dob": "1988-05-30",
+        "school": "Lakeside Middle School",
+        "address": "3111 Sunset Blvd, Madison, TX"
+      },
+      "academic": {
+        "gpa": 3.67,
+        "grades": {
+          "math": "C",
+          "english": "C",
+          "science": "C"
+        }
+      },
+      "support": {
+        "iep": true,
+        "attendance_alert": true,
+        "guardian_email": "hector.harris2 [at] corp.example"
+      }
+    },
+    {
+      "student": {
+        "name": "Leo Taylor",
+        "student_id": "S8471997",
+        "dob": "1960-03-24",
+        "school": "Lakeside Middle School",
+        "address": "8892 5th St, Chicago, WA"
+      },
+      "academic": {
+        "gpa": 2.88,
+        "grades": {
+          "math": "A",
+          "english": "A",
+          "science": "A"
+        }
+      },
+      "support": {
+        "iep": false,
+        "attendance_alert": false,
+        "guardian_email": "le***@corp.example"
+      }
+    },
+    {
+      "student": {
+        "name": "Ivy Taylor",
+        "student_id": "S5292557",
+        "dob": "1991-05-22",
+        "school": "Westfield Elementary",
+        "address": "8314 5th St, Boise, ID"
+      },
+      "academic": {
+        "gpa": 3.17,
+        "grades": {
+          "math": "A",
+          "english": "A",
+          "science": "C"
+        }
+      },
+      "support": {
+        "iep": true,
+        "attendance_alert": true,
+        "guardian_email": "ivy.taylor59 [at] sample.net"
+      }
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+employee_name,employee_id,ssn,salary,bank_account_last4,routing_number,home_address
+Fatima Thompson,5406,xxx-xx-1415,123118,3498,329703378,"6021 Maple Dr, Plano, CA"
+Jamal Thompson,8021,xxx-xx-5180,90459,5127,862880298,"7116 Cedar Ln, Phoenix, WA"
+Sam Harris,9538,127358615,131205,3810,261783107,"6541 5th St, Chicago, WA"
+Ivy Jackson,4179,***-**-5175,125878,4151,210015285,"1780 Maple Dr, Chicago, ID"
+Carlos Johnson,8638,xxx-xx-1206,110805,6083,712739895,"4545 Broadway, Seattle, CA"
+Uma Martinez,9958,527422117,156205,9695,704606128,"5224 Maple Dr, Austin, CA"
+Tina Miller,6442,527-58-3198,102656,1213,714630972,"7319 Broadway, Phoenix, WA"

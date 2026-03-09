@@ -1,0 +1,14 @@
+2025-11-15 ERROR leaked_token=sk-vn3NikGyQGYr97tGbxBr2mJvEHUsfWru aws_access_key_id=AKIAS5DBCUH4G5JZ8QI9 src_ip=241.143.157.118 service=db-proxy
+2025-09-23 ERROR leaked_token=sk-JNJ2XuiboBZ6Zk7JQ4s4BZwxIBZ2Acnx aws_access_key_id=AKIAMV82QFQNODK6XYAQ src_ip=40.134.207.33 service=scheduler
+2024-02-27 ERROR leaked_token=sk-ld6zVC87qzmqZ5puIAtde5EpMPUZHDda aws_access_key_id=AKIA4QW1A5XK892846J1 src_ip=170.33.55.38 service=search-indexer
+2024-05-05 ERROR leaked_token=sk-vLWaj7hCwwdcqJL6FT7UdXam3uVIsvmh aws_access_key_id=AKIAEG7UI3CE2DA436C7 src_ip=117.137.60.183 service=auth-service
+2024-09-14 ERROR leaked_token=sk-yfol55KIvPYdQV1lPbhYY3nsv0Z4WMjM aws_access_key_id=AKIAAD02XB1HKBORVX7N src_ip=214.188.124.14 service=search-indexer
+2026-02-05 ERROR leaked_token=sk-SpmzahhaXBkGeXtVtqypi8F5feOtnGNs aws_access_key_id=AKIANRNMBC0FSKWPF60V src_ip=215.173.180.132 service=db-proxy
+2025-01-25 ERROR leaked_token=sk-FTGDIcWw1kisRIvijvDQHCH18FxuTh5t aws_access_key_id=AKIAGOWH9ATV0QBH7B2X src_ip=127.18.86.84 service=etl-job
+2025-10-24 ERROR leaked_token=sk-zsAcjcC1hTr2uFuI2SeBeep9S32priCn aws_access_key_id=AKIAB7N5W86WJEYQAFS3 src_ip=36.186.222.131 service=scheduler
+2024-01-26 ERROR leaked_token=sk-iwVP5KbAwJH4aaeoSJAGR71fy3oimHYL aws_access_key_id=AKIARCWXQNPGW851YFL0 src_ip=60.197.248.230 service=api-gateway
+2026-02-06 ERROR leaked_token=sk-5sbFY2wyzHTAzrXXOIdZdbBtJjW1m0o5 aws_access_key_id=AKIA0TJXTHTV0YPL147A src_ip=86.133.41.158 service=worker
+2024-07-22 ERROR leaked_token=sk-spuO50KQOS7dsVCFC76bNpXdYY28HcLT aws_access_key_id=AKIAMRPRYNEOJ0GTIELL src_ip=4.243.147.29 service=api-gateway
+2024-04-23 ERROR leaked_token=sk-DK1iJDPuIzVXZlr7Dw5WXG2Db4paeAqZ aws_access_key_id=AKIA67SDTIIOCRGRZ80W src_ip=212.153.121.16 service=search-indexer
+2025-05-03 ERROR leaked_token=sk-78XLkIeJkjRTDbdQqXYdpwMNiBXxHr7Q aws_access_key_id=AKIALO673E87146LAJIX src_ip=96.77.46.221 service=search-indexer
+2025-10-05 ERROR leaked_token=sk-t0qstno97dIH2n890PMEwpqARKCtbL7c aws_access_key_id=AKIAC85FP3N2WEPSMJDW src_ip=39.138.20.153 service=db-proxy

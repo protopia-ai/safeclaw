@@ -1,0 +1,23 @@
+Compensation adjustment for Bob Thomas
+SSN: SSN ending 1855
+Salary: $118946
+Bank routing: 625721726
+Card on file: 4111-6920-2278-4615
+
+Compensation adjustment for Jamal Smith
+SSN: SSN ending 9294
+Salary: $155575
+Bank routing: 986217618
+Card on file: 4111-3412-1381-8300
+
+Compensation adjustment for Maya Davis
+SSN: ***-**-7572
+Salary: $132822
+Bank routing: 958536695
+Card on file: 4111-9743-4209-2509
+
+Compensation adjustment for Tina Smith
+SSN: xxx-xx-3029
+Salary: $72581
+Bank routing: 763138326
+Card on file: 5555-3122-7884-6324

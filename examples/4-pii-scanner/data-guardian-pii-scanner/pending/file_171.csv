@@ -1,0 +1,9 @@
+service,cpu_percent,latency_ms,date,note
+etl-job,46,379,2025-06-18,routine telemetry
+api-gateway,5,177,2025-12-07,Reference id 4111-1111-1111 is test data.
+worker,95,64,2024-03-13,Order code 123-45-678 is not an SSN.
+api-gateway,32,67,2025-08-26,Order code 123-45-678 is not an SSN.
+db-proxy,44,323,2024-06-04,Template placeholder firstname.lastname@example.com.
+etl-job,33,148,2024-01-04,routine telemetry
+worker,25,313,2025-04-02,routine telemetry
+search-indexer,59,159,2025-11-29,Order code 123-45-678 is not an SSN.

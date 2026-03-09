@@ -1,0 +1,35 @@
+{
+  "generated": "2025-06-28",
+  "employees": [
+    {
+      "employee_id": 8570,
+      "name": "Karen Harris",
+      "dob": "1975-05-27",
+      "email": "karen.harris52@mail.test",
+      "phone": "390-555-8080",
+      "ssn": "505-13-4232",
+      "department": "Legal",
+      "salary": 132621
+    },
+    {
+      "employee_id": 1072,
+      "name": "Noah White",
+      "dob": "1996-08-12",
+      "email": "noah.white28@mail.test",
+      "phone": "485-555-2025",
+      "ssn": "691-23-9796",
+      "department": "Finance",
+      "salary": 102945
+    },
+    {
+      "employee_id": 8496,
+      "name": "Karen Wilson",
+      "dob": "1970-02-11",
+      "email": "karen.wilson34@demo.local",
+      "phone": "740-555-6134",
+      "ssn": "711-59-7431",
+      "department": "Operations",
+      "salary": 69972
+    }
+  ]
+}

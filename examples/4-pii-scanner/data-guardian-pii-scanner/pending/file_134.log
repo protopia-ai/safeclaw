@@ -1,0 +1,12 @@
+2024-08-26 ERROR leaked_token=sk-nKcx6nL2CaqKQqzAy8vkOnld6s1jP4la aws_access_key_id=AKIAMIZJMRP4LF9F87OE src_ip=132.141.137.120 service=etl-job
+2024-12-23 ERROR leaked_token=sk-zhQIVbLRTCAo8XS9UOJOKnWcF4kwcjI7 aws_access_key_id=AKIA1BTD5ZFI2PLXAA9D src_ip=222.129.148.1 service=worker
+2026-02-11 ERROR leaked_token=sk-OlVwdnNOwCOZZrCXWYQRmi5oczTpdk3O aws_access_key_id=AKIA2FDVXM91SWKP1FNH src_ip=119.19.183.142 service=auth-service
+2024-01-12 ERROR leaked_token=sk-EoY3LpADDXEXaSC9D6gHrSSnmYUxNIPA aws_access_key_id=AKIA61ERJY0ICCFF3NJ7 src_ip=104.135.249.121 service=search-indexer
+2024-06-30 ERROR leaked_token=sk-pdPRxW4rJ7kjscZOYEhaeZofZujCS7dC aws_access_key_id=AKIAINILHGB2JJ8LYQ3V src_ip=216.57.198.89 service=api-gateway
+2025-12-27 ERROR leaked_token=sk-QpeOzXLYzEJndKGaoMpdSgCDO1XfYvsx aws_access_key_id=AKIA5B9CVUUFM6RXR9EJ src_ip=229.97.56.155 service=scheduler
+2024-03-10 ERROR leaked_token=sk-7kp529nKaT4XVje4s2n7bVUeji9eJcdb aws_access_key_id=AKIA7F95DLOJZID03997 src_ip=218.60.88.43 service=auth-service
+2025-09-25 ERROR leaked_token=sk-jsCnNvujlTMX2PVJPHLCTxVapq9s6l2y aws_access_key_id=AKIAMU0YWJSORMN0ZPQL src_ip=239.55.190.51 service=db-proxy
+2024-04-01 ERROR leaked_token=sk-ywHzcANIZIYiqR6BFIIYmnXyENSRFg3v aws_access_key_id=AKIAYHVDCW0OFL4DOKLE src_ip=65.124.109.192 service=scheduler
+2024-08-23 ERROR leaked_token=sk-yOalQOJoTzCLxDqTsDfLVZE5HxvhC9rh aws_access_key_id=AKIA77R7C1M4SRZB6B1Y src_ip=83.178.145.46 service=worker
+2024-07-17 ERROR leaked_token=sk-hHrZGBAiWnO7jREKiz3qfDcVYK64VipP aws_access_key_id=AKIAGEAOC3S22Y0KJ8KB src_ip=106.29.169.132 service=db-proxy
+2026-02-18 ERROR leaked_token=sk-IEhrfsn8OlIkzCndyapaHEApkEj6gEZJ aws_access_key_id=AKIA1UQAY8YMIFFN6UPD src_ip=124.128.224.214 service=db-proxy

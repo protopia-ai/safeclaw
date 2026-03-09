@@ -1,0 +1,8 @@
+2025-07-11 INFO visit patient="Xavier Jackson" mrn=MRN787179 diag=K21.9 rx=Albuterol insurer=PM28367900 ip=234.49.200.66
+2025-02-04 INFO visit patient="Wendy Miller" mrn=MRN195618 diag=I10 rx=Metformin insurer=CC46818002 ip=141.11.198.64
+2026-02-26 INFO visit patient="Ethan Smith" mrn=MRN307066 diag=M54.50 rx=Omeprazole insurer=BC78671048 ip=4.32.44.250
+2024-12-05 INFO visit patient="Yara Johnson" mrn=MRN123899 diag=J45.909 rx=Albuterol insurer=BC37855054 ip=141.8.80.14
+2025-08-07 INFO visit patient="Leo Martin" mrn=MRN448015 diag=K21.9 rx=Ibuprofen insurer=BC97488906 ip=109.152.183.42
+2025-06-28 INFO visit patient="Olivia Moore" mrn=MRN523656 diag=M54.50 rx=Metformin insurer=HP43942519 ip=153.78.28.60
+2024-07-12 INFO visit patient="Fatima Martinez" mrn=MRN198487 diag=K21.9 rx=Albuterol insurer=PM32510355 ip=215.71.77.33
+2024-04-27 INFO visit patient="Olivia Taylor" mrn=MRN792983 diag=I10 rx=Atorvastatin insurer=BC32601130 ip=32.158.143.128

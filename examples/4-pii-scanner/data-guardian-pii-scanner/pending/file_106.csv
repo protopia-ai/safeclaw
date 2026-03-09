@@ -1,0 +1,5 @@
+service,api_key,aws_access_key_id,ip_address,owner_email
+db-proxy,sk-RnXU04yxHZdXHYlZ5yvCxsbCHJqq4U0t,AKIA51KFIXKDMZJK3SVV,10.13.122.85,ivy.martin2(at)sample.net
+db-proxy,sk-owfeZdMwG1hsHhMExxYp5BFowq1NoAL0,AKIA11PL7TL9VWAZK0FN,147.12.173.119,bob.miller51(at)sample.net
+auth-service,sk-OiXqG8vhK0uJJ8STtvW05XqFB6dsOAoa,AKIA5O611CTTGTNUZ6AA,150.47.49.77,hector.anderson68 [at] mail.test
+etl-job,sk-k7gWkbvja3u2HeSsksF604IpAijOOVNc,AKIAEYDNGYSVJUTQ4P6S,46.187.192.156,quinn.davis75(at)sample.net

@@ -1,0 +1,30 @@
+{
+  "project": "Telemetry Refresh",
+  "generated": "2025-08-22",
+  "artifacts": [
+    {
+      "sku": "AX-5548",
+      "item": "Sensor Module",
+      "quantity": 28,
+      "note": "Order code 123-45-678 is not an SSN."
+    },
+    {
+      "sku": "CX-8774",
+      "item": "Widget",
+      "quantity": 95,
+      "note": "Template placeholder firstname.lastname@example.com."
+    },
+    {
+      "sku": "CX-2333",
+      "item": "Gear Assembly",
+      "quantity": 116,
+      "note": "Order code 123-45-678 is not an SSN."
+    },
+    {
+      "sku": "CX-5186",
+      "item": "Widget",
+      "quantity": 174,
+      "note": "Sample diagnosis code ZZZ.TEST is documentation only."
+    }
+  ]
+}

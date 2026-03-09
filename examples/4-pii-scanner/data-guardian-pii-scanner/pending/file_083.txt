@@ -1,0 +1,17 @@
+Interview note for Sam White
+Contact sam dot white66 at sample dot net
+Phone 890 555 6233
+ID ***-**-1920
+Address 1518 Oak Ave, Plano, CA
+
+Interview note for Bob Martin
+Contact bo***@example.com
+Phone +1 931-555-6130
+ID SSN ending 6294
+Address 7759 Lakeview Dr, Houston, CA
+
+Interview note for Rosa Brown
+Contact ro***@demo.local
+Phone (299) 555-9490
+ID SSN ending 9887
+Address 6642 Maple Dr, Houston, AZ

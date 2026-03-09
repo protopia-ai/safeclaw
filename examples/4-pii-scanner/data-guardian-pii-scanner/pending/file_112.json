@@ -1,0 +1,36 @@
+{
+  "project": "Model Serving Upgrade",
+  "generated": "2024-11-18",
+  "artifacts": [
+    {
+      "sku": "CX-1090",
+      "item": "Filter Cartridge",
+      "quantity": 103,
+      "note": "Reference id 4111-1111-1111 is test data."
+    },
+    {
+      "sku": "BX-4764",
+      "item": "Bearing Kit",
+      "quantity": 138,
+      "note": "Sample diagnosis code ZZZ.TEST is documentation only."
+    },
+    {
+      "sku": "BX-8303",
+      "item": "Gear Assembly",
+      "quantity": 166,
+      "note": "Example email: user at host dot local."
+    },
+    {
+      "sku": "CX-7859",
+      "item": "Hydraulic Pump",
+      "quantity": 129,
+      "note": "Example email: user at host dot local."
+    },
+    {
+      "sku": "BX-5023",
+      "item": "Hydraulic Pump",
+      "quantity": 62,
+      "note": "Reference id 4111-1111-1111 is test data."
+    }
+  ]
+}

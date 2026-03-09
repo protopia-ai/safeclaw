@@ -1,0 +1,23 @@
+Customer support notes
+
+Ticket: 518373
+Name: Wendy Anderson
+Email: wendy.anderson86@corp.example
+Phone: 648-555-9479
+Address: 7497 Oak Ave, Houston, CA
+Issue: Password reset and billing question.
+
+Ticket: 122056
+Name: Carlos Thomas
+Email: carlos.thomas76@mail.test
+Phone: 802-555-4608
+Address: 217 Oak Ave, Denton, CA
+Issue: Password reset and billing question.
+
+Ticket: 446479
+Name: Carlos Smith
+Email: carlos.smith10@mail.test
+Phone: 485-555-8953
+Address: 3610 Pine Rd, Atlanta, CA
+Issue: Password reset and billing question.
+

@@ -1,0 +1,35 @@
+Patient intake: Noah Thompson
+DOB: 2014-03-29
+MRN: MRN819799
+Diagnosis: Seasonal Allergies (K21.9)
+Medication: Albuterol
+Insurance member id: PM86299304
+Phone: (488) 555-8745
+Address: 7758 Elm St, Boise, TX
+
+Patient intake: Fatima Miller
+DOB: 2010-11-09
+MRN: MRN979892
+Diagnosis: Back Pain (M54.50)
+Medication: Ibuprofen
+Insurance member id: PM69123713
+Phone: 653.555.8335
+Address: 2775 Pine Rd, Boise, IL
+
+Patient intake: Quinn Thompson
+DOB: 1976-09-01
+MRN: MRN600595
+Diagnosis: Type 2 Diabetes (F41.9)
+Medication: Albuterol
+Insurance member id: PM27969671
+Phone: 865-555-9844
+Address: 9691 Oak Ave, Austin, AZ
+
+Patient intake: Wendy Moore
+DOB: 1987-10-17
+MRN: MRN941147
+Diagnosis: Seasonal Allergies (I10)
+Medication: Sertraline
+Insurance member id: PM55972241
+Phone: 450-555-4577
+Address: 4084 Sunset Blvd, Plano, TX

@@ -1,0 +1,99 @@
+{
+  "records": [
+    {
+      "patient": {
+        "name": "Alice Taylor",
+        "dob": "2016-05-20",
+        "address": "3773 Cedar Ln, Houston, ID",
+        "email": "alice.taylor46 [at] demo.local",
+        "mrn": "MRN996387"
+      },
+      "encounter": {
+        "facility": "Northside Medical Center",
+        "visit_date": "2025-01-15",
+        "diagnosis": "Back Pain",
+        "icd10": "K21.9",
+        "prescriptions": [
+          "Ibuprofen",
+          "Sertraline",
+          "Metformin"
+        ]
+      },
+      "billing": {
+        "insurance": "Apex Health",
+        "member_id": "BC24460728",
+        "card_on_file": "4111-6688-6522-5932"
+      }
+    },
+    {
+      "patient": {
+        "name": "Yara Anderson",
+        "dob": "1973-08-07",
+        "address": "5095 5th St, Phoenix, ID",
+        "email": "yara.anderson38(at)sample.net",
+        "mrn": "MRN119056"
+      },
+      "encounter": {
+        "facility": "Oak Grove Pediatrics",
+        "visit_date": "2024-02-06",
+        "diagnosis": "Hypertension",
+        "icd10": "I10",
+        "prescriptions": [
+          "Albuterol"
+        ]
+      },
+      "billing": {
+        "insurance": "Apex Health",
+        "member_id": "BC76287349",
+        "card_on_file": "5555-3769-2691-3799"
+      }
+    },
+    {
+      "patient": {
+        "name": "Zane Smith",
+        "dob": "1994-02-20",
+        "address": "8415 Pine Rd, Austin, TX",
+        "email": "zane.smith98(at)example.com",
+        "mrn": "MRN854919"
+      },
+      "encounter": {
+        "facility": "Mercy General",
+        "visit_date": "2024-06-01",
+        "diagnosis": "Back Pain",
+        "icd10": "F41.9",
+        "prescriptions": [
+          "Atorvastatin",
+          "Metformin"
+        ]
+      },
+      "billing": {
+        "insurance": "Community Care",
+        "member_id": "HP24413401",
+        "card_on_file": "5555-9325-2608-9720"
+      }
+    },
+    {
+      "patient": {
+        "name": "Xavier Taylor",
+        "dob": "1995-06-25",
+        "address": "7213 Oak Ave, Austin, GA",
+        "email": "xa***@mail.test",
+        "mrn": "MRN953116"
+      },
+      "encounter": {
+        "facility": "Oak Grove Pediatrics",
+        "visit_date": "2025-08-31",
+        "diagnosis": "Back Pain",
+        "icd10": "G43.909",
+        "prescriptions": [
+          "Ibuprofen"
+        ]
+      },
+      "billing": {
+        "insurance": "Blue Horizon",
+        "member_id": "HP34332788",
+        "card_on_file": "5555-4295-2551-4518"
+      }
+    }
+  ]
+}

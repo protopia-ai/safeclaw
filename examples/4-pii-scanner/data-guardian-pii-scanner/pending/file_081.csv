@@ -1,0 +1,9 @@
+service,cpu_percent,latency_ms,date,note
+auth-service,14,310,2025-04-08,Reference id 4111-1111-1111 is test data.
+auth-service,82,165,2025-01-11,Reference id 4111-1111-1111 is test data.
+worker,36,361,2025-09-04,Template placeholder firstname.lastname@example.com.
+search-indexer,76,383,2025-04-09,routine telemetry
+api-gateway,36,176,2025-06-07,Template placeholder firstname.lastname@example.com.
+worker,77,176,2025-05-12,Order code 123-45-678 is not an SSN.
+db-proxy,81,15,2025-09-12,Example email: user at host dot local.
+api-gateway,80,246,2025-04-23,Reference id 4111-1111-1111 is test data.

@@ -271,12 +271,9 @@ Sorts and sends a report to slack when files are uploaded to a local directory, 
 2. Copy the [demo data and task instructions](./examples/4-pii-scanner/) to the OpenClaw workspace: `~/.openclaw/workspace-safeclaw/`.
     ```bash
     cp -r examples/4-pii-scanner ~/.openclaw/workspace-safeclaw/pii-scanner
-    chmod -R a+r ~/.openclaw/workspace-safeclaw/pii-scanner
-    mkdir ~/.openclaw/workspace-safeclaw/data-guardian-pii-scanner/
-    mkdir ~/.openclaw/workspace-safeclaw/data-guardian-pii-scanner/pending
     mkdir ~/.openclaw/workspace-safeclaw/data-guardian-pii-scanner/no-pii
     mkdir ~/.openclaw/workspace-safeclaw/data-guardian-pii-scanner/yes-pii
-    chmod -R a+r ~/.openclaw/workspace-safeclaw/data-guardian-pii-scanner
+    chmod -R a+r ~/.openclaw/workspace-safeclaw/pii-scanner
     ```
 3. Register the [`pii_scanner`](./cron/pii_scanner.sh) OpenClaw cron task:
     ```bash
@@ -290,7 +287,7 @@ Sorts and sends a report to slack when files are uploaded to a local directory, 
     docker compose exec openclaw-gateway openclaw cron run [job-id]
     ```
 
-### Example Slack Report
+### Example Slack PII Scan Report
 ![demo-4](./screenshots/demo-4.png)
 
 # Data Sources Integration 📀

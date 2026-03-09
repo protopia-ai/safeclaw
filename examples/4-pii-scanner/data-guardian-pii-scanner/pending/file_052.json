@@ -1,0 +1,36 @@
+{
+  "project": "Model Serving Upgrade",
+  "generated": "2025-09-09",
+  "artifacts": [
+    {
+      "sku": "AX-5716",
+      "item": "Gear Assembly",
+      "quantity": 194
+    },
+    {
+      "sku": "AX-5194",
+      "item": "Filter Cartridge",
+      "quantity": 35
+    },
+    {
+      "sku": "BX-3027",
+      "item": "Bearing Kit",
+      "quantity": 183
+    },
+    {
+      "sku": "CX-3851",
+      "item": "Hydraulic Pump",
+      "quantity": 74
+    },
+    {
+      "sku": "AX-6651",
+      "item": "Gear Assembly",
+      "quantity": 199
+    },
+    {
+      "sku": "AX-3077",
+      "item": "Filter Cartridge",
+      "quantity": 153
+    }
+  ]
+}

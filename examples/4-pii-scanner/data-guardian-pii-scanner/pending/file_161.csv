@@ -1,0 +1,7 @@
+service,api_key,aws_access_key_id,ip_address,owner_email
+etl-job,sk-D93jluusrHVZX2tmOMFZrZGy3LprCOHx,AKIAQ0Q1R3W6LM3CGOEC,211.162.43.231,karen.anderson62 at sample.net
+db-proxy,sk-GMvo37Qal6ae9asmzuFNTL6zPcDQXuHH,AKIA9CUDIAO0A9BTOOL9,195.152.56.107,qu***@mail.test
+db-proxy,sk-2djA0nXMuoqTuVerBbJMIke7FT5G0wpE,AKIARX73CYPBZVQMTYW8,227.199.126.214,no***@demo.local
+auth-service,sk-5WZSHHm0gw2dQnB63dCk7F6KpyUI4ofy,AKIA8YIV4NMLTP636511,223.150.197.84,alice.miller35 at demo.local
+worker,sk-gv10d2AwlBibpXeA706I2jrveDDNGkG4,AKIARUWXUBUGQE2WY997,109.49.123.169,ti***@sample.net
+scheduler,sk-QDNtVy02aL6M2oEFYbapFzdtcjv5t6Tc,AKIAOL9CV48EYSGWZKJN,20.5.80.155,quinn.martin32(at)corp.example

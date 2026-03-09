@@ -1,0 +1,36 @@
+{
+  "project": "Telemetry Refresh",
+  "generated": "2025-01-15",
+  "artifacts": [
+    {
+      "sku": "CX-1629",
+      "item": "Bearing Kit",
+      "quantity": 50
+    },
+    {
+      "sku": "CX-9928",
+      "item": "Filter Cartridge",
+      "quantity": 45
+    },
+    {
+      "sku": "AX-5168",
+      "item": "Widget",
+      "quantity": 12
+    },
+    {
+      "sku": "AX-4635",
+      "item": "Gear Assembly",
+      "quantity": 101
+    },
+    {
+      "sku": "BX-6689",
+      "item": "Bearing Kit",
+      "quantity": 56
+    },
+    {
+      "sku": "AX-9992",
+      "item": "Hydraulic Pump",
+      "quantity": 148
+    }
+  ]
+}

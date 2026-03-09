@@ -1,0 +1,30 @@
+Customer support notes
+
+Ticket: 233096
+Name: Fatima Jackson
+Email: fatima.jackson96@corp.example
+Phone: 950-555-2934
+Address: 580 Elm St, Seattle, IL
+Issue: Password reset and billing question.
+
+Ticket: 375722
+Name: Quinn Martinez
+Email: quinn.martinez92@example.com
+Phone: 708-555-8457
+Address: 8468 Elm St, Denton, WA
+Issue: Password reset and billing question.
+
+Ticket: 485548
+Name: Sam Miller
+Email: sam.miller21@corp.example
+Phone: 305-555-2889
+Address: 3842 Main St, Denton, TX
+Issue: Password reset and billing question.
+
+Ticket: 594681
+Name: Hector Smith
+Email: hector.smith47@demo.local
+Phone: 353-555-3932
+Address: 679 Lakeview Dr, Houston, IL
+Issue: Password reset and billing question.
+

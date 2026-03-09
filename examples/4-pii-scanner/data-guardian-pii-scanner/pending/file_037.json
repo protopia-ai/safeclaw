@@ -1,0 +1,35 @@
+{
+  "generated": "2026-02-12",
+  "employees": [
+    {
+      "employee_id": 1149,
+      "name": "Carlos Davis",
+      "dob": "1974-10-24",
+      "email": "carlos.davis65@demo.local",
+      "phone": "582-555-1990",
+      "ssn": "732-91-8916",
+      "department": "Sales",
+      "salary": 118944
+    },
+    {
+      "employee_id": 9719,
+      "name": "Alice Johnson",
+      "dob": "1989-09-30",
+      "email": "alice.johnson53@example.com",
+      "phone": "217-555-9673",
+      "ssn": "839-45-9777",
+      "department": "HR",
+      "salary": 57246
+    },
+    {
+      "employee_id": 3937,
+      "name": "Quinn Harris",
+      "dob": "1969-10-20",
+      "email": "quinn.harris13@mail.test",
+      "phone": "446-555-4144",
+      "ssn": "734-77-5135",
+      "department": "HR",
+      "salary": 90038
+    }
+  ]
+}

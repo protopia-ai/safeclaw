@@ -1,0 +1,7 @@
+patient_name,dob,mrn,diagnosis,icd10,medication,provider,insurance_member_id,phone
+Jamal Jackson,1979-04-06,MRN395542,Back Pain,M54.50,Metformin,Northside Medical Center,PM50887250,904-555-9953
+Rosa Smith,2005-12-31,MRN540023,Seasonal Allergies,I10,Lisinopril,Starlight Clinic,HP29205127,270 555 2726
+Diana White,2011-05-06,MRN964498,Migraine,J45.909,Metformin,Northside Medical Center,HP38911791,468 555 3750
+Xavier Thompson,1985-02-19,MRN833877,Back Pain,E11.9,Omeprazole,Mercy General,HP57551250,477.555.8388
+Carlos Thomas,2012-02-10,MRN270474,Asthma,G43.909,Atorvastatin,Mercy General,BC69568180,(430) 555-3378
+Maya Davis,1959-05-27,MRN619083,Hypertension,K21.9,Sertraline,Valley Regional Hospital,HP94622607,(753) 555-2995

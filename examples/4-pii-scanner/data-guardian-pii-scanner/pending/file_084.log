@@ -1,0 +1,13 @@
+2025-05-23 INFO service=worker cpu=25 latency=88 status=ok
+2025-03-24 INFO service=scheduler cpu=65 latency=104 status=ok
+2025-12-17 INFO service=worker cpu=31 latency=363 status=ok
+2025-08-31 INFO service=search-indexer cpu=46 latency=381 status=ok
+2026-01-31 INFO service=db-proxy cpu=92 latency=127 status=ok
+2025-07-01 INFO service=db-proxy cpu=36 latency=157 status=ok
+2025-11-04 INFO service=etl-job cpu=82 latency=165 status=ok
+2025-03-11 INFO service=scheduler cpu=62 latency=377 status=ok
+2025-06-04 INFO service=search-indexer cpu=45 latency=281 status=ok
+2025-03-02 INFO service=scheduler cpu=58 latency=177 status=ok
+2026-01-19 INFO service=db-proxy cpu=69 latency=76 status=ok
+2025-04-03 INFO service=worker cpu=40 latency=284 status=ok
+2025-11-11 INFO service=search-indexer cpu=66 latency=160 status=ok

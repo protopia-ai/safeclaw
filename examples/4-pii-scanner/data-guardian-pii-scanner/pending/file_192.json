@@ -1,0 +1,148 @@
+{
+  "records": [
+    {
+      "patient": {
+        "name": "Ethan Davis",
+        "dob": "2003-02-12",
+        "address": "4646 Main St, Phoenix, TX",
+        "email": "ethan.davis84(at)sample.net",
+        "mrn": "MRN354962"
+      },
+      "encounter": {
+        "facility": "Starlight Clinic",
+        "visit_date": "2025-03-25",
+        "diagnosis": "Hypertension",
+        "icd10": "F41.9",
+        "prescriptions": [
+          "Sertraline",
+          "Omeprazole"
+        ]
+      },
+      "billing": {
+        "insurance": "Community Care",
+        "member_id": "PM10889929",
+        "card_on_file": "5555-6498-8335-7143"
+      }
+    },
+    {
+      "patient": {
+        "name": "Ivy Brown",
+        "dob": "2010-04-28",
+        "address": "5220 Pine Rd, Austin, IL",
+        "email": "ivy.brown82 at sample.net",
+        "mrn": "MRN919277"
+      },
+      "encounter": {
+        "facility": "Starlight Clinic",
+        "visit_date": "2025-07-10",
+        "diagnosis": "Type 2 Diabetes",
+        "icd10": "M54.50",
+        "prescriptions": [
+          "Metformin",
+          "Lisinopril",
+          "Albuterol"
+        ]
+      },
+      "billing": {
+        "insurance": "Community Care",
+        "member_id": "HP44762018",
+        "card_on_file": "5555-5465-8877-3038"
+      }
+    },
+    {
+      "patient": {
+        "name": "Leo Davis",
+        "dob": "1970-03-10",
+        "address": "6109 Cedar Ln, Austin, AZ",
+        "email": "leo.davis91(at)demo.local",
+        "mrn": "MRN453052"
+      },
+      "encounter": {
+        "facility": "Northside Medical Center",
+        "visit_date": "2025-09-11",
+        "diagnosis": "Type 2 Diabetes",
+        "icd10": "G43.909",
+        "prescriptions": [
+          "Metformin",
+          "Lisinopril"
+        ]
+      },
+      "billing": {
+        "insurance": "Apex Health",
+        "member_id": "CC96989024",
+        "card_on_file": "4111-1470-8542-8017"
+      }
+    },
+    {
+      "patient": {
+        "name": "Ethan Thomas",
+        "dob": "1964-06-18",
+        "address": "3999 Elm St, Atlanta, WA",
+        "email": "ethan.thomas44 [at] mail.test",
+        "mrn": "MRN247859"
+      },
+      "encounter": {
+        "facility": "Starlight Clinic",
+        "visit_date": "2025-04-14",
+        "diagnosis": "Asthma",
+        "icd10": "J45.909",
+        "prescriptions": [
+          "Lisinopril",
+          "Omeprazole",
+          "Ibuprofen"
+        ]
+      },
+      "billing": {
+        "insurance": "Blue Horizon",
+        "member_id": "CC64757437",
+        "card_on_file": "5555-1704-8421-7155"
+      }
+    },
+    {
+      "patient": {
+        "name": "Carlos Davis",
+        "dob": "2001-09-08",
+        "address": "9417 Lakeview Dr, Austin, TX",
+        "email": "carlos.davis99 at mail.test",
+        "mrn": "MRN263980"
+      },
+      "encounter": {
+        "facility": "Mercy General",
+        "visit_date": "2024-09-23",
+        "diagnosis": "Hypertension",
+        "icd10": "K21.9",
+        "prescriptions": [
+          "Metformin"
+        ]
+      },
+      "billing": {
+        "insurance": "Community Care",
+        "member_id": "HP31570400",
+        "card_on_file": "5555-4828-3514-2502"
+      }
+    },
+    {
+      "patient": {
+        "name": "Fatima Thompson",
+        "dob": "1956-08-30",
+        "address": "2375 Oak Ave, Atlanta, AZ",
+        "email": "fa***@demo.local",
+        "mrn": "MRN844362"
+      },
+      "encounter": {
+        "facility": "Starlight Clinic",
+        "visit_date": "2024-02-12",
+        "diagnosis": "Anxiety",
+        "icd10": "F41.9",
+        "prescriptions": [
+          "Omeprazole"
+        ]
+      },
+      "billing": {
+        "insurance": "Blue Horizon",
+        "member_id": "CC33519122",
+        "card_on_file": "4111-4881-9252-1234"
+      }
+    }
+  ]
+}

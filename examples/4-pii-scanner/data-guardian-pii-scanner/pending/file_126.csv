@@ -1,0 +1,6 @@
+patient_name,dob,mrn,diagnosis,icd10,medication,provider,insurance_member_id,phone
+Maya Thomas,2000-03-22,MRN661831,Migraine,I10,Sertraline,Valley Regional Hospital,HP46887628,643 555 2603
+Sam Moore,2014-03-13,MRN773048,Hypertension,E11.9,Albuterol,Valley Regional Hospital,BC57310105,768-555-9018
+Jamal Thomas,1987-02-26,MRN610183,Anxiety,K21.9,Ibuprofen,Starlight Clinic,BC90594695,(392) 555-2889
+Fatima Wilson,1998-09-27,MRN621986,Anxiety,M54.50,Omeprazole,Valley Regional Hospital,HP79742959,523-555-1612
+Victor Taylor,1957-10-06,MRN800832,Seasonal Allergies,E11.9,Albuterol,Mercy General,CC41624686,972.555.6107

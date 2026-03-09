@@ -1,0 +1,151 @@
+{
+  "records": [
+    {
+      "patient": {
+        "name": "Jamal Jackson",
+        "dob": "2006-12-14",
+        "address": "2332 Sunset Blvd, Denton, CA",
+        "email": "ja***@corp.example",
+        "mrn": "MRN511423"
+      },
+      "encounter": {
+        "facility": "Northside Medical Center",
+        "visit_date": "2024-06-10",
+        "diagnosis": "Depression",
+        "icd10": "M54.50",
+        "prescriptions": [
+          "Metformin",
+          "Sertraline"
+        ]
+      },
+      "billing": {
+        "insurance": "Blue Horizon",
+        "member_id": "HP30771106",
+        "card_on_file": "4111-3164-2447-6177"
+      }
+    },
+    {
+      "patient": {
+        "name": "Karen Anderson",
+        "dob": "1984-02-17",
+        "address": "520 Lakeview Dr, Plano, IL",
+        "email": "karen.anderson26(at)mail.test",
+        "mrn": "MRN879053"
+      },
+      "encounter": {
+        "facility": "Oak Grove Pediatrics",
+        "visit_date": "2024-05-11",
+        "diagnosis": "Seasonal Allergies",
+        "icd10": "K21.9",
+        "prescriptions": [
+          "Omeprazole",
+          "Albuterol",
+          "Sertraline"
+        ]
+      },
+      "billing": {
+        "insurance": "Blue Horizon",
+        "member_id": "HP76797878",
+        "card_on_file": "5555-2745-3392-3501"
+      }
+    },
+    {
+      "patient": {
+        "name": "Sam Miller",
+        "dob": "1973-05-07",
+        "address": "2742 Broadway, Chicago, TX",
+        "email": "sam.miller48 [at] example.com",
+        "mrn": "MRN625825"
+      },
+      "encounter": {
+        "facility": "Northside Medical Center",
+        "visit_date": "2025-10-15",
+        "diagnosis": "Hypertension",
+        "icd10": "E11.9",
+        "prescriptions": [
+          "Omeprazole",
+          "Lisinopril"
+        ]
+      },
+      "billing": {
+        "insurance": "Blue Horizon",
+        "member_id": "HP58074387",
+        "card_on_file": "5555-5394-6473-1312"
+      }
+    },
+    {
+      "patient": {
+        "name": "Wendy Thomas",
+        "dob": "2015-12-06",
+        "address": "5732 Sunset Blvd, Boise, WI",
+        "email": "we***@demo.local",
+        "mrn": "MRN644578"
+      },
+      "encounter": {
+        "facility": "Northside Medical Center",
+        "visit_date": "2025-09-24",
+        "diagnosis": "Anxiety",
+        "icd10": "E11.9",
+        "prescriptions": [
+          "Ibuprofen",
+          "Sertraline",
+          "Omeprazole"
+        ]
+      },
+      "billing": {
+        "insurance": "Apex Health",
+        "member_id": "PM87783536",
+        "card_on_file": "4111-7298-9464-5218"
+      }
+    },
+    {
+      "patient": {
+        "name": "Xavier Taylor",
+        "dob": "1988-08-16",
+        "address": "8514 Elm St, Seattle, GA",
+        "email": "xavier.taylor42 at sample.net",
+        "mrn": "MRN681031"
+      },
+      "encounter": {
+        "facility": "Mercy General",
+        "visit_date": "2024-02-27",
+        "diagnosis": "Anxiety",
+        "icd10": "J45.909",
+        "prescriptions": [
+          "Ibuprofen",
+          "Omeprazole",
+          "Lisinopril"
+        ]
+      },
+      "billing": {
+        "insurance": "Blue Horizon",
+        "member_id": "CC24697135",
+        "card_on_file": "5555-4212-5197-8625"
+      }
+    },
+    {
+      "patient": {
+        "name": "Tina Jackson",
+        "dob": "2012-06-06",
+        "address": "441 Lakeview Dr, Boise, AZ",
+        "email": "tina.jackson60(at)example.com",
+        "mrn": "MRN223500"
+      },
+      "encounter": {
+        "facility": "Mercy General",
+        "visit_date": "2024-12-11",
+        "diagnosis": "Migraine",
+        "icd10": "E11.9",
+        "prescriptions": [
+          "Albuterol",
+          "Sertraline"
+        ]
+      },
+      "billing": {
+        "insurance": "Blue Horizon",
+        "member_id": "HP47466318",
+        "card_on_file": "5555-4372-6316-4419"
+      }
+    }
+  ]
+}

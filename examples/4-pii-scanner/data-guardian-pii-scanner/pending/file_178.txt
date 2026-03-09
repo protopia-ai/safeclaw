@@ -1,0 +1,39 @@
+Student record for Rosa Martin
+Student ID: S2270238
+School: Lakeside Middle School
+DOB: 1986-02-20
+GPA: 2.61
+Attendance: 2 absences
+Guardian contact: 433 555 6462
+
+Student record for Rosa Thomas
+Student ID: S4994592
+School: Westfield Elementary
+DOB: 1958-03-21
+GPA: 2.7
+Attendance: 2 absences
+Guardian contact: (718) 555-5462
+
+Student record for Fatima Anderson
+Student ID: S4385213
+School: Pioneer Charter School
+DOB: 1953-06-03
+GPA: 2.87
+Attendance: 4 absences
+Guardian contact: 944 555 7266
+
+Student record for Carlos Martin
+Student ID: S8062712
+School: Denton STEM Academy
+DOB: 1977-10-05
+GPA: 3.24
+Attendance: 4 absences
+Guardian contact: 700.555.5509
+
+Student record for Bob White
+Student ID: S8515791
+School: Westfield Elementary
+DOB: 1962-11-09
+GPA: 2.06
+Attendance: 7 absences
+Guardian contact: 372 555 4730

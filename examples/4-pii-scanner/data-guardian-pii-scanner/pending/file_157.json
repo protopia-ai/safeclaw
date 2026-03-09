@@ -1,0 +1,122 @@
+{
+  "records": [
+    {
+      "patient": {
+        "name": "Bob Moore",
+        "dob": "1977-07-07",
+        "address": "7198 Maple Dr, Denton, WA",
+        "email": "bob.moore92 at mail.test",
+        "mrn": "MRN397679"
+      },
+      "encounter": {
+        "facility": "Oak Grove Pediatrics",
+        "visit_date": "2025-09-12",
+        "diagnosis": "Depression",
+        "icd10": "F41.9",
+        "prescriptions": [
+          "Omeprazole"
+        ]
+      },
+      "billing": {
+        "insurance": "Community Care",
+        "member_id": "HP53007705",
+        "card_on_file": "5555-1482-4073-2172"
+      }
+    },
+    {
+      "patient": {
+        "name": "Hector Thomas",
+        "dob": "2017-02-21",
+        "address": "7762 Oak Ave, Seattle, GA",
+        "email": "hector.thomas30(at)example.com",
+        "mrn": "MRN213344"
+      },
+      "encounter": {
+        "facility": "Oak Grove Pediatrics",
+        "visit_date": "2024-10-17",
+        "diagnosis": "Migraine",
+        "icd10": "F41.9",
+        "prescriptions": [
+          "Lisinopril",
+          "Sertraline"
+        ]
+      },
+      "billing": {
+        "insurance": "Pioneer Mutual",
+        "member_id": "BC53610351",
+        "card_on_file": "5555-5526-3120-4943"
+      }
+    },
+    {
+      "patient": {
+        "name": "Ethan Thompson",
+        "dob": "1969-01-24",
+        "address": "7325 Maple Dr, Madison, IL",
+        "email": "ethan.thompson3 at example.com",
+        "mrn": "MRN325678"
+      },
+      "encounter": {
+        "facility": "Valley Regional Hospital",
+        "visit_date": "2025-02-09",
+        "diagnosis": "Asthma",
+        "icd10": "J45.909",
+        "prescriptions": [
+          "Lisinopril"
+        ]
+      },
+      "billing": {
+        "insurance": "Pioneer Mutual",
+        "member_id": "HP97978219",
+        "card_on_file": "5555-3447-4594-7529"
+      }
+    },
+    {
+      "patient": {
+        "name": "Uma Thomas",
+        "dob": "2009-05-22",
+        "address": "7678 Sunset Blvd, Seattle, CA",
+        "email": "uma.thomas90 at demo.local",
+        "mrn": "MRN452788"
+      },
+      "encounter": {
+        "facility": "Northside Medical Center",
+        "visit_date": "2025-03-04",
+        "diagnosis": "Hypertension",
+        "icd10": "K21.9",
+        "prescriptions": [
+          "Sertraline",
+          "Omeprazole",
+          "Albuterol"
+        ]
+      },
+      "billing": {
+        "insurance": "Blue Horizon",
+        "member_id": "HP62278444",
+        "card_on_file": "4111-6193-9599-7531"
+      }
+    },
+    {
+      "patient": {
+        "name": "Zane Brown",
+        "dob": "1954-08-02",
+        "address": "1580 Main St, Phoenix, AZ",
+        "email": "zane.brown56(at)demo.local",
+        "mrn": "MRN208952"
+      },
+      "encounter": {
+        "facility": "Starlight Clinic",
+        "visit_date": "2026-01-05",
+        "diagnosis": "Hypertension",
+        "icd10": "E11.9",
+        "prescriptions": [
+          "Metformin"
+        ]
+      },
+      "billing": {
+        "insurance": "Community Care",
+        "member_id": "HP81037578",
+        "card_on_file": "4111-7821-5447-4237"
+      }
+    }
+  ]
+}

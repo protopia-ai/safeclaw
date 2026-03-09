@@ -1,0 +1,30 @@
+Customer support notes
+
+Ticket: 894139
+Name: Noah Thompson
+Email: noah.thompson69@mail.test
+Phone: 980-555-5054
+Address: 9861 Oak Ave, Atlanta, GA
+Issue: Password reset and billing question.
+
+Ticket: 181896
+Name: Wendy Jackson
+Email: wendy.jackson73@example.com
+Phone: 263-555-9972
+Address: 8381 Maple Dr, Austin, CA
+Issue: Password reset and billing question.
+
+Ticket: 221886
+Name: Karen Martin
+Email: karen.martin88@mail.test
+Phone: 934-555-9008
+Address: 1589 Sunset Blvd, Denton, WA
+Issue: Password reset and billing question.
+
+Ticket: 578987
+Name: Ethan Harris
+Email: ethan.harris73@example.com
+Phone: 772-555-8575
+Address: 5149 Main St, Seattle, IL
+Issue: Password reset and billing question.
+

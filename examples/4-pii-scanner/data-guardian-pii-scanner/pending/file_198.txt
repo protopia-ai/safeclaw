@@ -1,0 +1,26 @@
+Patient intake: Wendy Thompson
+DOB: 1987-06-07
+MRN: MRN484903
+Diagnosis: Asthma (I10)
+Medication: Omeprazole
+Insurance member id: HP96901417
+Phone: +1 552-555-8357
+Address: 4448 Maple Dr, Atlanta, WA
+
+Patient intake: Victor Smith
+DOB: 1985-05-18
+MRN: MRN564335
+Diagnosis: Seasonal Allergies (F41.9)
+Medication: Atorvastatin
+Insurance member id: BC77219245
+Phone: +1 932-555-5880
+Address: 3706 Elm St, Boise, GA
+
+Patient intake: Diana Smith
+DOB: 1972-07-01
+MRN: MRN251015
+Diagnosis: Depression (J45.909)
+Medication: Lisinopril
+Insurance member id: CC53580566
+Phone: 257-555-7024
+Address: 1103 Broadway, Chicago, GA

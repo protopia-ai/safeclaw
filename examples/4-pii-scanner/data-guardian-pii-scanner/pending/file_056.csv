@@ -1,0 +1,5 @@
+service,cpu_percent,latency_ms,date,note
+api-gateway,77,45,2026-02-23,Example email: user at host dot local.
+scheduler,20,207,2026-01-04,routine telemetry
+auth-service,93,46,2025-03-15,routine telemetry
+worker,26,310,2025-08-20,routine telemetry

@@ -1,0 +1,58 @@
+{
+  "profiles": [
+    {
+      "name": "Noah Thompson",
+      "dob": "1991-04-15",
+      "address": "1458 Cedar Ln, Boise, WA",
+      "email": "no***@sample.net",
+      "phone": "(963) 555-9406",
+      "government_id": "711507522",
+      "payment": "5555-3001-1519-6505"
+    },
+    {
+      "name": "Ivy Brown",
+      "dob": "1961-10-12",
+      "address": "7726 Pine Rd, Madison, ID",
+      "email": "ivy.brown78 at example.com",
+      "phone": "234 555 2286",
+      "government_id": "758-48-4510",
+      "payment": "4111-7814-6118-2494"
+    },
+    {
+      "name": "Quinn Martin",
+      "dob": "1971-10-27",
+      "address": "9507 5th St, Chicago, IL",
+      "email": "quinn.martin97 [at] example.com",
+      "phone": "843-555-3161",
+      "government_id": "602383264",
+      "payment": "4111-1005-7827-7586"
+    },
+    {
+      "name": "Priya Miller",
+      "dob": "2009-10-27",
+      "address": "9326 Cedar Ln, Madison, ID",
+      "email": "priya.miller41(at)corp.example",
+      "phone": "526.555.3005",
+      "government_id": "475-94-4110",
+      "payment": "5555-6166-7002-9892"
+    },
+    {
+      "name": "Fatima Harris",
+      "dob": "1985-01-31",
+      "address": "986 Elm St, Austin, ID",
+      "email": "fatima.harris14(at)mail.test",
+      "phone": "625.555.4881",
+      "government_id": "SSN ending 8177",
+      "payment": "5555-9357-5305-3500"
+    },
+    {
+      "name": "Wendy Miller",
+      "dob": "1965-11-12",
+      "address": "4360 Maple Dr, Madison, IL",
+      "email": "we***@demo.local",
+      "phone": "852-555-6634",
+      "government_id": "SSN ending 9166",
+      "payment": "5555-5008-1724-1992"
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+employee_name,employee_id,ssn,salary,bank_account_last4,routing_number,home_address
+Wendy Smith,3626,780249787,69334,9746,599310898,"1103 Lakeview Dr, Atlanta, GA"
+Wendy Miller,8246,***-**-2435,62979,2051,288639417,"8228 Main St, Chicago, WI"
+Jamal Thomas,9359,***-**-7015,104608,2023,548150418,"9067 Pine Rd, Denton, ID"
+Alice Wilson,2199,488-55-1522,66520,7860,453869276,"6398 Maple Dr, Austin, WI"
+Rosa Martin,7064,604608607,187353,2797,415061230,"6610 Elm St, Houston, TX"
+Victor Taylor,4414,***-**-1239,185138,8176,589774910,"8480 Lakeview Dr, Plano, WA"

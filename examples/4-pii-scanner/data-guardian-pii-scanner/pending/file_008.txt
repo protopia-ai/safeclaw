@@ -1,0 +1,16 @@
+Customer support notes
+
+Ticket: 916232
+Name: Yara Brown
+Email: yara.brown55@mail.test
+Phone: 380-555-9486
+Address: 7711 Main St, Houston, TX
+Issue: Password reset and billing question.
+
+Ticket: 940346
+Name: Olivia Davis
+Email: olivia.davis60@corp.example
+Phone: 973-555-8251
+Address: 8370 Lakeview Dr, Atlanta, CA
+Issue: Password reset and billing question.
+

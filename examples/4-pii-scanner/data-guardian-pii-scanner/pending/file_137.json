@@ -1,0 +1,24 @@
+{
+  "project": "Model Serving Upgrade",
+  "generated": "2025-06-28",
+  "artifacts": [
+    {
+      "sku": "CX-8296",
+      "item": "Bearing Kit",
+      "quantity": 158,
+      "note": "Template placeholder firstname.lastname@example.com."
+    },
+    {
+      "sku": "BX-3110",
+      "item": "Gear Assembly",
+      "quantity": 134,
+      "note": "Order code 123-45-678 is not an SSN."
+    },
+    {
+      "sku": "AX-1064",
+      "item": "Widget",
+      "quantity": 87,
+      "note": "Template placeholder firstname.lastname@example.com."
+    }
+  ]
+}

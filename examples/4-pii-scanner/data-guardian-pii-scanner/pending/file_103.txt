@@ -1,0 +1,26 @@
+Patient intake: Priya Brown
+DOB: 1982-10-23
+MRN: MRN725535
+Diagnosis: Hypertension (F41.9)
+Medication: Ibuprofen
+Insurance member id: HP75176664
+Phone: +1 368-555-6650
+Address: 6054 Pine Rd, Atlanta, WA
+
+Patient intake: Priya Miller
+DOB: 1999-06-05
+MRN: MRN673751
+Diagnosis: Seasonal Allergies (G43.909)
+Medication: Lisinopril
+Insurance member id: HP72214463
+Phone: +1 958-555-9495
+Address: 8739 Maple Dr, Madison, ID
+
+Patient intake: Maya White
+DOB: 1994-10-07
+MRN: MRN934716
+Diagnosis: Seasonal Allergies (J45.909)
+Medication: Albuterol
+Insurance member id: HP83758724
+Phone: (241) 555-3576
+Address: 8694 Lakeview Dr, Houston, WA

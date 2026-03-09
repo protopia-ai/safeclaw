@@ -1,0 +1,29 @@
+{
+  "generated": "2025-11-09",
+  "records": [
+    {
+      "summary": "profile update Zane Smith",
+      "raw": "benefits record ssn=SSN ending 5561 address=4076 Elm St, Seattle, IL",
+      "metadata": {
+        "ip": "174.113.195.5",
+        "aws": "AKIAIBBBN4WH05HYJSL4"
+      }
+    },
+    {
+      "summary": "profile update Karen Thompson",
+      "raw": "Karen Thompson / karen.thompson2 at demo.local / +1 384-555-2805",
+      "metadata": {
+        "ip": "22.177.92.102",
+        "aws": "AKIAHQBDGP3LPSPVDJNJ"
+      }
+    },
+    {
+      "summary": "profile update Rosa Miller",
+      "raw": "benefits record ssn=xxx-xx-4347 address=8918 Elm St, Phoenix, IL",
+      "metadata": {
+        "ip": "2.152.4.214",
+        "aws": "AKIAQ5PM2MY26WZC8Y8H"
+      }
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+employee_name,employee_id,ssn,salary,bank_account_last4,routing_number,home_address
+Noah White,2555,xxx-xx-1437,90614,1315,435837195,"4278 Lakeview Dr, Denton, WA"
+Sam Thompson,4478,458-81-6392,55084,1042,230672365,"2892 Oak Ave, Madison, WA"
+Leo Wilson,3827,SSN ending 3677,143887,6206,553757828,"7272 Broadway, Madison, CA"
+Noah Davis,1227,365546427,176769,7587,799724051,"897 Pine Rd, Atlanta, WA"
+Leo Johnson,8849,***-**-3427,105046,2473,681651317,"5059 Broadway, Phoenix, TX"
+Wendy Anderson,9818,***-**-6353,82455,8256,983293871,"8955 Cedar Ln, Atlanta, WA"
+Zane Davis,5700,***-**-8797,181335,1716,765426168,"6007 Pine Rd, Boise, WI"
+Zane Johnson,4119,***-**-1099,139625,1602,258306410,"2348 Main St, Seattle, WA"

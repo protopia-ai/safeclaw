@@ -1,0 +1,147 @@
+{
+  "records": [
+    {
+      "patient": {
+        "name": "Leo Thomas",
+        "dob": "1996-10-11",
+        "address": "4566 Main St, Boise, AZ",
+        "email": "leo.thomas81 [at] corp.example",
+        "mrn": "MRN702095"
+      },
+      "encounter": {
+        "facility": "Mercy General",
+        "visit_date": "2025-06-18",
+        "diagnosis": "Seasonal Allergies",
+        "icd10": "G43.909",
+        "prescriptions": [
+          "Ibuprofen",
+          "Omeprazole",
+          "Sertraline"
+        ]
+      },
+      "billing": {
+        "insurance": "Blue Horizon",
+        "member_id": "HP22365824",
+        "card_on_file": "4111-1084-8368-5093"
+      }
+    },
+    {
+      "patient": {
+        "name": "Rosa Harris",
+        "dob": "1976-06-16",
+        "address": "8637 Elm St, Houston, AZ",
+        "email": "rosa.harris44 [at] corp.example",
+        "mrn": "MRN259489"
+      },
+      "encounter": {
+        "facility": "Valley Regional Hospital",
+        "visit_date": "2025-09-01",
+        "diagnosis": "Seasonal Allergies",
+        "icd10": "M54.50",
+        "prescriptions": [
+          "Ibuprofen"
+        ]
+      },
+      "billing": {
+        "insurance": "Pioneer Mutual",
+        "member_id": "PM43379590",
+        "card_on_file": "4111-5140-7533-7541"
+      }
+    },
+    {
+      "patient": {
+        "name": "Quinn Johnson",
+        "dob": "1967-09-25",
+        "address": "4935 Maple Dr, Chicago, IL",
+        "email": "quinn.johnson4(at)sample.net",
+        "mrn": "MRN608418"
+      },
+      "encounter": {
+        "facility": "Mercy General",
+        "visit_date": "2026-01-19",
+        "diagnosis": "Seasonal Allergies",
+        "icd10": "F41.9",
+        "prescriptions": [
+          "Sertraline",
+          "Metformin",
+          "Lisinopril"
+        ]
+      },
+      "billing": {
+        "insurance": "Blue Horizon",
+        "member_id": "HP19240577",
+        "card_on_file": "4111-9701-3852-6628"
+      }
+    },
+    {
+      "patient": {
+        "name": "Bob Thomas",
+        "dob": "1951-05-27",
+        "address": "6096 Broadway, Denton, ID",
+        "email": "bob.thomas50 [at] mail.test",
+        "mrn": "MRN723345"
+      },
+      "encounter": {
+        "facility": "Mercy General",
+        "visit_date": "2025-01-28",
+        "diagnosis": "Seasonal Allergies",
+        "icd10": "G43.909",
+        "prescriptions": [
+          "Lisinopril"
+        ]
+      },
+      "billing": {
+        "insurance": "Pioneer Mutual",
+        "member_id": "BC76201929",
+        "card_on_file": "5555-7926-4954-7284"
+      }
+    },
+    {
+      "patient": {
+        "name": "Noah Wilson",
+        "dob": "1950-01-29",
+        "address": "7868 Sunset Blvd, Atlanta, GA",
+        "email": "noah.wilson68(at)mail.test",
+        "mrn": "MRN305018"
+      },
+      "encounter": {
+        "facility": "Valley Regional Hospital",
+        "visit_date": "2025-06-27",
+        "diagnosis": "Migraine",
+        "icd10": "K21.9",
+        "prescriptions": [
+          "Omeprazole",
+          "Albuterol"
+        ]
+      },
+      "billing": {
+        "insurance": "Community Care",
+        "member_id": "BC13938307",
+        "card_on_file": "4111-8629-1339-8665"
+      }
+    },
+    {
+      "patient": {
+        "name": "Karen Davis",
+        "dob": "2005-11-22",
+        "address": "6247 Pine Rd, Seattle, IL",
+        "email": "karen.davis65 at sample.net",
+        "mrn": "MRN324568"
+      },
+      "encounter": {
+        "facility": "Northside Medical Center",
+        "visit_date": "2026-01-23",
+        "diagnosis": "Seasonal Allergies",
+        "icd10": "K21.9",
+        "prescriptions": [
+          "Sertraline"
+        ]
+      },
+      "billing": {
+        "insurance": "Apex Health",
+        "member_id": "CC19549310",
+        "card_on_file": "4111-2549-8561-1372"
+      }
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+Customer support notes
+
+Ticket: 953266
+Name: Olivia Miller
+Email: olivia.miller87@corp.example
+Phone: 829-555-2388
+Address: 2294 Elm St, Plano, CA
+Issue: Password reset and billing question.
+
+Ticket: 291936
+Name: Jamal Brown
+Email: jamal.brown48@mail.test
+Phone: 723-555-7364
+Address: 6952 Pine Rd, Seattle, WA
+Issue: Password reset and billing question.
+
+Ticket: 766371
+Name: Fatima Thompson
+Email: fatima.thompson69@mail.test
+Phone: 768-555-3733
+Address: 8122 Cedar Ln, Austin, CA
+Issue: Password reset and billing question.
+
+Ticket: 749498
+Name: Karen Martin
+Email: karen.martin7@corp.example
+Phone: 209-555-8939
+Address: 2336 Maple Dr, Seattle, GA
+Issue: Password reset and billing question.
+

@@ -1,0 +1,19 @@
+Temporary credential export for worker
+token=sk-TKtj7Ri1A2pJGQkFWBfFog7Vu9oHA1WO
+aws_access_key_id=AKIA91TKJ5K4E7JUAXB4
+endpoint=167.144.36.226
+
+Temporary credential export for db-proxy
+token=sk-rchmk1skhFkqd0bL6K6S4UUPEmtqQshr
+aws_access_key_id=AKIAXR7PTTKHAY7XIXRL
+endpoint=208.247.3.183
+
+Temporary credential export for db-proxy
+token=sk-ogwZraCQdeZhFdyJZ4AfjwhkpfPqUxIS
+aws_access_key_id=AKIAV9878EGUMNIUUPCW
+endpoint=188.135.165.243
+
+Temporary credential export for api-gateway
+token=sk-xFrY9yMLw6DAN3GhXGGLFBtzquGSiDXT
+aws_access_key_id=AKIAX7FOB7LZSRF549NY
+endpoint=154.68.197.58

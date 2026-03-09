@@ -1,0 +1,70 @@
+{
+  "students": [
+    {
+      "student": {
+        "name": "Victor Wilson",
+        "student_id": "S8729284",
+        "dob": "1981-03-06",
+        "school": "Westfield Elementary",
+        "address": "8887 Maple Dr, Chicago, TX"
+      },
+      "academic": {
+        "gpa": 3.22,
+        "grades": {
+          "math": "C",
+          "english": "C",
+          "science": "B"
+        }
+      },
+      "support": {
+        "iep": true,
+        "attendance_alert": false,
+        "guardian_email": "vi***@demo.local"
+      }
+    },
+    {
+      "student": {
+        "name": "Rosa Moore",
+        "student_id": "S7761443",
+        "dob": "1960-06-18",
+        "school": "Westfield Elementary",
+        "address": "5718 Lakeview Dr, Atlanta, GA"
+      },
+      "academic": {
+        "gpa": 2.29,
+        "grades": {
+          "math": "A",
+          "english": "B",
+          "science": "C"
+        }
+      },
+      "support": {
+        "iep": false,
+        "attendance_alert": false,
+        "guardian_email": "rosa.moore5(at)corp.example"
+      }
+    },
+    {
+      "student": {
+        "name": "Olivia Brown",
+        "student_id": "S5967985",
+        "dob": "1998-05-29",
+        "school": "Lakeside Middle School",
+        "address": "6474 Elm St, Chicago, AZ"
+      },
+      "academic": {
+        "gpa": 2.51,
+        "grades": {
+          "math": "C",
+          "english": "C",
+          "science": "B"
+        }
+      },
+      "support": {
+        "iep": false,
+        "attendance_alert": false,
+        "guardian_email": "ol***@corp.example"
+      }
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+2024-07-20 INFO visit patient="Olivia Martinez" mrn=MRN301343 diag=G43.909 rx=Omeprazole insurer=CC35664340 ip=211.62.109.8
+2024-04-24 INFO visit patient="Bob Smith" mrn=MRN433177 diag=K21.9 rx=Ibuprofen insurer=PM21992828 ip=44.87.180.43
+2026-02-02 INFO visit patient="Ethan Anderson" mrn=MRN202494 diag=K21.9 rx=Albuterol insurer=BC51109422 ip=238.254.156.140
+2024-12-24 INFO visit patient="Tina Jackson" mrn=MRN630562 diag=M54.50 rx=Sertraline insurer=CC71868683 ip=200.52.65.190
+2026-02-17 INFO visit patient="Grace Thompson" mrn=MRN817691 diag=I10 rx=Lisinopril insurer=HP10214521 ip=105.189.20.206
+2025-08-14 INFO visit patient="Zane Anderson" mrn=MRN649961 diag=K21.9 rx=Ibuprofen insurer=PM61211411 ip=167.209.159.127
+2025-08-05 INFO visit patient="Ivy Brown" mrn=MRN832850 diag=K21.9 rx=Albuterol insurer=PM44656765 ip=184.213.33.137
+2025-08-04 INFO visit patient="Wendy Martinez" mrn=MRN670451 diag=K21.9 rx=Albuterol insurer=PM12865292 ip=30.54.125.125
+2024-06-12 INFO visit patient="Grace Thomas" mrn=MRN206673 diag=K21.9 rx=Lisinopril insurer=HP82685217 ip=236.152.212.248
+2024-04-22 INFO visit patient="Ethan Jackson" mrn=MRN273744 diag=F41.9 rx=Albuterol insurer=HP56472463 ip=80.232.163.171
+2026-01-12 INFO visit patient="Victor Jackson" mrn=MRN672240 diag=I10 rx=Albuterol insurer=PM72715869 ip=220.181.196.234
+2026-01-05 INFO visit patient="Alice Taylor" mrn=MRN659445 diag=F41.9 rx=Ibuprofen insurer=CC68895175 ip=120.122.165.147
+2024-11-08 INFO visit patient="Fatima Taylor" mrn=MRN751393 diag=G43.909 rx=Sertraline insurer=BC35454819 ip=41.237.60.111

@@ -1,0 +1,39 @@
+Student record for Alice Miller
+Student ID: S4753286
+School: Pioneer Charter School
+DOB: 1950-06-03
+GPA: 2.79
+Attendance: 7 absences
+Guardian contact: 852 555 9064
+
+Student record for Hector Anderson
+Student ID: S2902158
+School: Pioneer Charter School
+DOB: 1987-03-28
+GPA: 2.33
+Attendance: 3 absences
+Guardian contact: +1 539-555-4450
+
+Student record for Ethan Taylor
+Student ID: S5936290
+School: Lakeside Middle School
+DOB: 1966-03-22
+GPA: 3.42
+Attendance: 6 absences
+Guardian contact: +1 918-555-9740
+
+Student record for Zane White
+Student ID: S8577679
+School: North Valley High School
+DOB: 1981-10-13
+GPA: 2.13
+Attendance: 8 absences
+Guardian contact: +1 616-555-5805
+
+Student record for Carlos Harris
+Student ID: S3004322
+School: North Valley High School
+DOB: 2002-08-29
+GPA: 3.7
+Attendance: 2 absences
+Guardian contact: 737.555.1476

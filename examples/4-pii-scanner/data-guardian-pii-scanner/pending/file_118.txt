@@ -1,0 +1,23 @@
+Student record for Sam White
+Student ID: S2861256
+School: Lakeside Middle School
+DOB: 1973-02-15
+GPA: 3.9
+Attendance: 3 absences
+Guardian contact: +1 933-555-2395
+
+Student record for Bob Wilson
+Student ID: S4106009
+School: North Valley High School
+DOB: 1988-09-19
+GPA: 3.31
+Attendance: 1 absences
+Guardian contact: 272-555-6042
+
+Student record for Tina Jackson
+Student ID: S4813164
+School: Pioneer Charter School
+DOB: 1992-03-18
+GPA: 2.2
+Attendance: 4 absences
+Guardian contact: +1 686-555-3230

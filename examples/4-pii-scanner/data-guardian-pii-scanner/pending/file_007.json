@@ -1,0 +1,25 @@
+{
+  "generated": "2025-12-19",
+  "employees": [
+    {
+      "employee_id": 2530,
+      "name": "Jamal Thomas",
+      "dob": "2001-09-18",
+      "email": "jamal.thomas97@mail.test",
+      "phone": "888-555-6085",
+      "ssn": "330-35-3414",
+      "department": "Engineering",
+      "salary": 61057
+    },
+    {
+      "employee_id": 2193,
+      "name": "Hector Thompson",
+      "dob": "1985-06-06",
+      "email": "hector.thompson54@mail.test",
+      "phone": "935-555-7291",
+      "ssn": "606-61-4997",
+      "department": "Finance",
+      "salary": 140990
+    }
+  ]
+}

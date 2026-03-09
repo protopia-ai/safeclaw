@@ -1,0 +1,20 @@
+{
+  "warehouse": "A1",
+  "items": [
+    {
+      "sku": "AX-4431",
+      "name": "Widget",
+      "quantity": 120
+    },
+    {
+      "sku": "BX-9921",
+      "name": "Gear Assembly",
+      "quantity": 55
+    },
+    {
+      "sku": "CX-1112",
+      "name": "Hydraulic Pump",
+      "quantity": 12
+    }
+  ]
+}

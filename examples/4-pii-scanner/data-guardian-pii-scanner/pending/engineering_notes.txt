@@ -1,0 +1,7 @@
+Engineering Notes
+
+Project: Edge Cache Optimization
+
+Observations: - Cache hit rate improved from 71% to 84% after tuning. -
+Latency reduced by ~22 ms on average. - Further optimization may require
+CDN routing adjustments.

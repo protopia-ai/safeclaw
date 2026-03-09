@@ -1,0 +1,8 @@
+2025-04-08 INFO service=etl-job cpu=19 latency=152 status=ok
+2025-06-10 INFO service=etl-job cpu=85 latency=360 status=ok
+2025-06-27 INFO service=scheduler cpu=23 latency=25 status=ok
+2025-10-24 INFO service=etl-job cpu=64 latency=199 status=ok
+2025-07-01 INFO service=scheduler cpu=35 latency=241 status=ok
+2025-07-28 INFO service=etl-job cpu=6 latency=397 status=ok
+2025-02-02 INFO service=worker cpu=11 latency=27 status=ok
+2025-04-21 INFO service=etl-job cpu=31 latency=339 status=ok

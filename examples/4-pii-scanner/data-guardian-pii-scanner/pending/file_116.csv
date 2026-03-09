@@ -1,0 +1,7 @@
+service,cpu_percent,latency_ms,date,note
+worker,92,333,2025-07-27,Sample diagnosis code ZZZ.TEST is documentation only.
+search-indexer,60,111,2025-07-29,Reference id 4111-1111-1111 is test data.
+worker,29,134,2025-10-12,Template placeholder firstname.lastname@example.com.
+api-gateway,72,75,2025-12-14,routine telemetry
+auth-service,15,378,2025-01-09,routine telemetry
+auth-service,33,60,2026-01-19,routine telemetry

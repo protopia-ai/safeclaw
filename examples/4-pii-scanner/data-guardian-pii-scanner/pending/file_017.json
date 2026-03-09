@@ -1,0 +1,25 @@
+{
+  "generated": "2025-08-16",
+  "employees": [
+    {
+      "employee_id": 8802,
+      "name": "Xavier Martinez",
+      "dob": "1985-02-09",
+      "email": "xavier.martinez47@example.com",
+      "phone": "662-555-9254",
+      "ssn": "326-88-1710",
+      "department": "Sales",
+      "salary": 157659
+    },
+    {
+      "employee_id": 8504,
+      "name": "Victor Anderson",
+      "dob": "1993-11-10",
+      "email": "victor.anderson4@example.com",
+      "phone": "690-555-7580",
+      "ssn": "536-97-2768",
+      "department": "Legal",
+      "salary": 148375
+    }
+  ]
+}

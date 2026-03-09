@@ -1,0 +1,65 @@
+{
+  "generated": "2026-01-09",
+  "employees": [
+    {
+      "employee_id": 8019,
+      "name": "Rosa Taylor",
+      "dob": "1991-03-06",
+      "email": "rosa.taylor52@corp.example",
+      "phone": "424-555-3266",
+      "ssn": "621-73-2489",
+      "department": "Engineering",
+      "salary": 69371
+    },
+    {
+      "employee_id": 7916,
+      "name": "Ethan Miller",
+      "dob": "1991-10-03",
+      "email": "ethan.miller9@demo.local",
+      "phone": "590-555-8668",
+      "ssn": "641-42-1188",
+      "department": "Sales",
+      "salary": 149466
+    },
+    {
+      "employee_id": 6573,
+      "name": "Diana Taylor",
+      "dob": "1970-01-02",
+      "email": "diana.taylor38@demo.local",
+      "phone": "361-555-8433",
+      "ssn": "103-43-9201",
+      "department": "Finance",
+      "salary": 121542
+    },
+    {
+      "employee_id": 9317,
+      "name": "Diana Anderson",
+      "dob": "1992-04-26",
+      "email": "diana.anderson26@mail.test",
+      "phone": "582-555-3646",
+      "ssn": "652-77-1009",
+      "department": "Operations",
+      "salary": 97487
+    },
+    {
+      "employee_id": 2832,
+      "name": "Priya Johnson",
+      "dob": "1981-04-14",
+      "email": "priya.johnson40@mail.test",
+      "phone": "259-555-4946",
+      "ssn": "680-20-2403",
+      "department": "Sales",
+      "salary": 118699
+    },
+    {
+      "employee_id": 3103,
+      "name": "Carlos Davis",
+      "dob": "1994-08-06",
+      "email": "carlos.davis61@mail.test",
+      "phone": "471-555-9645",
+      "ssn": "721-64-4470",
+      "department": "Operations",
+      "salary": 153994
+    }
+  ]
+}

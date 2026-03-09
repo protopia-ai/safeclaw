@@ -1,0 +1,8 @@
+2026-02-19 INFO service=worker cpu=75 latency=100 status=ok
+2025-10-16 INFO service=auth-service cpu=42 latency=37 status=ok
+2025-06-22 INFO service=scheduler cpu=16 latency=66 status=ok
+2025-01-15 INFO service=worker cpu=2 latency=42 status=ok
+2025-04-05 INFO service=worker cpu=38 latency=348 status=ok
+2025-02-07 INFO service=scheduler cpu=40 latency=395 status=ok
+2025-03-16 INFO service=api-gateway cpu=70 latency=210 status=ok
+2025-12-13 INFO service=api-gateway cpu=71 latency=224 status=ok

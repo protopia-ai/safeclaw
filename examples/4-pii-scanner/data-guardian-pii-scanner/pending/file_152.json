@@ -1,0 +1,75 @@
+{
+  "records": [
+    {
+      "patient": {
+        "name": "Victor Davis",
+        "dob": "2013-08-26",
+        "address": "2293 5th St, Austin, WA",
+        "email": "victor.davis59 at mail.test",
+        "mrn": "MRN926011"
+      },
+      "encounter": {
+        "facility": "Northside Medical Center",
+        "visit_date": "2024-01-29",
+        "diagnosis": "Depression",
+        "icd10": "G43.909",
+        "prescriptions": [
+          "Omeprazole"
+        ]
+      },
+      "billing": {
+        "insurance": "Community Care",
+        "member_id": "HP85203861",
+        "card_on_file": "4111-7693-7791-5013"
+      }
+    },
+    {
+      "patient": {
+        "name": "Xavier Harris",
+        "dob": "1995-12-06",
+        "address": "1288 Elm St, Seattle, CA",
+        "email": "xavier.harris22 at mail.test",
+        "mrn": "MRN391863"
+      },
+      "encounter": {
+        "facility": "Starlight Clinic",
+        "visit_date": "2026-01-14",
+        "diagnosis": "Depression",
+        "icd10": "G43.909",
+        "prescriptions": [
+          "Omeprazole"
+        ]
+      },
+      "billing": {
+        "insurance": "Pioneer Mutual",
+        "member_id": "BC93620255",
+        "card_on_file": "5555-6431-3101-6998"
+      }
+    },
+    {
+      "patient": {
+        "name": "Grace White",
+        "dob": "1962-05-22",
+        "address": "8971 Lakeview Dr, Austin, AZ",
+        "email": "grace.white90 at corp.example",
+        "mrn": "MRN342048"
+      },
+      "encounter": {
+        "facility": "Oak Grove Pediatrics",
+        "visit_date": "2025-05-08",
+        "diagnosis": "Seasonal Allergies",
+        "icd10": "M54.50",
+        "prescriptions": [
+          "Ibuprofen",
+          "Lisinopril",
+          "Sertraline"
+        ]
+      },
+      "billing": {
+        "insurance": "Blue Horizon",
+        "member_id": "HP57122682",
+        "card_on_file": "4111-1643-6934-8031"
+      }
+    }
+  ]
+}

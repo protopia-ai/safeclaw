@@ -1,0 +1,28 @@
+{
+  "secrets": [
+    {
+      "service": "search-indexer",
+      "token": "sk-sgnDmTpevmglEKjYTHiFeyp70GOI8d30",
+      "aws_access_key_id": "AKIA3JK34MFNS7EON3BK",
+      "endpoint_ip": "99.187.149.146"
+    },
+    {
+      "service": "worker",
+      "token": "sk-CW5WdSm4yPkKLmqfqcBj23MrrAPEsikj",
+      "aws_access_key_id": "AKIABDCK96G7JQ5L4XMU",
+      "endpoint_ip": "165.248.190.47"
+    },
+    {
+      "service": "search-indexer",
+      "token": "sk-tXQTCxdewqDD8Ccv5UkAXGn8MDOAwFCr",
+      "aws_access_key_id": "AKIAXVHFCFH22F7M54AE",
+      "endpoint_ip": "135.244.48.78"
+    },
+    {
+      "service": "db-proxy",
+      "token": "sk-OWYrz7Z45tt5yexIJ1Bwz4792zTqc4i6",
+      "aws_access_key_id": "AKIA5WFXA61IBGG79IL7",
+      "endpoint_ip": "63.127.174.161"
+    }
+  ]
+}

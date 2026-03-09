@@ -1,0 +1,23 @@
+Customer support notes
+
+Ticket: 396635
+Name: Leo Jackson
+Email: leo.jackson50@demo.local
+Phone: 546-555-1857
+Address: 5582 Oak Ave, Phoenix, TX
+Issue: Password reset and billing question.
+
+Ticket: 397949
+Name: Rosa White
+Email: rosa.white33@mail.test
+Phone: 541-555-2335
+Address: 9647 Pine Rd, Phoenix, IL
+Issue: Password reset and billing question.
+
+Ticket: 235215
+Name: Uma White
+Email: uma.white77@example.com
+Phone: 517-555-7171
+Address: 5481 Pine Rd, Plano, AZ
+Issue: Password reset and billing question.
+

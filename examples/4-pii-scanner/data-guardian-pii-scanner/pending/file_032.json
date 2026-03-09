@@ -1,0 +1,55 @@
+{
+  "generated": "2026-01-18",
+  "employees": [
+    {
+      "employee_id": 2845,
+      "name": "Ivy Wilson",
+      "dob": "1979-11-01",
+      "email": "ivy.wilson21@demo.local",
+      "phone": "863-555-5215",
+      "ssn": "835-33-1230",
+      "department": "Sales",
+      "salary": 99185
+    },
+    {
+      "employee_id": 4164,
+      "name": "Zane Anderson",
+      "dob": "1972-11-15",
+      "email": "zane.anderson79@demo.local",
+      "phone": "637-555-9442",
+      "ssn": "435-21-7567",
+      "department": "Sales",
+      "salary": 67502
+    },
+    {
+      "employee_id": 8822,
+      "name": "Fatima Davis",
+      "dob": "1979-07-08",
+      "email": "fatima.davis32@example.com",
+      "phone": "467-555-7284",
+      "ssn": "341-67-5374",
+      "department": "HR",
+      "salary": 94576
+    },
+    {
+      "employee_id": 5285,
+      "name": "Sam Johnson",
+      "dob": "1994-04-28",
+      "email": "sam.johnson47@mail.test",
+      "phone": "263-555-2936",
+      "ssn": "576-49-3616",
+      "department": "Legal",
+      "salary": 144925
+    },
+    {
+      "employee_id": 2923,
+      "name": "Quinn Anderson",
+      "dob": "1993-08-26",
+      "email": "quinn.anderson38@corp.example",
+      "phone": "829-555-4618",
+      "ssn": "324-27-8834",
+      "department": "Finance",
+      "salary": 114634
+    }
+  ]
+}

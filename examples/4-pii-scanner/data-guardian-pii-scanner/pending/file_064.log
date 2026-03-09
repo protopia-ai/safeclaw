@@ -1,0 +1,14 @@
+2025-01-25 INFO service=api-gateway cpu=2 latency=314 status=ok
+2025-07-07 INFO service=worker cpu=13 latency=243 status=ok
+2025-03-30 INFO service=scheduler cpu=2 latency=94 status=ok
+2025-12-19 INFO service=scheduler cpu=59 latency=195 status=ok
+2025-08-08 INFO service=etl-job cpu=27 latency=52 status=ok
+2025-07-15 INFO service=etl-job cpu=2 latency=110 status=ok
+2025-12-04 INFO service=db-proxy cpu=66 latency=226 status=ok
+2025-03-01 INFO service=auth-service cpu=95 latency=173 status=ok
+2025-09-13 INFO service=search-indexer cpu=1 latency=294 status=ok
+2025-09-25 INFO service=db-proxy cpu=10 latency=284 status=ok
+2025-02-14 INFO service=worker cpu=86 latency=281 status=ok
+2025-10-25 INFO service=api-gateway cpu=65 latency=36 status=ok
+2025-08-24 INFO service=scheduler cpu=25 latency=171 status=ok
+2025-06-18 INFO service=worker cpu=10 latency=137 status=ok

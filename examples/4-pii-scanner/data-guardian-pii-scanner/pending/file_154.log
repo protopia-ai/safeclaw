@@ -1,0 +1,11 @@
+2024-04-02 INFO visit patient="Ethan Brown" mrn=MRN185392 diag=G43.909 rx=Albuterol insurer=PM94596328 ip=147.48.42.175
+2025-12-30 INFO visit patient="Olivia Harris" mrn=MRN735519 diag=E11.9 rx=Sertraline insurer=PM99834888 ip=151.22.191.196
+2024-12-10 INFO visit patient="Grace Miller" mrn=MRN499541 diag=K21.9 rx=Omeprazole insurer=PM88226133 ip=6.234.34.73
+2024-10-24 INFO visit patient="Olivia Wilson" mrn=MRN785495 diag=M54.50 rx=Ibuprofen insurer=BC25047125 ip=44.122.111.222
+2024-12-16 INFO visit patient="Ivy Smith" mrn=MRN387618 diag=I10 rx=Ibuprofen insurer=HP19454178 ip=157.28.47.252
+2025-10-24 INFO visit patient="Ethan Wilson" mrn=MRN290801 diag=I10 rx=Metformin insurer=CC62573304 ip=202.161.30.38
+2025-06-24 INFO visit patient="Karen Miller" mrn=MRN814061 diag=K21.9 rx=Sertraline insurer=HP43970161 ip=94.234.49.90
+2024-07-01 INFO visit patient="Hector Anderson" mrn=MRN777469 diag=K21.9 rx=Metformin insurer=BC89533460 ip=5.186.28.244
+2025-08-03 INFO visit patient="Maya Martin" mrn=MRN196015 diag=F41.9 rx=Omeprazole insurer=CC36080542 ip=118.188.3.171
+2025-05-09 INFO visit patient="Priya Anderson" mrn=MRN765775 diag=I10 rx=Atorvastatin insurer=PM81403374 ip=125.37.8.107
+2025-09-12 INFO visit patient="Alice Harris" mrn=MRN484299 diag=E11.9 rx=Sertraline insurer=PM15249370 ip=86.4.24.136

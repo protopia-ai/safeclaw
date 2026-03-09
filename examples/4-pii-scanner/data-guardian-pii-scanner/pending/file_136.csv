@@ -1,0 +1,8 @@
+service,cpu_percent,latency_ms,date,note
+search-indexer,24,131,2025-02-04,routine telemetry
+etl-job,55,228,2024-09-15,routine telemetry
+scheduler,39,51,2025-04-14,Order code 123-45-678 is not an SSN.
+etl-job,41,104,2024-06-17,Sample diagnosis code ZZZ.TEST is documentation only.
+auth-service,11,386,2024-10-11,Order code 123-45-678 is not an SSN.
+etl-job,73,54,2025-02-11,Order code 123-45-678 is not an SSN.
+db-proxy,18,258,2024-02-23,routine telemetry

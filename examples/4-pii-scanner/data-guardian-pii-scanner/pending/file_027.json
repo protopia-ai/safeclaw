@@ -1,0 +1,65 @@
+{
+  "generated": "2025-12-19",
+  "employees": [
+    {
+      "employee_id": 2077,
+      "name": "Ethan Martinez",
+      "dob": "1978-11-16",
+      "email": "ethan.martinez51@demo.local",
+      "phone": "738-555-7730",
+      "ssn": "887-62-2208",
+      "department": "Finance",
+      "salary": 96553
+    },
+    {
+      "employee_id": 8372,
+      "name": "Uma Martinez",
+      "dob": "1985-11-24",
+      "email": "uma.martinez88@corp.example",
+      "phone": "331-555-3981",
+      "ssn": "886-26-8088",
+      "department": "Operations",
+      "salary": 62263
+    },
+    {
+      "employee_id": 5982,
+      "name": "Diana Davis",
+      "dob": "1972-05-21",
+      "email": "diana.davis21@corp.example",
+      "phone": "926-555-4694",
+      "ssn": "454-76-5653",
+      "department": "Engineering",
+      "salary": 87847
+    },
+    {
+      "employee_id": 3050,
+      "name": "Grace Taylor",
+      "dob": "1993-01-14",
+      "email": "grace.taylor39@example.com",
+      "phone": "714-555-3762",
+      "ssn": "706-84-3526",
+      "department": "Finance",
+      "salary": 141341
+    },
+    {
+      "employee_id": 1674,
+      "name": "Tina Thomas",
+      "dob": "2002-01-07",
+      "email": "tina.thomas4@example.com",
+      "phone": "246-555-5336",
+      "ssn": "766-36-7825",
+      "department": "Operations",
+      "salary": 138753
+    },
+    {
+      "employee_id": 9938,
+      "name": "Alice Thompson",
+      "dob": "1977-12-29",
+      "email": "alice.thompson83@corp.example",
+      "phone": "694-555-5012",
+      "ssn": "801-61-5873",
+      "department": "Legal",
+      "salary": 64564
+    }
+  ]
+}

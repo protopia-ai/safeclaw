@@ -1,0 +1,5 @@
+patient_name,dob,mrn,diagnosis,icd10,medication,provider,insurance_member_id,phone
+Leo Moore,1966-11-05,MRN596048,Back Pain,F41.9,Ibuprofen,Northside Medical Center,CC32489857,364-555-5078
+Fatima Martin,1955-06-17,MRN320666,Seasonal Allergies,E11.9,Metformin,Starlight Clinic,PM26356921,931-555-9530
+Diana Smith,2012-08-26,MRN380476,Asthma,G43.909,Ibuprofen,Northside Medical Center,PM36963149,(808) 555-1778
+Diana Moore,1958-07-17,MRN444270,Asthma,E11.9,Ibuprofen,Starlight Clinic,BC66819598,+1 770-555-2061

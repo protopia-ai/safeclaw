@@ -1,0 +1,142 @@
+{
+  "records": [
+    {
+      "patient": {
+        "name": "Xavier Brown",
+        "dob": "2011-06-29",
+        "address": "8532 Elm St, Plano, CA",
+        "email": "xavier.brown54(at)sample.net",
+        "mrn": "MRN400215"
+      },
+      "encounter": {
+        "facility": "Northside Medical Center",
+        "visit_date": "2025-02-16",
+        "diagnosis": "Back Pain",
+        "icd10": "K21.9",
+        "prescriptions": [
+          "Albuterol"
+        ]
+      },
+      "billing": {
+        "insurance": "Blue Horizon",
+        "member_id": "PM14636775",
+        "card_on_file": "4111-4564-7767-2200"
+      }
+    },
+    {
+      "patient": {
+        "name": "Ethan Harris",
+        "dob": "1952-01-29",
+        "address": "7863 Elm St, Madison, CA",
+        "email": "ethan.harris35 [at] sample.net",
+        "mrn": "MRN968281"
+      },
+      "encounter": {
+        "facility": "Northside Medical Center",
+        "visit_date": "2024-07-15",
+        "diagnosis": "Back Pain",
+        "icd10": "G43.909",
+        "prescriptions": [
+          "Lisinopril"
+        ]
+      },
+      "billing": {
+        "insurance": "Blue Horizon",
+        "member_id": "HP95364251",
+        "card_on_file": "5555-4977-1960-2264"
+      }
+    },
+    {
+      "patient": {
+        "name": "Hector Anderson",
+        "dob": "1980-08-27",
+        "address": "3394 Oak Ave, Plano, WI",
+        "email": "hector.anderson20(at)sample.net",
+        "mrn": "MRN319971"
+      },
+      "encounter": {
+        "facility": "Starlight Clinic",
+        "visit_date": "2025-09-01",
+        "diagnosis": "Hypertension",
+        "icd10": "M54.50",
+        "prescriptions": [
+          "Omeprazole"
+        ]
+      },
+      "billing": {
+        "insurance": "Pioneer Mutual",
+        "member_id": "BC71598099",
+        "card_on_file": "5555-4639-5175-2796"
+      }
+    },
+    {
+      "patient": {
+        "name": "Jamal Wilson",
+        "dob": "1972-01-22",
+        "address": "4284 Pine Rd, Boise, GA",
+        "email": "ja***@sample.net",
+        "mrn": "MRN852141"
+      },
+      "encounter": {
+        "facility": "Valley Regional Hospital",
+        "visit_date": "2024-08-27",
+        "diagnosis": "Anxiety",
+        "icd10": "G43.909",
+        "prescriptions": [
+          "Metformin"
+        ]
+      },
+      "billing": {
+        "insurance": "Pioneer Mutual",
+        "member_id": "PM97749353",
+        "card_on_file": "5555-1647-4710-3609"
+      }
+    },
+    {
+      "patient": {
+        "name": "Karen Anderson",
+        "dob": "1991-12-28",
+        "address": "3951 Maple Dr, Austin, AZ",
+        "email": "karen.anderson97 [at] example.com",
+        "mrn": "MRN979546"
+      },
+      "encounter": {
+        "facility": "Mercy General",
+        "visit_date": "2025-09-12",
+        "diagnosis": "Seasonal Allergies",
+        "icd10": "G43.909",
+        "prescriptions": [
+          "Omeprazole"
+        ]
+      },
+      "billing": {
+        "insurance": "Community Care",
+        "member_id": "HP19563828",
+        "card_on_file": "4111-4506-6696-6153"
+      }
+    },
+    {
+      "patient": {
+        "name": "Ivy Jackson",
+        "dob": "2017-03-28",
+        "address": "8942 5th St, Atlanta, IL",
+        "email": "iv***@example.com",
+        "mrn": "MRN810591"
+      },
+      "encounter": {
+        "facility": "Oak Grove Pediatrics",
+        "visit_date": "2025-11-26",
+        "diagnosis": "Depression",
+        "icd10": "F41.9",
+        "prescriptions": [
+          "Albuterol"
+        ]
+      },
+      "billing": {
+        "insurance": "Blue Horizon",
+        "member_id": "CC34185432",
+        "card_on_file": "5555-8702-9593-5963"
+      }
+    }
+  ]
+}

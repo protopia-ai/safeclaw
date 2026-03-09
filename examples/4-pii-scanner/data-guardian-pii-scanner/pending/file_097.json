@@ -1,0 +1,53 @@
+{
+  "generated": "2026-01-09",
+  "records": [
+    {
+      "summary": "profile update Karen Miller",
+      "raw": "benefits record ssn=***-**-6028 address=8288 Sunset Blvd, Plano, GA",
+      "metadata": {
+        "ip": "214.100.175.23",
+        "aws": "AKIAOJQHG1TH1CUP4WQ4"
+      }
+    },
+    {
+      "summary": "profile update Victor Thompson",
+      "raw": "benefits record ssn=***-**-6105 address=2693 Sunset Blvd, Denton, IL",
+      "metadata": {
+        "ip": "77.176.242.132",
+        "aws": "AKIAFJOBXAOZJ6GIGYWF"
+      }
+    },
+    {
+      "summary": "profile update Maya Davis",
+      "raw": "benefits record ssn=***-**-4764 address=4259 Maple Dr, Houston, AZ",
+      "metadata": {
+        "ip": "171.196.129.103",
+        "aws": "AKIA7NFMIR0S5WAAHR4D"
+      }
+    },
+    {
+      "summary": "profile update Ivy Wilson",
+      "raw": "benefits record ssn=SSN ending 9167 address=7279 Elm St, Chicago, IL",
+      "metadata": {
+        "ip": "205.37.8.128",
+        "aws": "AKIAKQQMIRPZYAKIAN4E"
+      }
+    },
+    {
+      "summary": "profile update Diana White",
+      "raw": "benefits record ssn=xxx-xx-6544 address=5164 Oak Ave, Phoenix, IL",
+      "metadata": {
+        "ip": "87.232.163.227",
+        "aws": "AKIAS66FX8QML0ESQXBO"
+      }
+    },
+    {
+      "summary": "profile update Fatima Harris",
+      "raw": "api_key leaked sk-onpXuCEfktOMwIlgYGhrJ5DCKUSoVeZp",
+      "metadata": {
+        "ip": "240.204.130.151",
+        "aws": "AKIAX8VHGCZA3NET57RF"
+      }
+    }
+  ]
+}

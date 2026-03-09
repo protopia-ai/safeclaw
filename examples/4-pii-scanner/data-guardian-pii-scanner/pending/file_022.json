@@ -1,0 +1,25 @@
+{
+  "generated": "2025-09-25",
+  "employees": [
+    {
+      "employee_id": 8581,
+      "name": "Tina White",
+      "dob": "1991-01-13",
+      "email": "tina.white71@example.com",
+      "phone": "660-555-4084",
+      "ssn": "429-87-8792",
+      "department": "Operations",
+      "salary": 74773
+    },
+    {
+      "employee_id": 2695,
+      "name": "Bob Martin",
+      "dob": "2001-05-18",
+      "email": "bob.martin44@example.com",
+      "phone": "716-555-3827",
+      "ssn": "140-41-8172",
+      "department": "Legal",
+      "salary": 123690
+    }
+  ]
+}

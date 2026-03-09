@@ -1,0 +1,4 @@
+service,cpu_percent,latency_ms
+api-gateway,60,49
+auth-service,31,101
+worker,45,70

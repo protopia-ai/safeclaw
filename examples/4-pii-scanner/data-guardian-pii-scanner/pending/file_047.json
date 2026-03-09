@@ -1,0 +1,55 @@
+{
+  "generated": "2026-02-05",
+  "employees": [
+    {
+      "employee_id": 8717,
+      "name": "Leo Miller",
+      "dob": "1999-07-23",
+      "email": "leo.miller10@example.com",
+      "phone": "801-555-2106",
+      "ssn": "114-43-4534",
+      "department": "Engineering",
+      "salary": 62925
+    },
+    {
+      "employee_id": 9300,
+      "name": "Zane White",
+      "dob": "1977-11-07",
+      "email": "zane.white81@demo.local",
+      "phone": "633-555-7590",
+      "ssn": "184-91-9791",
+      "department": "Operations",
+      "salary": 135746
+    },
+    {
+      "employee_id": 2369,
+      "name": "Ethan Taylor",
+      "dob": "1978-11-26",
+      "email": "ethan.taylor11@mail.test",
+      "phone": "359-555-9788",
+      "ssn": "434-60-2083",
+      "department": "HR",
+      "salary": 146576
+    },
+    {
+      "employee_id": 1948,
+      "name": "Noah Moore",
+      "dob": "1975-12-20",
+      "email": "noah.moore12@demo.local",
+      "phone": "318-555-8428",
+      "ssn": "726-87-1901",
+      "department": "HR",
+      "salary": 142304
+    },
+    {
+      "employee_id": 2956,
+      "name": "Xavier Miller",
+      "dob": "1965-07-27",
+      "email": "xavier.miller91@mail.test",
+      "phone": "918-555-1185",
+      "ssn": "267-73-6680",
+      "department": "Operations",
+      "salary": 122793
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+Customer support notes
+
+Ticket: 737846
+Name: Carlos Thomas
+Email: carlos.thomas19@example.com
+Phone: 329-555-5505
+Address: 9690 Elm St, Seattle, GA
+Issue: Password reset and billing question.
+
+Ticket: 575755
+Name: Quinn Anderson
+Email: quinn.anderson65@demo.local
+Phone: 301-555-2874
+Address: 9133 Maple Dr, Seattle, WA
+Issue: Password reset and billing question.
+

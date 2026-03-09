@@ -1,0 +1,44 @@
+Patient intake: Wendy Taylor
+DOB: 2005-04-23
+MRN: MRN100075
+Diagnosis: Back Pain (E11.9)
+Medication: Albuterol
+Insurance member id: HP59243289
+Phone: 780.555.6426
+Address: 2758 5th St, Austin, IL
+
+Patient intake: Grace Davis
+DOB: 2003-06-03
+MRN: MRN599458
+Diagnosis: Type 2 Diabetes (I10)
+Medication: Lisinopril
+Insurance member id: CC88093664
+Phone: (921) 555-4860
+Address: 5023 Sunset Blvd, Phoenix, AZ
+
+Patient intake: Ivy White
+DOB: 1981-11-02
+MRN: MRN152888
+Diagnosis: Depression (M54.50)
+Medication: Metformin
+Insurance member id: PM51836783
+Phone: (417) 555-5370
+Address: 1689 Main St, Boise, ID
+
+Patient intake: Wendy Davis
+DOB: 1989-08-21
+MRN: MRN837374
+Diagnosis: Back Pain (K21.9)
+Medication: Sertraline
+Insurance member id: PM16031439
+Phone: (704) 555-3622
+Address: 8835 Oak Ave, Atlanta, WI
+
+Patient intake: Maya Davis
+DOB: 1950-05-01
+MRN: MRN667960
+Diagnosis: Asthma (F41.9)
+Medication: Omeprazole
+Insurance member id: HP75323628
+Phone: 694.555.7158
+Address: 7576 5th St, Madison, TX

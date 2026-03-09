@@ -1,0 +1,6 @@
+employee_name,employee_id,ssn,salary,bank_account_last4,routing_number,home_address
+Wendy Harris,6925,184-55-5047,86452,6357,946080737,"2716 5th St, Denton, TX"
+Diana Johnson,3749,704688384,118822,2078,454269167,"3922 Main St, Chicago, IL"
+Quinn Martinez,3898,xxx-xx-1693,81862,4545,601409444,"9965 Lakeview Dr, Atlanta, WI"
+Karen Brown,7187,SSN ending 4318,62897,2628,109129299,"5975 Lakeview Dr, Chicago, GA"
+Diana Jackson,9677,640-65-6613,156481,3738,758449803,"7393 5th St, Houston, CA"

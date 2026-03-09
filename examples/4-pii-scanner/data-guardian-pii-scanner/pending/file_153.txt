@@ -1,0 +1,23 @@
+Compensation adjustment for Rosa Davis
+SSN: xxx-xx-2625
+Salary: $134314
+Bank routing: 562320593
+Card on file: 5555-6645-9240-8941
+
+Compensation adjustment for Alice Harris
+SSN: 735618417
+Salary: $145039
+Bank routing: 651668984
+Card on file: 5555-5122-1243-7449
+
+Compensation adjustment for Hector Anderson
+SSN: SSN ending 8319
+Salary: $88012
+Bank routing: 442608632
+Card on file: 5555-5550-6053-9954
+
+Compensation adjustment for Maya Jackson
+SSN: ***-**-5410
+Salary: $128383
+Bank routing: 334205503
+Card on file: 4111-9188-5437-2075

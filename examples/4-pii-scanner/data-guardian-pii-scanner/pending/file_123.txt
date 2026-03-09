@@ -1,0 +1,44 @@
+Patient intake: Zane Moore
+DOB: 1988-05-30
+MRN: MRN181037
+Diagnosis: Seasonal Allergies (G43.909)
+Medication: Lisinopril
+Insurance member id: HP17287246
+Phone: 396 555 4594
+Address: 6966 Pine Rd, Austin, TX
+
+Patient intake: Karen Moore
+DOB: 1976-06-29
+MRN: MRN886589
+Diagnosis: Type 2 Diabetes (F41.9)
+Medication: Sertraline
+Insurance member id: HP88699595
+Phone: 919.555.1401
+Address: 6639 Lakeview Dr, Plano, AZ
+
+Patient intake: Uma Brown
+DOB: 2017-01-28
+MRN: MRN201120
+Diagnosis: Back Pain (E11.9)
+Medication: Atorvastatin
+Insurance member id: PM16595667
+Phone: (545) 555-4946
+Address: 9985 Elm St, Seattle, WA
+
+Patient intake: Leo Brown
+DOB: 1997-06-01
+MRN: MRN546604
+Diagnosis: Anxiety (G43.909)
+Medication: Sertraline
+Insurance member id: CC86678705
+Phone: 687.555.4477
+Address: 8121 Broadway, Denton, GA
+
+Patient intake: Fatima Taylor
+DOB: 1964-01-21
+MRN: MRN213942
+Diagnosis: Seasonal Allergies (I10)
+Medication: Ibuprofen
+Insurance member id: BC85097300
+Phone: (287) 555-3036
+Address: 6964 Lakeview Dr, Denton, WA

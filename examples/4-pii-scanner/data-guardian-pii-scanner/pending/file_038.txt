@@ -1,0 +1,37 @@
+Customer support notes
+
+Ticket: 525750
+Name: Carlos Jackson
+Email: carlos.jackson59@mail.test
+Phone: 913-555-4700
+Address: 5014 Oak Ave, Denton, TX
+Issue: Password reset and billing question.
+
+Ticket: 495490
+Name: Maya White
+Email: maya.white71@demo.local
+Phone: 257-555-1154
+Address: 2907 Oak Ave, Atlanta, WA
+Issue: Password reset and billing question.
+
+Ticket: 693343
+Name: Uma Thomas
+Email: uma.thomas13@example.com
+Phone: 435-555-4463
+Address: 9386 Sunset Blvd, Chicago, TX
+Issue: Password reset and billing question.
+
+Ticket: 669408
+Name: Carlos Taylor
+Email: carlos.taylor73@example.com
+Phone: 383-555-6152
+Address: 356 Maple Dr, Austin, AZ
+Issue: Password reset and billing question.
+
+Ticket: 413814
+Name: Maya Martinez
+Email: maya.martinez21@mail.test
+Phone: 780-555-7375
+Address: 8956 Elm St, Seattle, AZ
+Issue: Password reset and billing question.
+

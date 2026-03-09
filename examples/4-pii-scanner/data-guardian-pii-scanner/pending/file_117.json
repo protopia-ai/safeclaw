@@ -1,0 +1,92 @@
+{
+  "students": [
+    {
+      "student": {
+        "name": "Hector Martinez",
+        "student_id": "S8314158",
+        "dob": "2015-11-18",
+        "school": "Lakeside Middle School",
+        "address": "3723 5th St, Madison, IL"
+      },
+      "academic": {
+        "gpa": 3.87,
+        "grades": {
+          "math": "C",
+          "english": "B",
+          "science": "C"
+        }
+      },
+      "support": {
+        "iep": true,
+        "attendance_alert": false,
+        "guardian_email": "hector.martinez87 at sample.net"
+      }
+    },
+    {
+      "student": {
+        "name": "Ivy Jackson",
+        "student_id": "S5635338",
+        "dob": "1989-09-13",
+        "school": "Pioneer Charter School",
+        "address": "9655 Oak Ave, Denton, IL"
+      },
+      "academic": {
+        "gpa": 2.09,
+        "grades": {
+          "math": "B",
+          "english": "B",
+          "science": "C"
+        }
+      },
+      "support": {
+        "iep": true,
+        "attendance_alert": false,
+        "guardian_email": "ivy.jackson58(at)corp.example"
+      }
+    },
+    {
+      "student": {
+        "name": "Tina Miller",
+        "student_id": "S1609079",
+        "dob": "2017-10-29",
+        "school": "Westfield Elementary",
+        "address": "8300 5th St, Boise, TX"
+      },
+      "academic": {
+        "gpa": 3.96,
+        "grades": {
+          "math": "A",
+          "english": "B",
+          "science": "C"
+        }
+      },
+      "support": {
+        "iep": false,
+        "attendance_alert": false,
+        "guardian_email": "ti***@example.com"
+      }
+    },
+    {
+      "student": {
+        "name": "Grace Brown",
+        "student_id": "S7286348",
+        "dob": "1990-12-01",
+        "school": "North Valley High School",
+        "address": "746 Sunset Blvd, Chicago, IL"
+      },
+      "academic": {
+        "gpa": 2.74,
+        "grades": {
+          "math": "C",
+          "english": "C",
+          "science": "C"
+        }
+      },
+      "support": {
+        "iep": true,
+        "attendance_alert": true,
+        "guardian_email": "grace.brown48(at)demo.local"
+      }
+    }
+  ]
+}

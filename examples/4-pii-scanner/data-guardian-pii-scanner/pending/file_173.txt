@@ -1,0 +1,35 @@
+Patient intake: Ethan Anderson
+DOB: 1964-07-13
+MRN: MRN575075
+Diagnosis: Migraine (F41.9)
+Medication: Sertraline
+Insurance member id: HP89203486
+Phone: +1 765-555-8187
+Address: 2041 5th St, Madison, WA
+
+Patient intake: Yara Anderson
+DOB: 1992-06-09
+MRN: MRN121003
+Diagnosis: Type 2 Diabetes (E11.9)
+Medication: Ibuprofen
+Insurance member id: PM65580546
+Phone: (341) 555-4764
+Address: 3111 Cedar Ln, Plano, ID
+
+Patient intake: Sam White
+DOB: 2008-07-03
+MRN: MRN616239
+Diagnosis: Back Pain (F41.9)
+Medication: Omeprazole
+Insurance member id: BC27188425
+Phone: 492 555 5291
+Address: 1166 Broadway, Denton, ID
+
+Patient intake: Yara Brown
+DOB: 1957-09-30
+MRN: MRN188005
+Diagnosis: Seasonal Allergies (G43.909)
+Medication: Ibuprofen
+Insurance member id: HP68141537
+Phone: 583-555-7531
+Address: 3753 Maple Dr, Denton, WA

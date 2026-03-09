@@ -1,0 +1,37 @@
+Customer support notes
+
+Ticket: 953085
+Name: Jamal White
+Email: jamal.white98@example.com
+Phone: 665-555-2442
+Address: 5253 Cedar Ln, Phoenix, TX
+Issue: Password reset and billing question.
+
+Ticket: 639593
+Name: Yara White
+Email: yara.white1@demo.local
+Phone: 623-555-1888
+Address: 3173 Elm St, Atlanta, AZ
+Issue: Password reset and billing question.
+
+Ticket: 313446
+Name: Olivia Smith
+Email: olivia.smith35@mail.test
+Phone: 494-555-8178
+Address: 8041 Oak Ave, Denton, AZ
+Issue: Password reset and billing question.
+
+Ticket: 844261
+Name: Tina Moore
+Email: tina.moore21@corp.example
+Phone: 764-555-1224
+Address: 9148 Lakeview Dr, Plano, CA
+Issue: Password reset and billing question.
+
+Ticket: 223172
+Name: Diana Martin
+Email: diana.martin83@mail.test
+Phone: 710-555-5781
+Address: 8437 Cedar Ln, Seattle, WA
+Issue: Password reset and billing question.
+

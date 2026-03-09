@@ -1,0 +1,122 @@
+{
+  "records": [
+    {
+      "patient": {
+        "name": "Jamal White",
+        "dob": "1976-08-19",
+        "address": "8718 Sunset Blvd, Plano, WI",
+        "email": "jamal.white40 at example.com",
+        "mrn": "MRN930104"
+      },
+      "encounter": {
+        "facility": "Valley Regional Hospital",
+        "visit_date": "2026-01-30",
+        "diagnosis": "Migraine",
+        "icd10": "F41.9",
+        "prescriptions": [
+          "Sertraline",
+          "Atorvastatin",
+          "Metformin"
+        ]
+      },
+      "billing": {
+        "insurance": "Blue Horizon",
+        "member_id": "PM97507032",
+        "card_on_file": "5555-9015-3338-5400"
+      }
+    },
+    {
+      "patient": {
+        "name": "Hector Wilson",
+        "dob": "1953-11-06",
+        "address": "9254 Main St, Seattle, GA",
+        "email": "hector.wilson50 [at] demo.local",
+        "mrn": "MRN779849"
+      },
+      "encounter": {
+        "facility": "Starlight Clinic",
+        "visit_date": "2025-05-29",
+        "diagnosis": "Depression",
+        "icd10": "M54.50",
+        "prescriptions": [
+          "Ibuprofen"
+        ]
+      },
+      "billing": {
+        "insurance": "Pioneer Mutual",
+        "member_id": "BC81701914",
+        "card_on_file": "4111-3327-7597-5073"
+      }
+    },
+    {
+      "patient": {
+        "name": "Rosa Smith",
+        "dob": "1992-10-21",
+        "address": "5584 Elm St, Atlanta, AZ",
+        "email": "rosa.smith2 [at] mail.test",
+        "mrn": "MRN170589"
+      },
+      "encounter": {
+        "facility": "Mercy General",
+        "visit_date": "2025-08-29",
+        "diagnosis": "Asthma",
+        "icd10": "G43.909",
+        "prescriptions": [
+          "Lisinopril",
+          "Ibuprofen"
+        ]
+      },
+      "billing": {
+        "insurance": "Community Care",
+        "member_id": "CC43450205",
+        "card_on_file": "5555-1116-1237-2056"
+      }
+    },
+    {
+      "patient": {
+        "name": "Sam Wilson",
+        "dob": "1973-11-13",
+        "address": "7840 Cedar Ln, Atlanta, WA",
+        "email": "sa***@sample.net",
+        "mrn": "MRN372797"
+      },
+      "encounter": {
+        "facility": "Starlight Clinic",
+        "visit_date": "2024-10-14",
+        "diagnosis": "Hypertension",
+        "icd10": "F41.9",
+        "prescriptions": [
+          "Sertraline"
+        ]
+      },
+      "billing": {
+        "insurance": "Apex Health",
+        "member_id": "PM37870684",
+        "card_on_file": "4111-2406-5250-6197"
+      }
+    },
+    {
+      "patient": {
+        "name": "Olivia Thomas",
+        "dob": "1998-11-07",
+        "address": "6396 Pine Rd, Seattle, AZ",
+        "email": "olivia.thomas39 [at] mail.test",
+        "mrn": "MRN592899"
+      },
+      "encounter": {
+        "facility": "Oak Grove Pediatrics",
+        "visit_date": "2024-02-01",
+        "diagnosis": "Seasonal Allergies",
+        "icd10": "I10",
+        "prescriptions": [
+          "Omeprazole"
+        ]
+      },
+      "billing": {
+        "insurance": "Apex Health",
+        "member_id": "BC43306826",
+        "card_on_file": "4111-4535-4165-8561"
+      }
+    }
+  ]
+}

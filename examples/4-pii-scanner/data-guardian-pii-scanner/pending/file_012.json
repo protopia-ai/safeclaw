@@ -1,0 +1,65 @@
+{
+  "generated": "2025-12-22",
+  "employees": [
+    {
+      "employee_id": 1534,
+      "name": "Priya Anderson",
+      "dob": "1975-05-21",
+      "email": "priya.anderson37@corp.example",
+      "phone": "919-555-8438",
+      "ssn": "172-97-4824",
+      "department": "HR",
+      "salary": 158262
+    },
+    {
+      "employee_id": 7965,
+      "name": "Zane Wilson",
+      "dob": "1970-02-24",
+      "email": "zane.wilson70@mail.test",
+      "phone": "863-555-3441",
+      "ssn": "372-28-2169",
+      "department": "Engineering",
+      "salary": 76747
+    },
+    {
+      "employee_id": 5728,
+      "name": "Zane Anderson",
+      "dob": "1984-09-13",
+      "email": "zane.anderson16@demo.local",
+      "phone": "905-555-5982",
+      "ssn": "816-61-5460",
+      "department": "Operations",
+      "salary": 125776
+    },
+    {
+      "employee_id": 2317,
+      "name": "Priya Martin",
+      "dob": "1991-10-30",
+      "email": "priya.martin6@demo.local",
+      "phone": "952-555-6280",
+      "ssn": "718-42-1423",
+      "department": "Engineering",
+      "salary": 85005
+    },
+    {
+      "employee_id": 5415,
+      "name": "Victor Johnson",
+      "dob": "1990-11-07",
+      "email": "victor.johnson6@mail.test",
+      "phone": "681-555-9502",
+      "ssn": "767-66-5557",
+      "department": "Finance",
+      "salary": 131720
+    },
+    {
+      "employee_id": 2494,
+      "name": "Noah Thompson",
+      "dob": "1986-01-31",
+      "email": "noah.thompson45@demo.local",
+      "phone": "541-555-6260",
+      "ssn": "786-23-3634",
+      "department": "HR",
+      "salary": 108955
+    }
+  ]
+}

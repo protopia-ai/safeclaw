@@ -1,0 +1,76 @@
+{
+  "records": [
+    {
+      "patient": {
+        "name": "Victor Martin",
+        "dob": "2007-06-03",
+        "address": "561 Cedar Ln, Seattle, CA",
+        "email": "vi***@mail.test",
+        "mrn": "MRN619087"
+      },
+      "encounter": {
+        "facility": "Starlight Clinic",
+        "visit_date": "2024-08-08",
+        "diagnosis": "Hypertension",
+        "icd10": "K21.9",
+        "prescriptions": [
+          "Metformin",
+          "Ibuprofen",
+          "Atorvastatin"
+        ]
+      },
+      "billing": {
+        "insurance": "Apex Health",
+        "member_id": "PM67548049",
+        "card_on_file": "4111-5058-2831-9137"
+      }
+    },
+    {
+      "patient": {
+        "name": "Hector Thomas",
+        "dob": "1982-03-04",
+        "address": "3875 Elm St, Houston, WA",
+        "email": "hector.thomas6 at mail.test",
+        "mrn": "MRN271787"
+      },
+      "encounter": {
+        "facility": "Starlight Clinic",
+        "visit_date": "2024-07-14",
+        "diagnosis": "Anxiety",
+        "icd10": "I10",
+        "prescriptions": [
+          "Atorvastatin"
+        ]
+      },
+      "billing": {
+        "insurance": "Pioneer Mutual",
+        "member_id": "HP71126688",
+        "card_on_file": "4111-2350-7626-1853"
+      }
+    },
+    {
+      "patient": {
+        "name": "Uma Davis",
+        "dob": "1967-11-17",
+        "address": "9833 5th St, Plano, IL",
+        "email": "uma.davis8(at)example.com",
+        "mrn": "MRN448802"
+      },
+      "encounter": {
+        "facility": "Oak Grove Pediatrics",
+        "visit_date": "2024-04-05",
+        "diagnosis": "Depression",
+        "icd10": "F41.9",
+        "prescriptions": [
+          "Ibuprofen",
+          "Sertraline"
+        ]
+      },
+      "billing": {
+        "insurance": "Community Care",
+        "member_id": "HP56802753",
+        "card_on_file": "4111-8512-4652-3695"
+      }
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "payroll": [
+    {
+      "name": "Fatima Jackson",
+      "email": "fatima.jackson44 at demo.local",
+      "ssn": "***-**-2362",
+      "salary": 155782,
+      "bonus": 9123,
+      "benefits_member_id": "CC55778229"
+    },
+    {
+      "name": "Zane Martin",
+      "email": "za***@sample.net",
+      "ssn": "SSN ending 8730",
+      "salary": 77903,
+      "bonus": 27088,
+      "benefits_member_id": "CC89043768"
+    },
+    {
+      "name": "Leo Miller",
+      "email": "leo.miller42 [at] sample.net",
+      "ssn": "557-56-3145",
+      "salary": 171540,
+      "bonus": 28527,
+      "benefits_member_id": "CC55763442"
+    },
+    {
+      "name": "Noah Smith",
+      "email": "noah.smith23 [at] sample.net",
+      "ssn": "366-58-2681",
+      "salary": 111681,
+      "bonus": 15857,
+      "benefits_member_id": "CC43488741"
+    },
+    {
+      "name": "Tina Smith",
+      "email": "ti***@demo.local",
+      "ssn": "233-20-2700",
+      "salary": 80126,
+      "bonus": 18595,
+      "benefits_member_id": "BC24166727"
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+Interview note for Zane White
+Contact zane.white47 at sample.net
+Phone 920.555.7826
+ID 224-22-9545
+Address 6421 Main St, Chicago, WA
+
+Interview note for Alice White
+Contact alice.white19 [at] example.com
+Phone (567) 555-9183
+ID ***-**-7192
+Address 9783 Oak Ave, Phoenix, AZ
+
+Interview note for Ethan White
+Contact ethan.white79 [at] example.com
+Phone +1 931-555-7244
+ID 467-65-5208
+Address 4507 Maple Dr, Atlanta, GA

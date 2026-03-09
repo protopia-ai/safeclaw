@@ -1,0 +1,14 @@
+2025-01-31 INFO visit patient="Victor Anderson" mrn=MRN843759 diag=J45.909 rx=Atorvastatin insurer=HP58865940 ip=225.156.92.76
+2025-07-28 INFO visit patient="Yara White" mrn=MRN851306 diag=K21.9 rx=Albuterol insurer=PM48268388 ip=119.3.147.41
+2025-06-18 INFO visit patient="Diana White" mrn=MRN479857 diag=E11.9 rx=Atorvastatin insurer=HP61127394 ip=217.121.53.185
+2025-08-09 INFO visit patient="Hector Wilson" mrn=MRN592163 diag=G43.909 rx=Sertraline insurer=HP36239407 ip=78.154.120.131
+2025-07-12 INFO visit patient="Bob Smith" mrn=MRN347236 diag=M54.50 rx=Ibuprofen insurer=HP26341581 ip=242.126.226.164
+2025-03-27 INFO visit patient="Karen Martinez" mrn=MRN221766 diag=M54.50 rx=Albuterol insurer=BC59368227 ip=160.5.173.21
+2025-12-21 INFO visit patient="Tina Martin" mrn=MRN128337 diag=F41.9 rx=Atorvastatin insurer=BC21979906 ip=160.120.163.132
+2024-07-17 INFO visit patient="Carlos Anderson" mrn=MRN140364 diag=I10 rx=Omeprazole insurer=HP48175500 ip=231.249.185.101
+2024-06-26 INFO visit patient="Jamal Taylor" mrn=MRN750790 diag=F41.9 rx=Albuterol insurer=CC74478027 ip=81.149.54.248
+2024-06-02 INFO visit patient="Grace Davis" mrn=MRN887142 diag=M54.50 rx=Omeprazole insurer=PM79990225 ip=154.158.26.93
+2026-01-27 INFO visit patient="Quinn Miller" mrn=MRN847203 diag=J45.909 rx=Lisinopril insurer=HP14136322 ip=238.216.81.45
+2025-01-06 INFO visit patient="Xavier Martinez" mrn=MRN214540 diag=M54.50 rx=Sertraline insurer=CC45778709 ip=219.110.178.157
+2025-08-18 INFO visit patient="Alice Moore" mrn=MRN840519 diag=G43.909 rx=Lisinopril insurer=CC53630089 ip=118.217.20.126
+2024-04-22 INFO visit patient="Tina Brown" mrn=MRN895075 diag=E11.9 rx=Omeprazole insurer=BC42413447 ip=61.202.136.225
