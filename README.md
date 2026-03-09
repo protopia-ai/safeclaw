@@ -278,6 +278,7 @@ Sorts and sends a report to slack when files are uploaded to a local directory, 
     chmod -R a+r ~/.openclaw/workspace-safeclaw/pii-scanner
     ```
 3. Register the [`pii_scanner`](./cron/pii_scanner.sh) OpenClaw cron task:
+    > 💡 Update the ./cron/pii_scanner.sh with your SLACK-CHANNEL-ID.
     ```bash
     # Register job.
     docker compose exec -T openclaw-gateway sh < cron/pii_scanner.sh
