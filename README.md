@@ -11,10 +11,10 @@ SafeClaw is an [OpenClaw](https://docs.openclaw.ai) agent with access to [Protop
 - [📋 Requirements](#requirements)
 - [⚙️ Setup](#setup)
 - [Setup OpenClaw Browsing Tool](#setup-openclaw-browsing-tool)
-- [Example 1: (Financial Data 📈 Using the Chat Interface).](#demo-candidate-1-financial-data--using-the-chat-interface)
-- [Example 2 (Portfolio Monitoring Agent ⏱️ Using cron job).](#demo-candidate-2-portfolio-monitoring-agent-️-using-cron-job)
-- [Example 3 (✉️ Email scanning/report).](#demo-candidate-3-email-scanningreport)
-- [Example 4 (🔎 PII Scanner).](#demo-candidate-4-pii-scanner)
+- [Example 1: (Financial Data 📈 Using the Chat Interface).](#example-1-financial-data--using-the-chat-interface)
+- [Example 2 (Portfolio Monitoring Agent ⏱️ Using cron job).](#example-2-portfolio-monitoring-agent-️-using-cron-job)
+- [Example 3 (✉️ Email scanning/report).](#example-3-email-scanningreport)
+- [Example 4 (🔎 PII Scanner).](#example-4-pii-scanner)
 - [Data Sources Integration](#data-sources-integration-)
     - [Google Gmail](#1-google-gmail-integration)
 - [Other Agent Use Cases](#other-agent-use-cases)
@@ -334,4 +334,4 @@ docker compose exec openclaw-gateway gog auth list
 docker compose exec openclaw-gateway gog gmail messages search "in:inbox" --max 10
 ```
 
-[🔙 back to email demo setup](#demo-candidate-3-email-scanningreport)
+[🔙 back to email demo setup](#example-3-email-scanningreport)
