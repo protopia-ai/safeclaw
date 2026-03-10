@@ -1,6 +1,6 @@
 # SafeClaw: OpenClaw with Protopia SGT Protection 🦞
 
-![SafeClaw](./safeclaw.jpg)
+<img src="./safeclaw.jpg" alt="SafeClaw" width="420" />
 
 SafeClaw is an [OpenClaw](https://docs.openclaw.ai) agent with access to [Protopia SGT](https://protopia.ai/stained-glass-transform/) to expand the usability of sensitive data for AI with state-of-the-art data protection and privacy.
 
@@ -34,78 +34,88 @@ SafeClaw is an [OpenClaw](https://docs.openclaw.ai) agent with access to [Protop
 ## Setup
 
 1. 🐳 Build custom `OpenClaw` docker image:
-```bash
-# Build demo image from custom Dockerfile
-docker build -t ghcr.io/openclaw/openclaw:protopia-demo .
-```
+    
+    ```bash
+    # Build demo image from custom Dockerfile
+    docker build -t ghcr.io/openclaw/openclaw:protopia-demo .
+    ```
 
-2. ⚠️ **Important**: Copy the provided `openclaw.json` config file to `~/.openclaw/openclaw.json` (create directory if needed). This config will be mounted to the OpenClaw container by `docker compose`.
+2. Use the provided [`openclaw.json`](openclaw.json) as a reference, then update/merge the relevant sections in your local `~/.openclaw/openclaw.json`.
+    
+    > ⚠️ **Important**: Do **not** replace your existing `~/.openclaw/openclaw.json` by copying this repo file directly.
+
+    **Key config sections to review:**
+    - `models.providers.vllm`: Points to the `stainedglass` container/port from this setup.
+    - `tools.web`: Configure this if you want web search enabled with Brave for [example 1](#example-1-financial-data--using-the-chat-interface) and [example 2](#example-2-portfolio-monitoring-agent-️-using-cron-job).
+    - `channels.slack`: Configure this to enable Slack integration for [example 2](#example-2-portfolio-monitoring-agent-️-using-cron-job), [example 3](#example-3-email-scanningreport), or [example 4](#example-4-pii-scanner).
+
+    Your local config is what gets mounted to the OpenClaw container by `docker compose`.
 
 3. Deploy upstream LLM to Modal with the [Modal Deployment Script](./modal_deploy_script.py) (or any other inference service of your choice).
 
-```bash
-# for a Modal deployment:
-uv pip install modal
-MODAL_LOG_LEVEL=DEBUG modal deploy scripts/modal_deploy_output_protection.py
-```
+    ```bash
+    # for a Modal deployment:
+    uv pip install modal
+    MODAL_LOG_LEVEL=DEBUG modal deploy scripts/modal_deploy_output_protection.py
+    ```
 
-⚠️ **Important**: The modal deploy script loads the `OUTPUT_PROTECTION_IMAGE` from AWS ECR. Update this as needed.
+    ⚠️ **Important**: The modal deploy script loads the `OUTPUT_PROTECTION_IMAGE` from AWS ECR. Update this as needed.
 
-⚠️ **Important**: The Modal deployment script loads the `Qwen/Qwen3-32B` model from Hugging Face. Ensure your Modal `huggingface-secret` is configured with a valid HF token. This token may differ from the HF token used for SGT model access.
+    ⚠️ **Important**: The Modal deployment script loads the `Qwen/Qwen3-32B` model from Hugging Face. Ensure your Modal `huggingface-secret` is configured with a valid HF token. This token may differ from the HF token used for SGT model access.
 
-- Update the [docker-compose](./docker-compose.yaml) `stainedglass` service with your modal API keys to ensure SGT proxy can communicate with upstream Modal.
+    - Update the [docker-compose](./docker-compose.yaml) `stainedglass` service with your modal API keys to ensure SGT proxy can communicate with upstream Modal.
 
-💡 Hint: Set env variable: `SGP_REQUEST_HEADERS_TO_ADD: "Modal-Key=[your-key],Modal-Secret=[your-secret]"` in the docker-compose `stainedglass` service.
+    💡 Hint: Set env variable: `SGP_REQUEST_HEADERS_TO_ADD: "Modal-Key=[your-key],Modal-Secret=[your-secret]"` in the docker-compose `stainedglass` service.
 
-4. Setup with docker compose
-```bash
-export HF_TOKEN=[your-hf-token] # Use the HF token provided by Protopia with access to the Qwen32B SGT.
-HF_TOKEN=[token] MODAL_KEY=[key] MODAL_SECRET=[secret] docker compose up -d
-```
+4. Run with `docker-compose`.
+    ```bash
+    export HF_TOKEN=[your-hf-token] # Use the HF token provided by Protopia with access to the Qwen32B SGT.
+    HF_TOKEN=[token] MODAL_KEY=[key] MODAL_SECRET=[secret] docker compose up -d
+    ```
 
 5. 🏁 Verify running containers:
-```bash 
-docker ps
+    ```bash 
+    docker ps
 
-# > you should have at least these containers running:
-ghcr.io/openclaw/openclaw:protopia-demo
-stainedglass-proxy
-```
+    # > you should have at least these containers running:
+    ghcr.io/openclaw/openclaw:protopia-demo
+    stainedglass-proxy
+    ```
 
 6. Register the `SafeClaw` OpenClaw agent
-```bash
-docker compose exec openclaw-gateway openclaw agents add safeclaw
-```
-- This will update your `~/.openclaw/openclaw.json` with your new `SafeClaw` agent.
+    ```bash
+    docker compose exec openclaw-gateway openclaw agents add safeclaw
+    ```
+    - This will update your `~/.openclaw/openclaw.json` with your new `SafeClaw` agent.
 
-![agent](./screenshots/agent.png)
+    ![agent](./screenshots/agent.png)
 
 7. Access OpenClaw Chat UI at `localhost:18790/chat?token=[your token]` (setup port-forward if needed).
 
-💡 Hint: You can find the `token` at `~/.openclaw/openclaw.json` under `auth`.
+    💡 Hint: You can find the `token` at `~/.openclaw/openclaw.json` under `auth`.
 
 8. ⚠️ If you get a `pairing required` error, then you need to allow your device in Openclaw, follow these steps:
-```bash
-# List pending requests
-docker compose exec openclaw-gateway openclaw devices list
-```
-- Find devices listed under `Pending` and copy its request id.
-```bash
-# Approve by request ID
-docker compose exec openclaw-gateway openclaw devices approve [request-id]
-```
 
-- Test accessing the OpenClaw Web UI again, or connect to the OpenClaw `TUI`:
-```bash
-docker compose exec openclaw-gateway openclaw tui
-```
+    ```bash
+    # List pending requests
+    docker compose exec openclaw-gateway openclaw devices list
+    ```
+    - Find devices listed under `Pending` and copy its request id.
+    ```bash
+    # Approve by request ID
+    docker compose exec openclaw-gateway openclaw devices approve [request-id]
+    ```
+
+    - Test accessing the OpenClaw Web UI again, or connect to the OpenClaw `TUI`:
+    ```bash
+    docker compose exec openclaw-gateway openclaw tui
+    ```
 
 ## Setup OpenClaw Browsing Tool
 
 1. You will need a Brave API key. Get one from https://api-dashboard.search.brave.com
 2. Run: `docker compose exec openclaw-gateway openclaw configure --section web` and follow the instructions.
 3. Ask OpenClaw to perform a search for you!
-
 
 ---
 
