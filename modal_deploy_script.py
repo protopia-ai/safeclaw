@@ -17,7 +17,7 @@ import modal
 # --------------- Deployment Constants ---------------
 
 OUTPUT_PROTECTION_IMAGE: Final[str] = ( # UPDATE THIS TO YOUR IMAGE
-    "protopia/stainedglass-inference-server:0.15.1-2.9.3-de5c836-obfuscated"
+    "protopia/stainedglass-inference-server:0.15.1-2.9.3"
 )
 
 MODEL_NAME: Final[str] = "Qwen/Qwen3-32B"

@@ -294,6 +294,8 @@ Sorts and sends a report to slack when files are uploaded to a local directory, 
 
 ### Example Slack PII Scan Report
 ![demo-4](./screenshots/demo-4.png)
+![demo-5](./screenshots/demo-5.png)
+
 
 # Data Sources Integration 📀
 
