@@ -137,7 +137,7 @@ def warmup(n_requests: int) -> None:
         "/home/stainedglass/.cache/torch": torch_cache_vol,
     },
     enable_memory_snapshot=True,
-    experimental_options={"enable_gpu_snapshot": False},
+    experimental_options={"enable_gpu_snapshot": True},
     max_containers=1,
     secrets=[modal.Secret.from_name("huggingface-secret")],
 )
