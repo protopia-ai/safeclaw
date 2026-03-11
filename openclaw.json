@@ -23,7 +23,6 @@
             "input": [
               "text"
             ],
-            
             "contextWindow": 32768,
             "maxTokens": 32768
           }
@@ -55,7 +54,12 @@
     },
     "list": [
       {
-        "id": "main"
+        "id": "main",
+        "subagents": {
+          "allowAgents": [
+            "safeclaw"
+          ]
+        }
       },
       {
         "id": "safeclaw",
