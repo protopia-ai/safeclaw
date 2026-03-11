@@ -137,7 +137,7 @@ def warmup(n_requests: int) -> None:
         "/home/stainedglass/.cache/torch": torch_cache_vol,
     },
     enable_memory_snapshot=True,
-    experimental_options={"enable_gpu_snapshot": False},
+    experimental_options={"enable_gpu_snapshot": True},
     max_containers=1,
     secrets=[modal.Secret.from_name("huggingface-secret")],
 )
@@ -178,7 +178,7 @@ class OutputProtectedvLLMServer:
             # config for snapshotting
             # make KV cache predictable / small
             "--max-num-seqs",
-            "32",
+            "4",
             "--max-model-len",
             str(MAX_MODEL_LEN),
             "--max-num-batched-tokens",
