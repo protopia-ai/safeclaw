@@ -6,7 +6,7 @@ SafeClaw is an [OpenClaw](https://docs.openclaw.ai) agent with access to [Protop
 
 **SafeClaw** does not replace your existing OpenClaw agents, it provides an alternative for using your AI assistant with sensitive information. With SafeClaw, information never leaves your workspace as plaintext and cannot be recovered from the protected embeddings.
 
-💡 Request access to a Protopia SGT from https://protopia.ai/safeclaw/
+>💡 **Request access to Protopia SGT from https://protopia.ai/safeclaw/**
 
 ## Table of Contents
 
