@@ -85,7 +85,7 @@ def _post_stainedglass(
     return response.json()
 
 
-def _preview(text: str, max_chars: int = 550) -> str:
+def _preview(text: str, max_chars: int = 1024) -> str:
     clean = " ".join(text.split())
     if len(clean) <= max_chars:
         return clean
@@ -129,11 +129,10 @@ def main() -> int:
         "Run Config",
         textwrap.dedent(
             f"""\
-            Proxy URL  : {args.proxy_url}
-            Model      : {args.model}
-            Timeout    : {args.timeout}s
-            API Key    : {"set" if api_key else "not set"}
-            Prompt     : {_preview(args.message, 120)}
+            SGT Proxy URL  : {args.proxy_url}
+            Model          : {args.model}
+            Timeout        : {args.timeout}s
+            Prompt         : {_preview(args.message, 120)}
             """
         ).strip(),
     )
@@ -156,13 +155,15 @@ def main() -> int:
         plain_text = "".join(first_response.get("tokenized_plain_text", []))
 
         _print_section(
-            "Request #1: Plain + Protected Embeddings",
+            "Plain vs Protected Embeddings",
             textwrap.dedent(
                 f"""\
-                plain_text_embeddings preview: {plain}
-                transformed_embeddings preview: {transformed}
-                plaintext preview           : {_preview(plain_text)}
-                """
+            plain_text_embeddings preview: {plain}
+
+            transformed_embeddings preview: {transformed}
+                
+            plaintext preview           : {_preview(plain_text)}
+            """
             ).strip(),
         )
 
@@ -184,7 +185,7 @@ def main() -> int:
         )
 
         _print_section(
-            "Request #2: Transformed Embeddings",
+            "Request #2: 🔒 Transformed Embeddings 🔒",
             textwrap.dedent(
                 f"""\
                 Transformed Embeddings preview : {_preview(str(transformed_embeddings[:-5]))}
@@ -193,7 +194,7 @@ def main() -> int:
         )
 
         _print_section(
-            "Request #2: Reconstruction Check",
+            "Reconstruction Attempt Check 🕵️‍♂️",
             textwrap.dedent(
                 f"""\
                 reconstructed preview : {_preview(reconstructed_prompt)}
@@ -201,18 +202,9 @@ def main() -> int:
             ).strip(),
         )
 
-        _print_section(
-            "Raw JSON Keys",
-            (
-                "response #1 keys: "
-                f"{', '.join(sorted(first_response.keys()))}\n"
-                "response #2 keys: "
-                f"{', '.join(sorted(second_response.keys()))}"
-            ),
-        )
-
-        print("\nDemo verification completed successfully.")
+        print("\nDemo completed successfully.")
         return 0
+
     except requests.HTTPError as exc:
         status = exc.response.status_code if exc.response is not None else "unknown"
         body = exc.response.text if exc.response is not None else "<no response body>"
