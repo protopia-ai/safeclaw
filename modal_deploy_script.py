@@ -178,7 +178,7 @@ class OutputProtectedvLLMServer:
             # config for snapshotting
             # make KV cache predictable / small
             "--max-num-seqs",
-            "32",
+            "4",
             "--max-model-len",
             str(MAX_MODEL_LEN),
             "--max-num-batched-tokens",
