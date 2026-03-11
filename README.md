@@ -50,6 +50,7 @@ SafeClaw is an [OpenClaw](https://docs.openclaw.ai) agent with access to [Protop
     - `models.providers.vllm`: Points to the `stainedglass` container/port from this setup.
     - `tools.web`: Configure this if you want web search enabled with Brave for [example 1](#example-1-financial-data--using-the-chat-interface) and [example 2](#example-2-portfolio-monitoring-agent-️-using-cron-job).
     - `channels.slack`: Configure this to enable Slack integration for [example 2](#example-2-portfolio-monitoring-agent-️-using-cron-job), [example 3](#example-3-email-scanningreport), or [example 4](#example-4-pii-scanner).
+    - `agents.list`: To allow the `main` agent to spawn `safeclaw` as a subagent via `subagents.allowAgents`.
 
     Your local config is what gets mounted to the OpenClaw container by `docker compose`.
 
