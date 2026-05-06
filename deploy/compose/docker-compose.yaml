@@ -60,8 +60,17 @@ services:
       # Auto-generated if empty.
       OPENCLAW_GATEWAY_TOKEN: ${OPENCLAW_GATEWAY_TOKEN}
       OPENCLAW_ALLOW_INSECURE_PRIVATE_WS: ${OPENCLAW_ALLOW_INSECURE_PRIVATE_WS:-}
-      # Google integration
-      GOG_KEYRING_PASSWORD: "safeclaw"
+      # SGT endpoint — defaults to the local stainedglass service.
+      # Override with an external URL when not running stainedglass locally.
+      SGT_BASE_URL: "${SGT_BASE_URL:-http://stainedglass:8600/v1}"
+      SGT_API_KEY: "${SGT_API_KEY:-}"
+      # Slack integration (required for examples 2, 3, 4)
+      SLACK_BOT_TOKEN: "${SLACK_BOT_TOKEN:-}"
+      SLACK_APP_TOKEN: "${SLACK_APP_TOKEN:-}"
+      # Brave Search (required for example 2)
+      BRAVE_API_KEY: "${BRAVE_API_KEY:-}"
+      # Google integration (required for example 3)
+      GOG_KEYRING_PASSWORD: "${GOG_KEYRING_PASSWORD:-safeclaw}"
     volumes:
       - $HOME/.openclaw/:/home/node/.openclaw/
     ports:

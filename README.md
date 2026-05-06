@@ -42,17 +42,13 @@ SafeClaw is an [OpenClaw](https://docs.openclaw.ai) agent with access to [Protop
     docker build -t ghcr.io/openclaw/openclaw:protopia-demo .
     ```
 
-2. Use the provided [`openclaw.json`](openclaw.json) as a reference, then update/merge the relevant sections in your local `~/.openclaw/openclaw.json`.
-    
-    > ⚠️ **Important**: Do **not** replace your existing `~/.openclaw/openclaw.json` by copying this repo file directly.
+2. Copy [`openclaw.json`](openclaw.json) to your local OpenClaw config directory:
+    ```bash
+    cp openclaw.json ~/.openclaw/openclaw.json
+    ```
+    The file uses `${VAR}` placeholders for all secrets. The container expands them at startup using env vars passed by docker-compose (see step 4).
 
-    **Key config sections to review:**
-    - `models.providers.vllm`: Points to the `stainedglass` container/port from this setup.
-    - `tools.web`: Configure this if you want web search enabled with Brave for [example 1](#example-1-financial-data--using-the-chat-interface) and [example 2](#example-2-portfolio-monitoring-agent-️-using-cron-job).
-    - `channels.slack`: Configure this to enable Slack integration for [example 2](#example-2-portfolio-monitoring-agent-️-using-cron-job), [example 3](#example-3-email-scanningreport), or [example 4](#example-4-pii-scanner).
-    - `agents.list`: To allow the `main` agent to spawn `safeclaw` as a subagent via `subagents.allowAgents`.
-
-    Your local config is what gets mounted to the OpenClaw container by `docker compose`.
+    > ⚠️ **Important**: This will replace your existing `~/.openclaw/openclaw.json`. Back it up first if needed.
 
 3. Deploy upstream LLM to Modal with the [Modal Deployment Script](./modal_deploy_script.py) (or any other inference service of your choice).
 
@@ -70,10 +66,21 @@ SafeClaw is an [OpenClaw](https://docs.openclaw.ai) agent with access to [Protop
 
     💡 Hint: Set env variable: `SGP_REQUEST_HEADERS_TO_ADD: "Modal-Key=[your-key],Modal-Secret=[your-secret]"` in the docker-compose `stainedglass` service.
 
-4. Run with `docker compose`.
+4. Set your credentials and run with `docker compose`. The easiest way is a `.env` file in the project root:
     ```bash
-    export HF_TOKEN=[your-hf-token] # Use the HF token provided by Protopia with access to the Qwen32B SGT.
-    HF_TOKEN=[token] MODAL_KEY=[key] MODAL_SECRET=[secret] docker compose -f deploy/compose/docker-compose.yaml up -d
+    # .env
+    HF_TOKEN=...            # HF token with access to the Qwen32B SGT model (provided by Protopia)
+    MODAL_KEY=...           # Modal API key (for upstream inference)
+    MODAL_SECRET=...        # Modal API secret
+    SGT_API_KEY=...         # SGT proxy API key (provided by Protopia)
+    SLACK_BOT_TOKEN=...     # xoxb-... (required for examples 2, 3, 4)
+    SLACK_APP_TOKEN=...     # xapp-... (required for examples 2, 3, 4)
+    BRAVE_API_KEY=...       # Required for example 2 (portfolio monitor web search)
+    GOG_KEYRING_PASSWORD=safeclaw   # Use 'safeclaw' for the demo Gmail account
+    ```
+    Then start:
+    ```bash
+    docker compose -f deploy/compose/docker-compose.yaml up -d
     ```
 
 5. 🏁 Verify running containers:
@@ -125,11 +132,7 @@ SafeClaw is an [OpenClaw](https://docs.openclaw.ai) agent with access to [Protop
 # Example 1: (Financial Data 📈 Using the Chat Interface).
 User uses the OpenClaw chat interface to work on financial data analysis.
 
-1. Copy the [demo data](./examples/1-financial-data/documents/) to the OpenClaw workspace: `~/.openclaw/workspace-safeclaw/`.
-```bash
-cp -r examples/1-financial-data/documents/ ~/.openclaw/workspace-safeclaw/financial-data
-chmod -R a+r ~/.openclaw/workspace-safeclaw/financial-data
-```
+1. The demo data is automatically seeded to `~/.openclaw/workspace-safeclaw/financial-data/` when the container first starts.
 
 ![demo-1](./screenshots/demo-1.png)
 ![demo-2](./screenshots/demo-2.png)
@@ -140,11 +143,7 @@ chmod -R a+r ~/.openclaw/workspace-safeclaw/financial-data
 OpenClaw agent scheduled task to generate a report based on local portfolio data and web search. The resulting report is posted on Slack.
 
 ## 1. Demo data: 
-1. Copy the [demo data and instructions](./examples/2-investment-portfolio/) to the OpenClaw workspace: `~/.openclaw/workspace-safeclaw/`.
-```bash
-cp -r examples/2-investment-portfolio ~/.openclaw/workspace-safeclaw/investment-portfolio
-chmod -R a+r ~/.openclaw/workspace-safeclaw/investment-portfolio
-```
+1. The demo data and task instructions are automatically seeded to `~/.openclaw/workspace-safeclaw/investment-portfolio/` when the container first starts.
 
 ## 2. Setup Slack Integration
 
@@ -262,11 +261,7 @@ Sends a report to Slack each day with a list of action items based on new emails
 
 1. Follow the steps to [setup OpenClaw Gmail Integration](#1-google-gmail-integration).
 2. Follow the steps to [setup Slack Integration](#2-setup-slack-integration).
-3. Copy the [demo data and task instructions](./examples/3-email-monitor/) to the OpenClaw workspace: `~/.openclaw/workspace-safeclaw/`.
-```bash
-cp -r examples/3-email-monitor ~/.openclaw/workspace-safeclaw/email-monitor
-chmod -R a+r ~/.openclaw/workspace-safeclaw/email-monitor
-```
+3. The demo data and task instructions are automatically seeded to `~/.openclaw/workspace-safeclaw/email-monitor/` when the container first starts.
 4. Register the [`email_monitor`](./cron/email_monitor.sh) OpenClaw cron task:
     > 💡 Update ./cron/email_monitor.sh with your SLACK-CHANNEL-ID.
     
@@ -285,13 +280,7 @@ chmod -R a+r ~/.openclaw/workspace-safeclaw/email-monitor
 Sorts and sends a report to slack when files are uploaded to a local directory, stating whether the files contained PII.
 
 1. Follow the steps to [setup Slack Integration](#2-setup-slack-integration).
-2. Copy the [demo data and task instructions](./examples/4-pii-scanner/) to the OpenClaw workspace: `~/.openclaw/workspace-safeclaw/`.
-    ```bash
-    cp -r examples/4-pii-scanner ~/.openclaw/workspace-safeclaw/pii-scanner
-    mkdir ~/.openclaw/workspace-safeclaw/pii-scanner/data-guardian-pii-scanner/no-pii
-    mkdir ~/.openclaw/workspace-safeclaw/pii-scanner/data-guardian-pii-scanner/yes-pii
-    chmod -R a+r ~/.openclaw/workspace-safeclaw/pii-scanner
-    ```
+2. The demo data, task instructions, and sort directories (`pending/`, `no-pii/`, `yes-pii/`) are automatically seeded to `~/.openclaw/workspace-safeclaw/pii-scanner/` when the container first starts.
 3. Register the [`pii_scanner`](./cron/pii_scanner.sh) OpenClaw cron task:
     > 💡 Update ./cron/pii_scanner.sh with your SLACK-CHANNEL-ID.
     ```bash

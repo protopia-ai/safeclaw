@@ -21,6 +21,8 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 RUN mkdir -p /home/linuxbrew/.linuxbrew \
 	&& chown -R node:node /home/linuxbrew
 
+COPY --chown=node:node examples/ /opt/safeclaw-examples/
+
 USER node
 
 # Install brew
@@ -30,4 +32,7 @@ ENV PATH="/home/linuxbrew/.linuxbrew/bin:/home/linuxbrew/.linuxbrew/sbin:${PATH}
 
 # Install gogcli
 RUN brew install steipete/tap/gogcli
+
+COPY deploy/entrypoint.sh /usr/local/bin/entrypoint.sh
+ENTRYPOINT ["/usr/local/bin/entrypoint.sh"]
 

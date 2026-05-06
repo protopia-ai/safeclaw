@@ -12,8 +12,8 @@
     "mode": "merge",
     "providers": {
       "vllm": {
-        "baseUrl": "http://stainedglass:8600/v1",
-        "apiKey": "VLLM_API_KEY",
+        "baseUrl": "${SGT_BASE_URL}",
+        "apiKey": "${SGT_API_KEY}",
         "api": "openai-completions",
         "models": [
           {
@@ -75,7 +75,7 @@
       "search": {
         "enabled": true,
         "provider": "brave",
-        "apiKey": "[BRAVE_API_KEY]"
+        "apiKey": "${BRAVE_API_KEY}"
       },
       "fetch": {
         "enabled": true
@@ -126,8 +126,8 @@
       "mode": "socket",
       "webhookPath": "/slack/events",
       "enabled": true,
-      "botToken": "[SLACK_BOT_TOKEN]",
-      "appToken": "[SLACK_APP_TOKEN]",
+      "botToken": "${SLACK_BOT_TOKEN}",
+      "appToken": "${SLACK_APP_TOKEN}",
       "userTokenReadOnly": true,
       "groupPolicy": "allowlist",
       "streaming": "partial",
