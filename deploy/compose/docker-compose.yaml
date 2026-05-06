@@ -4,7 +4,7 @@ services:
   # Protopia StainedGlass Proxy #
   ###############################
   stainedglass:
-    image: stainedglass-proxy:1.49.2-e934ce8-dgx
+    image: stainedglass-proxy:1.63.1-8a6120e5
     environment:
       SGP_SGT_PATH: Protopia/SGT-for-Qwen3-32B-swept-water-bfloat16
       SGP_INFERENCE_SERVICE_HOST: "[INFERENCE-SERVICE-URL]"
