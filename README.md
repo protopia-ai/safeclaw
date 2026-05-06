@@ -28,7 +28,7 @@ SafeClaw is an [OpenClaw](https://docs.openclaw.ai) agent with access to [Protop
 > 💡 Request access to a Protopia SGT from https://protopia.ai/safeclaw/
 
 3. Modal deployment script and Modal API keys (or any other way to host the upstream `Qwen3-32B` for inference.)
-4. [docker-compose](/docker-compose.yaml) file.
+4. [docker-compose](deploy/compose/docker-compose.yaml) file.
 5. [openclaw.json](openclaw.json) starter configuration.
 6. [Demo Resources and Data](./examples/)
 7. [Example Cron Tasks Scripts](./cron/)
@@ -66,14 +66,14 @@ SafeClaw is an [OpenClaw](https://docs.openclaw.ai) agent with access to [Protop
 
     ⚠️ **Important**: The Modal deployment script loads the `Qwen/Qwen3-32B` model from Hugging Face. Ensure your Modal `huggingface-secret` is configured with a valid HF token. This token may differ from the HF token used for SGT model access.
 
-    - Update the [docker-compose](./docker-compose.yaml) `stainedglass` service with your modal API keys to ensure SGT proxy can communicate with upstream Modal.
+    - Update the [docker-compose](./deploy/compose/docker-compose.yaml) `stainedglass` service with your modal API keys to ensure SGT proxy can communicate with upstream Modal.
 
     💡 Hint: Set env variable: `SGP_REQUEST_HEADERS_TO_ADD: "Modal-Key=[your-key],Modal-Secret=[your-secret]"` in the docker-compose `stainedglass` service.
 
-4. Run with `docker-compose`.
+4. Run with `docker compose`.
     ```bash
     export HF_TOKEN=[your-hf-token] # Use the HF token provided by Protopia with access to the Qwen32B SGT.
-    HF_TOKEN=[token] MODAL_KEY=[key] MODAL_SECRET=[secret] docker compose up -d
+    HF_TOKEN=[token] MODAL_KEY=[key] MODAL_SECRET=[secret] docker compose -f deploy/compose/docker-compose.yaml up -d
     ```
 
 5. 🏁 Verify running containers:
@@ -87,7 +87,7 @@ SafeClaw is an [OpenClaw](https://docs.openclaw.ai) agent with access to [Protop
 
 6. Register the `SafeClaw` OpenClaw agent
     ```bash
-    docker compose exec openclaw-gateway openclaw agents add safeclaw
+    docker compose -f deploy/compose/docker-compose.yaml exec openclaw-gateway openclaw agents add safeclaw
     ```
     - This will update your `~/.openclaw/openclaw.json` with your new `SafeClaw` agent.
 
@@ -101,23 +101,23 @@ SafeClaw is an [OpenClaw](https://docs.openclaw.ai) agent with access to [Protop
 
     ```bash
     # List pending requests
-    docker compose exec openclaw-gateway openclaw devices list
+    docker compose -f deploy/compose/docker-compose.yaml exec openclaw-gateway openclaw devices list
     ```
     - Find devices listed under `Pending` and copy its request id.
     ```bash
     # Approve by request ID
-    docker compose exec openclaw-gateway openclaw devices approve [request-id]
+    docker compose -f deploy/compose/docker-compose.yaml exec openclaw-gateway openclaw devices approve [request-id]
     ```
 
     - Test accessing the OpenClaw Web UI again, or connect to the OpenClaw `TUI`:
     ```bash
-    docker compose exec openclaw-gateway openclaw tui
+    docker compose -f deploy/compose/docker-compose.yaml exec openclaw-gateway openclaw tui
     ```
 
 ## Setup OpenClaw Browsing Tool
 
 1. You will need a Brave API key. Get one from https://api-dashboard.search.brave.com
-2. Run: `docker compose exec openclaw-gateway openclaw configure --section web` and follow the instructions.
+2. Run: `docker compose -f deploy/compose/docker-compose.yaml exec openclaw-gateway openclaw configure --section web` and follow the instructions.
 3. Ask OpenClaw to perform a search for you!
 
 ---
@@ -235,7 +235,7 @@ chmod -R a+r ~/.openclaw/workspace-safeclaw/investment-portfolio
 
 ```bash
 # Test Slack integration
-docker compose exec openclaw-gateway openclaw channels status --probe
+docker compose -f deploy/compose/docker-compose.yaml exec openclaw-gateway openclaw channels status --probe
 ```
 
 ## 3. Monitoring Job Setup
@@ -243,11 +243,11 @@ docker compose exec openclaw-gateway openclaw channels status --probe
 - Register the `portfolio_monitor` OpenClaw cron task:
 ```bash
 # Register job.
-docker compose exec -T openclaw-gateway sh < cron/portfolio_monitor.sh
+docker compose -f deploy/compose/docker-compose.yaml exec -T openclaw-gateway sh < cron/portfolio_monitor.sh
 # Verify job.
-docker compose exec openclaw-gateway openclaw cron list
+docker compose -f deploy/compose/docker-compose.yaml exec openclaw-gateway openclaw cron list
 # Test run job.
-docker compose exec openclaw-gateway openclaw cron run [job-id]
+docker compose -f deploy/compose/docker-compose.yaml exec openclaw-gateway openclaw cron run [job-id]
 ```
 
 ### Example Slack Message
@@ -272,13 +272,13 @@ chmod -R a+r ~/.openclaw/workspace-safeclaw/email-monitor
     
     ```bash
     # Register job.
-    docker compose exec -T openclaw-gateway sh < cron/email_monitor.sh
+    docker compose -f deploy/compose/docker-compose.yaml exec -T openclaw-gateway sh < cron/email_monitor.sh
 
     # Verify job.
-    docker compose exec openclaw-gateway openclaw cron list
+    docker compose -f deploy/compose/docker-compose.yaml exec openclaw-gateway openclaw cron list
 
     # Test run job.
-    docker compose exec openclaw-gateway openclaw cron run [job-id]
+    docker compose -f deploy/compose/docker-compose.yaml exec openclaw-gateway openclaw cron run [job-id]
     ```
 
 # Example 4 (PII Scanner)
@@ -296,13 +296,13 @@ Sorts and sends a report to slack when files are uploaded to a local directory, 
     > 💡 Update ./cron/pii_scanner.sh with your SLACK-CHANNEL-ID.
     ```bash
     # Register job.
-    docker compose exec -T openclaw-gateway sh < cron/pii_scanner.sh
+    docker compose -f deploy/compose/docker-compose.yaml exec -T openclaw-gateway sh < cron/pii_scanner.sh
 
     # Verify job.
-    docker compose exec openclaw-gateway openclaw cron list
+    docker compose -f deploy/compose/docker-compose.yaml exec openclaw-gateway openclaw cron list
 
     # Test run job.
-    docker compose exec openclaw-gateway openclaw cron run [job-id]
+    docker compose -f deploy/compose/docker-compose.yaml exec openclaw-gateway openclaw cron run [job-id]
     ```
 
 ### Example Slack PII Scan Report
@@ -340,16 +340,16 @@ mkdir -p ~/.openclaw/workspace-safeclaw/google && cp [your-secret.json] ~/.openc
 
 ```bash
 # 1. Auth client
-docker compose exec openclaw-gateway gog auth credentials /home/node/.openclaw/workspace/google/client_secret.json
+docker compose -f deploy/compose/docker-compose.yaml exec openclaw-gateway gog auth credentials /home/node/.openclaw/workspace/google/client_secret.json
 
 # 2. Add account 💡 Use 'safeclaw' when prompted for a keyring password since this is the valude set in the docker-compose for GOG_KEYRING_PASSWORD.
-docker compose exec openclaw-gateway gog auth add --manual [demo-email@gmai.com] --services gmail # other services include calendar,drive,contacts,docs,sheets
+docker compose -f deploy/compose/docker-compose.yaml exec openclaw-gateway gog auth add --manual [demo-email@gmai.com] --services gmail # other services include calendar,drive,contacts,docs,sheets
 
 # 3. Verify
-docker compose exec openclaw-gateway gog auth list
+docker compose -f deploy/compose/docker-compose.yaml exec openclaw-gateway gog auth list
 
 # 4. Test
-docker compose exec openclaw-gateway gog gmail messages search "in:inbox" --max 10
+docker compose -f deploy/compose/docker-compose.yaml exec openclaw-gateway gog gmail messages search "in:inbox" --max 10
 ```
 
 [🔙 back to email demo setup](#example-3-email-scanningreport)
