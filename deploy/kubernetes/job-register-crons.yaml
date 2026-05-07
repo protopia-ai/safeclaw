@@ -1,0 +1,65 @@
+---
+# One-time Job to register all cron schedules with the running openclaw gateway.
+#
+# The `openclaw cron add` command registers a recurring task INSIDE the 
+# gateway process. The gateway then executes it on schedule,
+# this Job only needs to run once.
+#
+# Apply after the gateway pod is healthy:
+#   kubectl apply -f deploy/kubernetes/job-register-crons.yaml
+#
+# Monitor progress:
+#   kubectl -n protopia-safeclaw logs job/safeclaw-register-crons -f
+#
+# Before applying, set SLACK_CHANNEL_ID to your Slack channel ID.
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: safeclaw-register-crons
+  namespace: protopia-safeclaw
+spec:
+  backoffLimit: 5
+  ttlSecondsAfterFinished: 86400  # auto-clean after 24h
+  template:
+    spec:
+      restartPolicy: OnFailure
+      initContainers:
+        # Wait for the gateway to be healthy before registering cron jobs.
+        - name: wait-for-gateway
+          image: curlimages/curl:latest
+          command:
+            - sh
+            - -c
+            - |
+              until curl -sf http://safeclaw.protopia-safeclaw.svc.cluster.local:18789/healthz; do
+                echo "Waiting for openclaw gateway..."; sleep 5
+              done
+              echo "Gateway is healthy."
+      containers:
+        - name: register-crons
+          image: protopia/safeclaw:latest
+          command: [sh, /etc/cron-scripts/register_all.sh]
+          env:
+            # Gateway connection — the operator stores the auth token in safeclaw-gateway.
+            # Verify the secret name with: kubectl get secrets -n protopia-safeclaw
+            - name: OPENCLAW_GATEWAY_TOKEN
+              valueFrom:
+                secretKeyRef:
+                  name: safeclaw-gateway  # operator-managed secret (key: token)
+                  key: token
+            - name: OPENCLAW_GATEWAY_URL
+              value: ws://safeclaw.protopia-safeclaw.svc.cluster.local:18790
+            # Your Slack channel ID — replace with the actual channel that should receive
+            # cron job output (e.g. C0AHK8ZQKA5). Find it in Slack: right-click channel →
+            # View channel details → scroll to bottom.
+            - name: SLACK_CHANNEL_ID
+              value: REPLACE_WITH_SLACK_CHANNEL_ID
+          volumeMounts:
+            - name: cron-scripts
+              mountPath: /etc/cron-scripts
+              readOnly: true
+      volumes:
+        - name: cron-scripts
+          configMap:
+            name: safeclaw-cron-scripts
+            defaultMode: 0755

@@ -1,0 +1,57 @@
+---
+# SafeClaw OpenClawInstance
+#
+# Requires the openclaw-operator to be installed:
+#   helm install openclaw-operator \
+#     oci://ghcr.io/openclaw-rocks/charts/openclaw-operator \
+#     --namespace openclaw-operator-system --create-namespace
+apiVersion: openclaw.rocks/v1alpha1
+kind: OpenClawInstance
+metadata:
+  name: safeclaw
+  namespace: protopia-safeclaw
+spec:
+  image:
+    repository: protopia/safeclaw
+    tag: latest
+    pullPolicy: Always
+
+  # The operator auto-generates and stores the gateway auth token in a managed Secret
+  # named safeclaw-gateway (key: token). Reference it in job-register-crons.yaml.
+  gateway:
+    enabled: true
+
+  # openclaw.json is written from this ConfigMap to the PVC before the container starts.
+  # entrypoint.sh then expands ${VAR} placeholders using env vars from safeclaw-secrets.
+  config:
+    configMapRef:
+      name: safeclaw-openclaw-config
+      key: openclaw.json
+    mergeMode: merge
+
+  # Secret values are injected as env vars, entrypoint.sh expands them into openclaw.json.
+  envFrom:
+    - secretRef:
+        name: safeclaw-secrets
+
+  # Workspace seeding is handled by entrypoint.sh on first boot.
+  # All example data is copied from /opt/safeclaw-examples/ (baked into the image)
+  # to /home/node/.openclaw/workspace-safeclaw/ automatically.
+  storage:
+    persistence:
+      enabled: true
+      size: 5Gi
+      storageClass: gp3
+  networking:
+    service:
+      type: ClusterIP
+    networkPolicy:
+      enabled: true
+
+  # Prevent the agent from autonomously modifying its own instance spec.
+  selfConfigure:
+    enabled: false
+
+  # External access is handled by httproute.yaml (Envoy Gateway API).
+  ingress:
+    enabled: false
