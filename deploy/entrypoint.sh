@@ -27,6 +27,7 @@ if [ ! -d "${WORKSPACE}/investment-portfolio" ]; then
   mkdir -p "${WORKSPACE}/pii-scanner/data-guardian-pii-scanner/no-pii" \
             "${WORKSPACE}/pii-scanner/data-guardian-pii-scanner/yes-pii"
   cp -r /opt/safeclaw-examples/1-financial-data/.       "${WORKSPACE}/financial-data/"
+  cp /opt/safeclaw-examples/AGENTS.md                  "${WORKSPACE}/AGENTS.md"
 fi
 
 # Register plugins in openclaw's plugin registry.

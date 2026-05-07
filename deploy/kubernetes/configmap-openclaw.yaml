@@ -2,7 +2,7 @@
 # openclaw.json ConfigMap
 #
 # This file is mounted by the OpenClawInstance operator and written to the PVC at
-# /home/node/.openclaw/openclaw.json. The entrypoint.sh then expands ${VAR} placeholders
+# /home/openclaw/.openclaw/openclaw.json. The entrypoint.sh then expands ${VAR} placeholders
 # using env vars injected from the safeclaw-secrets Secret.
 #
 # Fields you may want to customise before deploying:
@@ -36,12 +36,12 @@ data:
               {
                 "id": "Qwen/Qwen3-32B",
                 "name": "Qwen/Qwen3-32B",
-                "reasoning": false,
+                "reasoning": true,
                 "input": [
                   "text"
                 ],
                 "contextWindow": 32768,
-                "maxTokens": 32768
+                "maxTokens": 8192
               }
             ]
           }
@@ -57,11 +57,11 @@ data:
               "alias": "Protopia-SGT-Model"
             }
           },
-          "workspace": "/home/node/.openclaw/workspace",
+          "workspace": "/home/openclaw/.openclaw/workspace",
           "compaction": {
             "mode": "safeguard"
           },
-          "thinkingDefault": "high",
+          "thinkingDefault": "low",
           "verboseDefault": "full",
           "typingMode": "instant",
           "maxConcurrent": 4,
@@ -81,8 +81,8 @@ data:
           {
             "id": "safeclaw",
             "name": "SafeClaw",
-            "workspace": "/home/node/.openclaw/workspace-safeclaw",
-            "agentDir": "/home/node/.openclaw/agents/safeclaw/agent",
+            "workspace": "/home/openclaw/.openclaw/workspace-safeclaw",
+            "agentDir": "/home/openclaw/.openclaw/agents/safeclaw/agent",
             "model": "Protopia-SGT-Model"
           }
         ]
@@ -119,6 +119,7 @@ data:
         "enabled": true,
         "path": "/hooks",
         "token": "OPENCLAW_HOOK_TOKEN",
+        "allowedSessionKeyPrefixes": ["hook:"],
         "presets": [
           "gmail"
         ],
@@ -141,24 +142,14 @@ data:
       "channels": {
         "slack": {
           "mode": "socket",
-          "webhookPath": "/slack/events",
           "enabled": true,
           "botToken": "${SLACK_BOT_TOKEN}",
           "appToken": "${SLACK_APP_TOKEN}",
-          "userTokenReadOnly": true,
-          "groupPolicy": "allowlist",
-          "streaming": "partial",
-          "nativeStreaming": false,
-          "dmPolicy": "pairing",
-          "dm": {
-            "enabled": true
-          },
           "channels": {
             "C0AHK8ZQKA5": {
               "requireMention": true
             }
-          },
-          "ackReaction": "eyes"
+          }
         }
       },
       "gateway": {
@@ -234,9 +225,18 @@ data:
       },
       "plugins": {
         "entries": {
-          "qwen-portal-auth": {
-            "enabled": false
+          "brave": {
+            "enabled": true
           }
         }
-      }
+      },
+      "bindings": [
+        {
+          "type": "route",
+          "agentId": "safeclaw",
+          "match": {
+            "channel": "slack"
+          }
+        }
+      ]
     }
