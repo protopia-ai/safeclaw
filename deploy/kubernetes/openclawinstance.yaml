@@ -41,17 +41,13 @@ spec:
     persistence:
       enabled: true
       size: 5Gi
-      storageClass: gp3
+      storageClass: gp2
   networking:
     service:
       type: ClusterIP
-    networkPolicy:
-      enabled: true
+  plugins:
+    - '@openclaw/brave-plugin'
 
   # Prevent the agent from autonomously modifying its own instance spec.
   selfConfigure:
-    enabled: false
-
-  # External access is handled by httproute.yaml (Envoy Gateway API).
-  ingress:
     enabled: false
