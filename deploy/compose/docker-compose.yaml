@@ -1,13 +1,13 @@
 ---
 services:
-  ###############################
-  # Protopia StainedGlass Proxy #
-  ###############################
+  ################################
+  # Protopia StainedGlass Proxy  #
+  ################################
   stainedglass:
-    image: stainedglass-proxy:1.49.2-e934ce8-dgx
+    image: stainedglass-proxy:1.63.1-8a6120e5
     environment:
       SGP_SGT_PATH: Protopia/SGT-for-Qwen3-32B-swept-water-bfloat16
-      SGP_INFERENCE_SERVICE_HOST: "[INFERENCE-SERVICE-URL]"
+      SGP_INFERENCE_SERVICE_HOST: '[INFERENCE-SERVICE-URL]'
       SGP_DEVICE: cuda
       SGP_OUTPUT_DECRYPTION: true
       SGP_RECONSTRUCTION_MAX_SEQUENCE_LENGTH: 2048
@@ -16,9 +16,9 @@ services:
       SGP_COMPILE_NOISE_LAYER_FORWARD: true
       SGP_TOOL_PARSER: hermes
       SGP_USE_AIOHTTP_FOR_UPSTREAM: true
-      HF_TOKEN: "${HF_TOKEN:-''}"
+      HF_TOKEN: ${HF_TOKEN:-''}
       # Set these if your upstream inference service requires Modal authentication.
-      SGP_REQUEST_HEADERS_TO_ADD: "Modal-Key=${MODAL_KEY:-},Modal-Secret=${MODAL_SECRET:-}"
+      SGP_REQUEST_HEADERS_TO_ADD: Modal-Key=${MODAL_KEY:-},Modal-Secret=${MODAL_SECRET:-}
       # Force PyTorch/Triton to use controlled cache paths
       TRITON_CACHE_DIR: /home/stainedglass/.triton
       TORCHINDUCTOR_CACHE_DIR: /home/stainedglass/.cache/torch/inductor
@@ -26,7 +26,7 @@ services:
     ports:
       - name: proxy
         target: 8600
-        published: "${PROXY_PORT:-0}"  # set to 8600 to not use a random port
+        published: ${PROXY_PORT:-0}  # set to 8600 to not use a random port
         protocol: tcp
         app_protocol: http
     healthcheck:
@@ -45,12 +45,12 @@ services:
         reservations:
           devices:
             - driver: nvidia
-              device_ids: ["0"] # Add/or remove available GPU IDs
+              device_ids: ['0']  # Add/or remove available GPU IDs
               capabilities: [gpu]
 
-  ##############
-  # 🦞 Gateway #
-  ##############
+  ###############
+  # 🦞 Gateway  #
+  ###############
   # source: https://github.com/openclaw/openclaw
   openclaw-gateway:
     image: ghcr.io/openclaw/openclaw:protopia-demo
@@ -62,76 +62,64 @@ services:
       OPENCLAW_ALLOW_INSECURE_PRIVATE_WS: ${OPENCLAW_ALLOW_INSECURE_PRIVATE_WS:-}
       # SGT endpoint — defaults to the local stainedglass service.
       # Override with an external URL when not running stainedglass locally.
-      SGT_BASE_URL: "${SGT_BASE_URL:-http://stainedglass:8600/v1}"
-      SGT_API_KEY: "${SGT_API_KEY:-}"
+      SGT_BASE_URL: ${SGT_BASE_URL:-http://stainedglass:8600/v1}
+      SGT_API_KEY: ${SGT_API_KEY:-}
       # Slack integration (required for examples 2, 3, 4)
-      SLACK_BOT_TOKEN: "${SLACK_BOT_TOKEN:-}"
-      SLACK_APP_TOKEN: "${SLACK_APP_TOKEN:-}"
+      SLACK_BOT_TOKEN: ${SLACK_BOT_TOKEN:-}
+      SLACK_APP_TOKEN: ${SLACK_APP_TOKEN:-}
       # Brave Search (required for example 2)
-      BRAVE_API_KEY: "${BRAVE_API_KEY:-}"
+      BRAVE_API_KEY: ${BRAVE_API_KEY:-}
       # Google integration (required for example 3)
-      GOG_KEYRING_PASSWORD: "${GOG_KEYRING_PASSWORD:-safeclaw}"
-    volumes:
-      - $HOME/.openclaw/:/home/node/.openclaw/
+      GOG_KEYRING_PASSWORD: ${GOG_KEYRING_PASSWORD:-safeclaw}
+    volumes: [$HOME/.openclaw/:/home/node/.openclaw/]
     ports:
       # Gateway web UI, REST API, and health endpoints.
-      - "${OPENCLAW_GATEWAY_PORT:-18789}:18789"
+      - ${OPENCLAW_GATEWAY_PORT:-18789}:18789
       # WebSocket bridge for CLI.
-      - "${OPENCLAW_BRIDGE_PORT:-18790}:18790"
+      - ${OPENCLAW_BRIDGE_PORT:-18790}:18790
     init: true
     restart: unless-stopped
     command:
-      [
-        "node",
-        "dist/index.js",
-        "gateway",
-        "--bind",
-        "lan",
-        "--port",
-        "18789",
-      ]
+      - node
+      - dist/index.js
+      - gateway
+      - --bind
+      - lan
+      - --port
+      - '18789'
     healthcheck:
       test:
-        [
-          "CMD",
-          "node",
-          "-e",
-          "fetch('http://127.0.0.1:18789/healthz').then((r)=>process.exit(r.ok?0:1)).catch(()=>process.exit(1))",
-        ]
+        - CMD
+        - node
+        - -e
+        - fetch('http://127.0.0.1:18789/healthz').then((r)=>process.exit(r.ok?0:1)).catch(()=>process.exit(1))
       interval: 30s
       timeout: 5s
       retries: 5
       start_period: 20s
     depends_on:
       - stainedglass
-        
 
-  ##########
-  # 🦞 CLI #
-  ##########
+  ###########
+  # 🦞 CLI  #
+  ###########
   openclaw-cli:
     image: ghcr.io/openclaw/openclaw:protopia-demo
-    network_mode: "service:openclaw-gateway"
-    cap_drop:
-      - NET_RAW
-      - NET_ADMIN
-    security_opt:
-      - no-new-privileges:true
+    network_mode: service:openclaw-gateway
+    cap_drop: [NET_RAW, NET_ADMIN]
+    security_opt: [no-new-privileges:true]
     environment:
       HOME: /home/node
       TERM: xterm-256color
       OPENCLAW_GATEWAY_TOKEN: ${OPENCLAW_GATEWAY_TOKEN}
       OPENCLAW_ALLOW_INSECURE_PRIVATE_WS: ${OPENCLAW_ALLOW_INSECURE_PRIVATE_WS:-}
       BROWSER: echo
-    volumes:
-      - $HOME/.openclaw/:/home/node/.openclaw/
+    volumes: [$HOME/.openclaw/:/home/node/.openclaw/]
     stdin_open: true
     tty: true
     init: true
-    entrypoint: ["node", "dist/index.js"]
-    depends_on:
-      - stainedglass
-
+    entrypoint: [node, dist/index.js]
+    depends_on: [stainedglass]
 volumes:
-  triton-cache: # project-scoped triton cache shared by vLLM and SGTs
+  triton-cache:  # project-scoped triton cache shared by vLLM and SGTs
   inference-engine-cache:

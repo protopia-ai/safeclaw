@@ -1,0 +1,19 @@
+---
+repos:
+  - repo: https://github.com/Yelp/detect-secrets
+    rev: v1.5.0
+    hooks:
+      - id: detect-secrets
+        args: [--exclude-secrets, ^REPLACE_ME$]
+        exclude: ^examples/4-pii-scanner/
+  - repo: https://github.com/lyz-code/yamlfix
+    rev: 1.17.0
+    hooks:
+      - id: yamlfix
+  - repo: https://github.com/adrienverge/yamllint.git
+    rev: v1.37.1
+    hooks:
+      - id: yamllint
+        args:
+          - --config-data
+          - '{extends: default, rules: {line-length: {max: 80}}}'

@@ -1,7 +1,7 @@
 #!/bin/bash
 set -euo pipefail
 
-OPENCLAW_DIR=/home/node/.openclaw
+OPENCLAW_DIR=/home/openclaw/.openclaw
 mkdir -p "${OPENCLAW_DIR}"
 
 # The operator writes the openclaw.json ConfigMap content to the PVC before this
@@ -27,6 +27,13 @@ if [ ! -d "${WORKSPACE}/investment-portfolio" ]; then
   mkdir -p "${WORKSPACE}/pii-scanner/data-guardian-pii-scanner/no-pii" \
             "${WORKSPACE}/pii-scanner/data-guardian-pii-scanner/yes-pii"
   cp -r /opt/safeclaw-examples/1-financial-data/.       "${WORKSPACE}/financial-data/"
+  cp /opt/safeclaw-examples/AGENTS.md                  "${WORKSPACE}/AGENTS.md"
 fi
+
+# Register plugins in openclaw's plugin registry.
+# The operator npm-installs plugins (spec.plugins) but doesn't update openclaw's
+# registry, running `openclaw plugins install` does both, making them available
+# on gateway startup without needing a separate manual step.
+openclaw plugins install @openclaw/brave-plugin 2>/dev/null || true
 
 exec "$@"

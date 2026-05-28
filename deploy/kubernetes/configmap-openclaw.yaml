@@ -1,0 +1,242 @@
+---
+# openclaw.json ConfigMap
+#
+# This file is mounted by the OpenClawInstance operator and written to the PVC at
+# /home/openclaw/.openclaw/openclaw.json. The entrypoint.sh then expands ${VAR} placeholders
+# using env vars injected from the safeclaw-secrets Secret.
+#
+# Fields you may want to customise before deploying:
+#   - The Slack channel allowlist under channels.slack.channels (currently C0AHK8ZQKA5)
+#   - The model context window / maxTokens if using a different SGT-protected model
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: safeclaw-openclaw-config
+  namespace: protopia-safeclaw
+data:
+  openclaw.json: |-
+    {
+      "browser": {
+        "defaultProfile": "openclaw"
+      },
+      "ui": {
+        "assistant": {
+          "name": "Protected by Protopia's SGT 🔒",
+          "avatar": "https://avatars.githubusercontent.com/u/73908584?s=200&v=4"
+        }
+      },
+      "models": {
+        "mode": "merge",
+        "providers": {
+          "vllm": {
+            "baseUrl": "${SGT_BASE_URL}",
+            "apiKey": "${SGT_API_KEY}",
+            "api": "openai-completions",
+            "models": [
+              {
+                "id": "Qwen/Qwen3-32B",
+                "name": "Qwen/Qwen3-32B",
+                "reasoning": true,
+                "input": [
+                  "text"
+                ],
+                "contextWindow": 32768,
+                "maxTokens": 8192
+              }
+            ]
+          }
+        }
+      },
+      "agents": {
+        "defaults": {
+          "model": {
+            "primary": "vllm/Qwen/Qwen3-32B"
+          },
+          "models": {
+            "vllm/Qwen/Qwen3-32B": {
+              "alias": "Protopia-SGT-Model"
+            }
+          },
+          "workspace": "/home/openclaw/.openclaw/workspace",
+          "compaction": {
+            "mode": "safeguard"
+          },
+          "thinkingDefault": "low",
+          "verboseDefault": "full",
+          "typingMode": "instant",
+          "maxConcurrent": 4,
+          "subagents": {
+            "maxConcurrent": 8
+          }
+        },
+        "list": [
+          {
+            "id": "main",
+            "subagents": {
+              "allowAgents": [
+                "safeclaw"
+              ]
+            }
+          },
+          {
+            "id": "safeclaw",
+            "name": "SafeClaw",
+            "workspace": "/home/openclaw/.openclaw/workspace-safeclaw",
+            "agentDir": "/home/openclaw/.openclaw/agents/safeclaw/agent",
+            "model": "Protopia-SGT-Model"
+          }
+        ]
+      },
+      "tools": {
+        "web": {
+          "search": {
+            "enabled": true,
+            "provider": "brave",
+            "apiKey": "${BRAVE_API_KEY}"
+          },
+          "fetch": {
+            "enabled": true
+          }
+        }
+      },
+      "messages": {
+        "ackReactionScope": "group-mentions"
+      },
+      "commands": {
+        "native": "auto",
+        "nativeSkills": "auto",
+        "bash": true,
+        "restart": true,
+        "ownerDisplay": "raw",
+        "allowFrom": {
+          "custom-1": []
+        }
+      },
+      "session": {
+        "dmScope": "per-channel-peer"
+      },
+      "hooks": {
+        "enabled": true,
+        "path": "/hooks",
+        "token": "OPENCLAW_HOOK_TOKEN",
+        "allowedSessionKeyPrefixes": ["hook:"],
+        "presets": [
+          "gmail"
+        ],
+        "mappings": [
+          {
+            "match": {
+              "path": "gmail"
+            },
+            "action": "agent",
+            "wakeMode": "now",
+            "name": "Gmail",
+            "sessionKey": "hook:gmail:{{messages[0].id}}",
+            "messageTemplate": "New email from {{messages[0].from}}\nSubject: {{messages[0].subject}}\n{{messages[0].snippet}}\n{{messages[0].body}}",
+            "deliver": true,
+            "channel": "slack",
+            "model": "vllm/Qwen/Qwen3-32B"
+          }
+        ]
+      },
+      "channels": {
+        "slack": {
+          "mode": "socket",
+          "enabled": true,
+          "botToken": "${SLACK_BOT_TOKEN}",
+          "appToken": "${SLACK_APP_TOKEN}",
+          "channels": {
+            "C0AHK8ZQKA5": {
+              "requireMention": true
+            }
+          }
+        }
+      },
+      "gateway": {
+        "port": 18789,
+        "mode": "local",
+        "bind": "lan",
+        "controlUi": {
+          "allowedOrigins": [
+            "*"
+          ]
+        },
+        "tailscale": {
+          "mode": "off",
+          "resetOnExit": false
+        },
+        "nodes": {
+          "denyCommands": [
+            "camera.snap",
+            "camera.clip",
+            "screen.record",
+            "calendar.add",
+            "contacts.add",
+            "reminders.add"
+          ]
+        }
+      },
+      "skills": {
+        "load": {
+          "extraDirs": [
+            "/opt/homebrew/lib/node_modules/openclaw/skills/"
+          ],
+          "watch": false
+        },
+        "install": {
+          "preferBrew": true,
+          "nodeManager": "npm"
+        },
+        "entries": {
+          "1password": {
+            "enabled": false
+          },
+          "apple-reminders": {
+            "enabled": false
+          },
+          "bear-notes": {
+            "enabled": false
+          },
+          "blogwatcher": {
+            "enabled": false
+          },
+          "camsnap": {
+            "enabled": false
+          },
+          "apple-notes": {
+            "enabled": false
+          },
+          "blucli": {
+            "enabled": false
+          },
+          "bluebubbles": {
+            "enabled": false
+          },
+          "coding-agent": {
+            "enabled": false
+          },
+          "discord": {
+            "enabled": false
+          },
+          "gog": {
+            "enabled": true
+          }
+        }
+      },
+      "plugins": {
+        "entries": {
+          "brave": {
+            "enabled": true
+          }
+        }
+      },
+      "bindings": [
+        {
+          "type": "route",
+          "agentId": "safeclaw",
+          "match": {
+            "channel": "slack"
+          }
+        }
+      ]
+    }

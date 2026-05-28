@@ -1,0 +1,36 @@
+---
+# Envoy Gateway HTTPRoute for SafeClaw
+#
+# Routes external HTTPS traffic from the protopia-gw Gateway to the 
+# openclaw-gateway service on port 18789 (Web UI + REST API).
+#
+# Before applying:
+#   - Set the hostname below to your actual domain.
+#   - Verify the Gateway allows routes from this namespace:
+#       kubectl get gateway protopia-gw -n envoy-gateway-system \
+#         -o jsonpath='{.spec.listeners[*].allowedRoutes}'
+#
+# WebSocket (port 18790 CLI bridge): Envoy Gateway handles HTTP→WebSocket upgrades
+# transparently on the same route — no separate TCPRoute is needed.
+apiVersion: gateway.networking.k8s.io/v1
+kind: HTTPRoute
+metadata:
+  name: safeclaw-route
+  namespace: protopia-safeclaw
+spec:
+  parentRefs:
+    - name: protopia-gw
+      namespace: envoy-gateway-system
+      sectionName: https
+  hostnames:
+    - safeclaw.REPLACE_WITH_YOUR_DOMAIN
+  rules:
+    - matches:
+        - path:
+            type: PathPrefix
+            value: /
+      backendRefs:
+        - kind: Service
+          name: safeclaw
+          namespace: protopia-safeclaw
+          port: 18789

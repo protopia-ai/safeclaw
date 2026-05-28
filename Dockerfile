@@ -4,6 +4,7 @@ USER root
 RUN apt-get update && apt-get install -y --no-install-recommends \
 	ca-certificates \
 	curl \
+	gettext-base \
 	gnupg \
 	apt-transport-https \
 	build-essential
@@ -35,4 +36,5 @@ RUN brew install steipete/tap/gogcli
 
 COPY deploy/entrypoint.sh /usr/local/bin/entrypoint.sh
 ENTRYPOINT ["/usr/local/bin/entrypoint.sh"]
+CMD ["node", "openclaw.mjs", "gateway", "--allow-unconfigured"]
 
