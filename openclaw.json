@@ -17,14 +17,14 @@
         "api": "openai-completions",
         "models": [
           {
-            "id": "Qwen/Qwen3-32B",
-            "name": "Qwen/Qwen3-32B",
+            "id": "nvidia/NVIDIA-Nemotron-3-Super-120B-A12B-BF16",
+            "name": "nvidia/NVIDIA-Nemotron-3-Super-120B-A12B-BF16",
             "reasoning": false,
             "input": [
               "text"
             ],
-            "contextWindow": 32768,
-            "maxTokens": 32768
+            "contextWindow": 131072,
+            "maxTokens": 131072
           }
         ]
       }
@@ -33,10 +33,10 @@
   "agents": {
     "defaults": {
       "model": {
-        "primary": "vllm/Qwen/Qwen3-32B"
+        "primary": "vllm/nvidia/NVIDIA-Nemotron-3-Super-120B-A12B-BF16"
       },
       "models": {
-        "vllm/Qwen/Qwen3-32B": {
+        "vllm/nvidia/NVIDIA-Nemotron-3-Super-120B-A12B-BF16": {
           "alias": "Protopia-SGT-Model"
         }
       },
@@ -117,7 +117,7 @@
         "messageTemplate": "New email from {{messages[0].from}}\nSubject: {{messages[0].subject}}\n{{messages[0].snippet}}\n{{messages[0].body}}",
         "deliver": true,
         "channel": "slack",
-        "model": "vllm/Qwen/Qwen3-32B"
+        "model": "vllm/nvidia/NVIDIA-Nemotron-3-Super-120B-A12B-BF16"
       }
     ]
   },
@@ -216,13 +216,6 @@
       },
       "gog": {
         "enabled": true
-      }
-    }
-  },
-  "plugins": {
-    "entries": {
-      "qwen-portal-auth": {
-        "enabled": false
       }
     }
   }

@@ -4,17 +4,19 @@ services:
   # Protopia StainedGlass Proxy  #
   ################################
   stainedglass:
-    image: stainedglass-proxy:1.63.1-8a6120e5
+    image: stainedglass-proxy:1.77.1-f62f49fe
     environment:
-      SGP_SGT_PATH: Protopia/SGT-for-Qwen3-32B-swept-water-bfloat16
+      SGP_SGT_TEXT__PATH: Protopia/SGT_for_NVIDIA-Nemotron-3-Super-120B-A12B-BF16_dark-sky-38-epoch-0-step-59082
       SGP_INFERENCE_SERVICE_HOST: '[INFERENCE-SERVICE-URL]'
-      SGP_DEVICE: cuda
+      SGP_SGT_TEXT__DEVICE: cuda
       SGP_OUTPUT_DECRYPTION: true
       SGP_RECONSTRUCTION_MAX_SEQUENCE_LENGTH: 2048
       SGP_RECONSTRUCTION_MAX_NUM_EMBEDDINGS: 2048
       SGP_RECONSTRUCTION_MAX_BATCH_SIZE: 512
-      SGP_COMPILE_NOISE_LAYER_FORWARD: true
-      SGP_TOOL_PARSER: hermes
+      SGP_SGT_TEXT__COMPILE_NOISE_LAYER_FORWARD: false
+      SGP_SGT_TEXT__USE_CACHE: false
+      SGP_SGT_TEXT__DEFAULT_CHAT_TEMPLATE_KWARGS: '{"enable_thinking": false}'
+      SGP_TOOL_PARSER: qwen3_coder
       SGP_USE_AIOHTTP_FOR_UPSTREAM: true
       HF_TOKEN: ${HF_TOKEN:-''}
       # Set these if your upstream inference service requires Modal authentication.
@@ -40,6 +42,7 @@ services:
       - inference-engine-cache:/home/stainedglass/.cache:rw
       # Cache for compiled triton kernels.
       - triton-cache:/home/stainedglass/.triton:rw
+      - tilelang-cache:/home/stainedglass/.tilelang:rw
     deploy:
       resources:
         reservations:
@@ -123,3 +126,4 @@ services:
 volumes:
   triton-cache:  # project-scoped triton cache shared by vLLM and SGTs
   inference-engine-cache:
+  tilelang-cache:

@@ -16,16 +16,16 @@ import modal
 
 # --------------- Deployment Constants ---------------
 
-OUTPUT_PROTECTION_IMAGE: Final[str] = ( # UPDATE THIS TO YOUR IMAGE
-    "protopia/stainedglass-inference-server:0.15.1-2.9.3"
+OUTPUT_PROTECTION_IMAGE: Final[str] = (  # UPDATE THIS TO YOUR IMAGE
+    "<REPLACE ME>"
 )
 
-MODEL_NAME: Final[str] = "Qwen/Qwen3-32B"
+MODEL_NAME: Final[str] = "nvidia/NVIDIA-Nemotron-3-Super-120B-A12B-BF16"
 SERVED_MODEL_NAME: Final[str] = MODEL_NAME
-MAX_MODEL_LEN: Final[int] = 32768
+MAX_MODEL_LEN: Final[int] = 131072
 
-GPU_TYPE: Final[str] = "H200"
-N_GPU: Final[int] = 1
+GPU_TYPE: Final[str] = "H100"
+N_GPU: Final[int] = 8
 
 VLLM_PORT: Final[int] = 8000
 # Set to False to enable Torch compilation
@@ -65,6 +65,7 @@ with vllm_image.imports():
 hf_cache_vol = modal.Volume.from_name("huggingface-cache", create_if_missing=True)
 vllm_cache_vol = modal.Volume.from_name("vllm-cache", create_if_missing=True)
 torch_cache_vol = modal.Volume.from_name("torch-cache", create_if_missing=True)
+tilelang_cache_vol = modal.Volume.from_name("tilelang-cache", create_if_missing=True)
 
 app = modal.App(f"{MODEL_NAME.lower().replace('/', '-')}-output-protection-vllm")
 
@@ -75,7 +76,9 @@ def sleep(level: int = 1) -> None:
     Args:
         level: The level of sleep mode to enter.
     """
-    requests.post(f"http://localhost:{VLLM_PORT}/sleep?level={level}").raise_for_status()  # noqa: S113
+    requests.post(
+        f"http://localhost:{VLLM_PORT}/sleep?level={level}"
+    ).raise_for_status()  # noqa: S113
 
 
 def wake_up() -> None:
@@ -99,7 +102,9 @@ def wait_ready(proc: subprocess.Popen) -> None:
             socket.create_connection(("localhost", VLLM_PORT), timeout=1).close()
             return
         except OSError:
-            time.sleep(1.0)  # Yield to the event loop to allow heartbeat checks and prevent timeouts during long startups.
+            time.sleep(
+                1.0
+            )  # Yield to the event loop to allow heartbeat checks and prevent timeouts during long startups.
 
 
 def warmup(n_requests: int) -> None:
@@ -110,7 +115,11 @@ def warmup(n_requests: int) -> None:
     """
     private_key = x25519.X25519PrivateKey.generate()
     client_public_key = private_key.public_key()
-    headers = {"x-client-public-key": base64.b64encode(client_public_key.public_bytes_raw()).decode("utf-8")}
+    headers = {
+        "x-client-public-key": base64.b64encode(
+            client_public_key.public_bytes_raw()
+        ).decode("utf-8")
+    }
     payload = {
         "model": "llm",
         "messages": [{"role": "user", "content": "Who are you?"}],
@@ -135,6 +144,7 @@ def warmup(n_requests: int) -> None:
         "/home/stainedglass/.cache/huggingface": hf_cache_vol,
         "/home/stainedglass/.cache/vllm": vllm_cache_vol,  # vLLM's torch.compile cache
         "/home/stainedglass/.cache/torch": torch_cache_vol,
+        "/home/stainedglass/.tilelang": tilelang_cache_vol,
     },
     enable_memory_snapshot=True,
     experimental_options={"enable_gpu_snapshot": True},
@@ -165,7 +175,7 @@ class OutputProtectedvLLMServer:
             "--port",
             str(VLLM_PORT),
             "--gpu_memory_utilization",
-            str(0.95),
+            str(0.9),
             "--enable-prompt-embeds",
             "--download-dir",
             "/home/stainedglass/.cache/huggingface",
@@ -173,16 +183,26 @@ class OutputProtectedvLLMServer:
             str(N_GPU),
             "--enable-auto-tool-choice",
             "--tool-call-parser",
-            "hermes",
+            "qwen3_coder",
             "--enable-sleep-mode",
             # config for snapshotting
             # make KV cache predictable / small
-            "--max-num-seqs",
-            "4",
             "--max-model-len",
             str(MAX_MODEL_LEN),
             "--max-num-batched-tokens",
             str(MAX_MODEL_LEN),
+            "--dtype",
+            "bfloat16",
+            "--kv-cache-dtype",
+            "fp8",
+            "--mamba-ssm-cache-dtype",
+            "float16",
+            "--enable-prefix-caching",
+            "--reasoning-parser",
+            "nemotron_v3",
+            "--max-num-seqs",
+            "256",
+            # NO trust remote code
         ]
 
         # enforce-eager disables both Torch compilation and CUDA graph capture
@@ -202,7 +222,9 @@ class OutputProtectedvLLMServer:
         wait_ready(self.vllm_proc)
         warmup(1)
 
-    @modal.web_server(port=VLLM_PORT, startup_timeout=40 * MINUTES, requires_proxy_auth=True)
+    @modal.web_server(
+        port=VLLM_PORT, startup_timeout=40 * MINUTES, requires_proxy_auth=True
+    )
     def serve(self) -> None:
         pass
 
