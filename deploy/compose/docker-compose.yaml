@@ -42,6 +42,7 @@ services:
       - inference-engine-cache:/home/stainedglass/.cache:rw
       # Cache for compiled triton kernels.
       - triton-cache:/home/stainedglass/.triton:rw
+      - tilelang-cache:/home/stainedglass/.tilelang:rw
     deploy:
       resources:
         reservations:
@@ -125,3 +126,4 @@ services:
 volumes:
   triton-cache:  # project-scoped triton cache shared by vLLM and SGTs
   inference-engine-cache:
+  tilelang-cache:

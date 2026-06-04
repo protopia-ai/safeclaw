@@ -17,15 +17,15 @@ import modal
 # --------------- Deployment Constants ---------------
 
 OUTPUT_PROTECTION_IMAGE: Final[str] = (  # UPDATE THIS TO YOUR IMAGE
-    "protopia/stainedglass-inference-server:0.15.1-2.9.3"
+    "<REPLACE ME>"
 )
 
 MODEL_NAME: Final[str] = "nvidia/NVIDIA-Nemotron-3-Super-120B-A12B-BF16"
 SERVED_MODEL_NAME: Final[str] = MODEL_NAME
-MAX_MODEL_LEN: Final[int] = 32768
+MAX_MODEL_LEN: Final[int] = 131072
 
-GPU_TYPE: Final[str] = "H200"
-N_GPU: Final[int] = 1
+GPU_TYPE: Final[str] = "H100"
+N_GPU: Final[int] = 8
 
 VLLM_PORT: Final[int] = 8000
 # Set to False to enable Torch compilation
@@ -65,6 +65,7 @@ with vllm_image.imports():
 hf_cache_vol = modal.Volume.from_name("huggingface-cache", create_if_missing=True)
 vllm_cache_vol = modal.Volume.from_name("vllm-cache", create_if_missing=True)
 torch_cache_vol = modal.Volume.from_name("torch-cache", create_if_missing=True)
+tilelang_cache_vol = modal.Volume.from_name("tilelang-cache", create_if_missing=True)
 
 app = modal.App(f"{MODEL_NAME.lower().replace('/', '-')}-output-protection-vllm")
 
@@ -143,6 +144,7 @@ def warmup(n_requests: int) -> None:
         "/home/stainedglass/.cache/huggingface": hf_cache_vol,
         "/home/stainedglass/.cache/vllm": vllm_cache_vol,  # vLLM's torch.compile cache
         "/home/stainedglass/.cache/torch": torch_cache_vol,
+        "/home/stainedglass/.tilelang": tilelang_cache_vol,
     },
     enable_memory_snapshot=True,
     experimental_options={"enable_gpu_snapshot": True},
@@ -173,7 +175,7 @@ class OutputProtectedvLLMServer:
             "--port",
             str(VLLM_PORT),
             "--gpu_memory_utilization",
-            str(0.95),
+            str(0.9),
             "--enable-prompt-embeds",
             "--download-dir",
             "/home/stainedglass/.cache/huggingface",
@@ -181,16 +183,26 @@ class OutputProtectedvLLMServer:
             str(N_GPU),
             "--enable-auto-tool-choice",
             "--tool-call-parser",
-            "hermes",
+            "qwen3_coder",
             "--enable-sleep-mode",
             # config for snapshotting
             # make KV cache predictable / small
-            "--max-num-seqs",
-            "4",
             "--max-model-len",
             str(MAX_MODEL_LEN),
             "--max-num-batched-tokens",
             str(MAX_MODEL_LEN),
+            "--dtype",
+            "bfloat16",
+            "--kv-cache-dtype",
+            "fp8",
+            "--mamba-ssm-cache-dtype",
+            "float16",
+            "--enable-prefix-caching",
+            "--reasoning-parser",
+            "nemotron_v3",
+            "--max-num-seqs",
+            "256",
+            # NO trust remote code
         ]
 
         # enforce-eager disables both Torch compilation and CUDA graph capture
