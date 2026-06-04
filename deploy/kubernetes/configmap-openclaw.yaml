@@ -36,11 +36,11 @@ data:
               {
                 "id": "nvidia/NVIDIA-Nemotron-3-Super-120B-A12B-BF16",
                 "name": "nvidia/NVIDIA-Nemotron-3-Super-120B-A12B-BF16",
-                "reasoning": true,
+                "reasoning": false,
                 "input": [
                   "text"
                 ],
-                "contextWindow": 32768,
+                "contextWindow": 131072,
                 "maxTokens": 8192
               }
             ]
