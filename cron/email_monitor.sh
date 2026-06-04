@@ -4,7 +4,7 @@ openclaw cron add \
   --every 24h \
   --wake now \
   --session isolated \
-  --model "vllm/Qwen/Qwen3-32B" \
+  --model "vllm/nvidia/NVIDIA-Nemotron-3-Super-120B-A12B-BF16" \
   --deliver \
   --channel slack \
   --to "[SLACK-CHANNEL-ID]" \

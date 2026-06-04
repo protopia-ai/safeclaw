@@ -16,11 +16,11 @@ import modal
 
 # --------------- Deployment Constants ---------------
 
-OUTPUT_PROTECTION_IMAGE: Final[str] = ( # UPDATE THIS TO YOUR IMAGE
+OUTPUT_PROTECTION_IMAGE: Final[str] = (  # UPDATE THIS TO YOUR IMAGE
     "protopia/stainedglass-inference-server:0.15.1-2.9.3"
 )
 
-MODEL_NAME: Final[str] = "Qwen/Qwen3-32B"
+MODEL_NAME: Final[str] = "nvidia/NVIDIA-Nemotron-3-Super-120B-A12B-BF16"
 SERVED_MODEL_NAME: Final[str] = MODEL_NAME
 MAX_MODEL_LEN: Final[int] = 32768
 
@@ -75,7 +75,9 @@ def sleep(level: int = 1) -> None:
     Args:
         level: The level of sleep mode to enter.
     """
-    requests.post(f"http://localhost:{VLLM_PORT}/sleep?level={level}").raise_for_status()  # noqa: S113
+    requests.post(
+        f"http://localhost:{VLLM_PORT}/sleep?level={level}"
+    ).raise_for_status()  # noqa: S113
 
 
 def wake_up() -> None:
@@ -99,7 +101,9 @@ def wait_ready(proc: subprocess.Popen) -> None:
             socket.create_connection(("localhost", VLLM_PORT), timeout=1).close()
             return
         except OSError:
-            time.sleep(1.0)  # Yield to the event loop to allow heartbeat checks and prevent timeouts during long startups.
+            time.sleep(
+                1.0
+            )  # Yield to the event loop to allow heartbeat checks and prevent timeouts during long startups.
 
 
 def warmup(n_requests: int) -> None:
@@ -110,7 +114,11 @@ def warmup(n_requests: int) -> None:
     """
     private_key = x25519.X25519PrivateKey.generate()
     client_public_key = private_key.public_key()
-    headers = {"x-client-public-key": base64.b64encode(client_public_key.public_bytes_raw()).decode("utf-8")}
+    headers = {
+        "x-client-public-key": base64.b64encode(
+            client_public_key.public_bytes_raw()
+        ).decode("utf-8")
+    }
     payload = {
         "model": "llm",
         "messages": [{"role": "user", "content": "Who are you?"}],
@@ -202,7 +210,9 @@ class OutputProtectedvLLMServer:
         wait_ready(self.vllm_proc)
         warmup(1)
 
-    @modal.web_server(port=VLLM_PORT, startup_timeout=40 * MINUTES, requires_proxy_auth=True)
+    @modal.web_server(
+        port=VLLM_PORT, startup_timeout=40 * MINUTES, requires_proxy_auth=True
+    )
     def serve(self) -> None:
         pass
 

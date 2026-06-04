@@ -6,7 +6,7 @@ services:
   stainedglass:
     image: stainedglass-proxy:1.63.1-8a6120e5
     environment:
-      SGP_SGT_PATH: Protopia/SGT-for-Qwen3-32B-swept-water-bfloat16
+      SGP_SGT_PATH: Protopia/SGT_for_NVIDIA-Nemotron-3-Super-120B-A12B-BF16_dark-sky-38-epoch-0-step-59082
       SGP_INFERENCE_SERVICE_HOST: '[INFERENCE-SERVICE-URL]'
       SGP_DEVICE: cuda
       SGP_OUTPUT_DECRYPTION: true

@@ -31,7 +31,7 @@ data:
       --every 10m \
       --disabled \
       --session isolated \
-      --model "vllm/Qwen/Qwen3-32B" \
+      --model "vllm/nvidia/NVIDIA-Nemotron-3-Super-120B-A12B-BF16" \
       --announce \
       --channel slack \
       --to "${SLACK_CHANNEL_ID}" \
@@ -44,7 +44,7 @@ data:
       --every 24h \
       --disabled \
       --session isolated \
-      --model "vllm/Qwen/Qwen3-32B" \
+      --model "vllm/nvidia/NVIDIA-Nemotron-3-Super-120B-A12B-BF16" \
       --announce \
       --channel slack \
       --to "${SLACK_CHANNEL_ID}" \
@@ -57,7 +57,7 @@ data:
       --every 15m \
       --disabled \
       --session isolated \
-      --model "vllm/Qwen/Qwen3-32B" \
+      --model "vllm/nvidia/NVIDIA-Nemotron-3-Super-120B-A12B-BF16" \
       --announce \
       --channel slack \
       --to "${SLACK_CHANNEL_ID}" \
@@ -70,7 +70,7 @@ data:
       --every 10m \
       --disabled \
       --session isolated \
-      --model "vllm/Qwen/Qwen3-32B" \
+      --model "vllm/nvidia/NVIDIA-Nemotron-3-Super-120B-A12B-BF16" \
       --announce \
       --channel slack \
       --to "${SLACK_CHANNEL_ID}" \

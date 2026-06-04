@@ -23,11 +23,11 @@ SafeClaw is an [OpenClaw](https://docs.openclaw.ai) agent with access to [Protop
 ## Requirements
 
 1. **Protopia Stained Glass Proxy (SGP) docker image (v1.49.2 or above).**
-2. **SGT model (e.g `Protopia/SGT-for-Qwen3-32B-swept-water-bfloat16`)**.
+2. **SGT model (e.g `Protopia/SGT_for_NVIDIA-Nemotron-3-Super-120B-A12B-BF16_dark-sky-38-epoch-0-step-59082`)**.
 
 > 💡 Request access to a Protopia SGT from https://protopia.ai/safeclaw/
 
-3. Modal deployment script and Modal API keys (or any other way to host the upstream `Qwen3-32B` for inference.)
+3. Modal deployment script and Modal API keys (or any other way to host the upstream `NVIDIA-Nemotron-3-Super-120B-A12B-BF16` for inference.)
 4. [docker-compose](deploy/compose/docker-compose.yaml) file.
 5. [openclaw.json](openclaw.json) starter configuration.
 6. [Demo Resources and Data](./examples/)
@@ -36,7 +36,7 @@ SafeClaw is an [OpenClaw](https://docs.openclaw.ai) agent with access to [Protop
 ## Setup
 
 1. 🐳 Build custom `OpenClaw` docker image:
-    
+
     ```bash
     # Build demo image from custom Dockerfile
     docker build -t ghcr.io/openclaw/openclaw:protopia-demo .
@@ -60,7 +60,7 @@ SafeClaw is an [OpenClaw](https://docs.openclaw.ai) agent with access to [Protop
 
     ⚠️ **Important**: The modal deploy script loads the `OUTPUT_PROTECTION_IMAGE` from AWS ECR. Update this as needed. [Other options here](https://modal.com/docs/reference/modal.Image).
 
-    ⚠️ **Important**: The Modal deployment script loads the `Qwen/Qwen3-32B` model from Hugging Face. Ensure your Modal `huggingface-secret` is configured with a valid HF token. This token may differ from the HF token used for SGT model access.
+    ⚠️ **Important**: The Modal deployment script loads the `nvidia/NVIDIA-Nemotron-3-Super-120B-A12B-BF16` model from Hugging Face. Ensure your Modal `huggingface-secret` is configured with a valid HF token. This token may differ from the HF token used for SGT model access.
 
     - Update the [docker-compose](./deploy/compose/docker-compose.yaml) `stainedglass` service with your modal API keys to ensure SGT proxy can communicate with upstream Modal.
 
@@ -69,7 +69,7 @@ SafeClaw is an [OpenClaw](https://docs.openclaw.ai) agent with access to [Protop
 4. Set your credentials and run with `docker compose`. The easiest way is a `.env` file in the project root:
     ```bash
     # .env
-    HF_TOKEN=...            # HF token with access to the Qwen32B SGT model (provided by Protopia)
+    HF_TOKEN=...            # HF token with access to the nvidia/NVIDIA-Nemotron-3-Super-120B-A12B-BF16 SGT model (provided by Protopia)
     MODAL_KEY=...           # Modal API key (for upstream inference)
     MODAL_SECRET=...        # Modal API secret
     SGT_API_KEY=...         # SGT proxy API key (provided by Protopia)
@@ -84,7 +84,7 @@ SafeClaw is an [OpenClaw](https://docs.openclaw.ai) agent with access to [Protop
     ```
 
 5. 🏁 Verify running containers:
-    ```bash 
+    ```bash
     docker ps
 
     # > you should have at least these containers running:
@@ -142,7 +142,7 @@ User uses the OpenClaw chat interface to work on financial data analysis.
 # Example 2 (Portfolio Monitoring Agent ⏱️ Using cron job).
 OpenClaw agent scheduled task to generate a report based on local portfolio data and web search. The resulting report is posted on Slack.
 
-## 1. Demo data: 
+## 1. Demo data:
 1. The demo data and task instructions are automatically seeded to `~/.openclaw/workspace-safeclaw/investment-portfolio/` when the container first starts.
 
 ## 2. Setup Slack Integration
@@ -264,7 +264,7 @@ Sends a report to Slack each day with a list of action items based on new emails
 3. The demo data and task instructions are automatically seeded to `~/.openclaw/workspace-safeclaw/email-monitor/` when the container first starts.
 4. Register the [`email_monitor`](./cron/email_monitor.sh) OpenClaw cron task:
     > 💡 Update ./cron/email_monitor.sh with your SLACK-CHANNEL-ID.
-    
+
     ```bash
     # Register job.
     docker compose -f deploy/compose/docker-compose.yaml exec -T openclaw-gateway sh < cron/email_monitor.sh

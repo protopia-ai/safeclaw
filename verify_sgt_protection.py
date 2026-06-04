@@ -9,7 +9,6 @@ This script calls the SGT Proxy `/stainedglass` endpoint twice:
 
 from __future__ import annotations
 
-import torch
 import argparse
 import os
 import sys
@@ -17,11 +16,11 @@ import textwrap
 from typing import Any
 
 import requests
-
+import torch
 
 # ---- SGT Proxy access defaults ----
 DEFAULT_PROXY_URL = "http://localhost:32784/v1"
-DEFAULT_MODEL_NAME = "Qwen/Qwen3-32B"
+DEFAULT_MODEL_NAME = "nvidia/NVIDIA-Nemotron-3-Super-120B-A12B-BF16"
 DEFAULT_TIMEOUT_SECONDS = 30
 
 
@@ -161,7 +160,7 @@ def main() -> int:
             plain_text_embeddings preview: {plain}
 
             transformed_embeddings preview: {transformed}
-                
+
             plaintext preview           : {_preview(plain_text)}
             """
             ).strip(),
